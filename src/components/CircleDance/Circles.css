@@ -1,0 +1,63 @@
+:root{
+    --circle-diameter: 300px
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.circles-container,
+.circles-container .circle1,
+.circles-container .circle2,
+.circles-container .circle3,
+.circles-container .circle4{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid hsl(0, 70%, 34%);
+    box-shadow: inset 0 0 30px rgb(255, 0, 0);
+    background-color: transparent;
+    border-radius: 100%;
+    animation: spin linear 8s infinite ;
+}
+
+.circles-container{
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+}
+
+.circles-container .circle1{
+    width: calc(var(--circle-diameter) - 50px);
+    height: calc(var(--circle-diameter) - 50px);
+}
+
+.circles-container .circle2{
+    width: calc(var(--circle-diameter) - 100px);
+    height: calc(var(--circle-diameter) - 100px);
+}
+
+.circles-container .circle3{
+    width: calc(var(--circle-diameter) - 150px);
+    height: calc(var(--circle-diameter) - 150px);
+}
+
+.circles-container .circle4{
+    width: calc(var(--circle-diameter) - 200px);
+    height: calc(var(--circle-diameter) - 200px);
+}
+
+@keyframes spin {
+    0%{
+        transform: rotateX(0deg) rotateY(0);
+    }
+    50%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+    100%{
+        transform: rotateX(0) rotateY(0);
+    }
+}

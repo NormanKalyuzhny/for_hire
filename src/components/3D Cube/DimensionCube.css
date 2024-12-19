@@ -1,0 +1,174 @@
+:root{
+  --circle-size: 250px;
+  --cube-size: 100px;
+  --side-distance: 50px;
+}
+
+.cubeBGcolor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 100%;
+  border: 3px solid hsl(246, 100%, 88%);
+  animation: glow 3s infinite linear;
+}
+
+.bg-circle{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--circle-size) - 50px);
+  height: calc(var(--circle-size) - 50px);
+  border-radius: 100%;
+  border: 3px solid hsl(246, 100%, 88%);
+  animation: glow 3s infinite linear;
+}
+
+.cube, .side{
+  width: var(--cube-size);
+  height: var(--cube-size);
+}
+
+.cube {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(45deg);
+    animation: rotate 6s infinite linear; 
+  }
+  
+  .side {
+    filter: brightness(130%);
+    position: absolute;
+    border-top: 2px solid #3458a52d;
+    border-left: 2px solid #13213dd2;
+    border-right: 2px solid #13213dd2;
+    border-bottom: 2px solid #0c1933d2;
+    background-color: #0e19302d;
+    backdrop-filter: blur(15px);
+  }
+  
+  .front.side {
+    transform: translateZ(var(--side-distance));
+    animation: moveFrontSide 6s infinite ease-in-out;
+  }
+  
+  .back.side {
+    transform: translateZ(-var(--side-distance));
+    animation: moveBackSide 6s infinite ease-in-out;
+  }
+  
+  .left.side {
+    transform: translateX(-var(--side-distance)) rotateY(-90deg);
+    animation: moveLeftSide 6s infinite ease-in-out;
+  }
+  
+  .right.side {
+    transform: translateX(var(--side-distance)) rotateY(90deg);
+    animation: moveRightSide 6s infinite ease-in-out;
+  }
+  
+  .top.side {
+    transform: translateY(-var(--side-distance)) rotateX(90deg);
+    animation: moveTopSide 6s infinite ease-in-out;
+    background-color: #345daf2d;
+    border: 2px solid #3157a32d;
+  }
+  
+  .bottom.side {
+    transform: translateY(var(--side-distance)) rotateX(-90deg);
+    animation: moveBottomSide 6s infinite ease-in-out;
+    background-color: #16254680;
+    border: 2px solid #162546cb;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(-30deg) rotateY(45deg);
+    }
+    100% {
+      transform: rotateX(-30deg) rotateY(405deg);
+    }
+  }
+  
+@keyframes moveFrontSide{
+  0% {
+    transform: translateZ(var(--side-distance));
+  }
+  50% {
+    transform: translateZ(calc(var(--side-distance) + 100px));
+  }
+  100% {
+    transform: translateZ(var(--side-distance));
+  }
+}
+@keyframes moveBackSide{
+  0% {
+    transform: translateZ(calc(-1 * var(--side-distance)));
+  }
+  50% {
+    transform: translateZ(calc(-1 * (var(--side-distance) + 100px)));
+  }
+  100% {
+    transform: translateZ(calc(-1 * var(--side-distance)));
+  }
+}
+@keyframes moveLeftSide{
+  0% {
+    transform: translateX(calc(-1 * var(--side-distance))) rotateY(-90deg);
+  }
+  50% {
+    transform: translateX(calc(-1 * (var(--side-distance) + 100px))) rotateY(-90deg);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--side-distance))) rotateY(-90deg);
+  }
+}
+@keyframes moveRightSide{
+  0% {
+    transform: translateX(var(--side-distance)) rotateY(-90deg);
+  }
+  50% {
+    transform: translateX(calc(var(--side-distance) + 100px)) rotateY(-90deg);
+  }
+  100% {
+    transform: translateX(var(--side-distance)) rotateY(-90deg);
+  }
+}
+
+@keyframes moveTopSide{
+  0% {
+    transform: translateY(calc(-1 * var(--side-distance))) rotateX(90deg);
+  }
+  50% {
+    transform: translateY(calc(-1 * (var(--side-distance) + 100px))) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(calc(-1 * var(--side-distance))) rotateX(90deg);
+  }
+}
+@keyframes moveBottomSide{
+  0% {
+    transform: translateY(var(--side-distance)) rotateX(-90deg);
+  }
+  50% {
+    transform: translateY(calc(var(--side-distance) + 100px)) rotateX(-90deg);
+  }
+  100% {
+    transform: translateY(var(--side-distance)) rotateX(-90deg);
+  }
+}
+
+@keyframes glow {
+  0%{
+    box-shadow:  0 0 10px hsl(246, 100%, 62%);
+  }
+  50%{
+    box-shadow:  0 0 30px hsl(246, 100%, 88%);
+  }
+  100%{
+    box-shadow:  0 0 10px hsl(246, 100%, 62%);
+  }
+}

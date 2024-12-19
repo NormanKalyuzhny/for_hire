@@ -1,0 +1,32 @@
+.sidebar{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    top: 70px;
+    z-index: 10;
+}
+
+.sidebar .menuListItem{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid hsl(27, 71%, 29%);
+    margin: 1rem;
+    border-radius: 0.3rem;
+    height: 2rem;
+    background-color: hsl(27, 71%, 49%);
+    z-index: 15;
+}
+
+.sidebar .bgOverlay{
+    position: absolute;
+    inset: 0;
+    background-color: #272727bb;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+}

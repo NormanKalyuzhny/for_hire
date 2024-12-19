@@ -1,0 +1,48 @@
+:root{
+  --primary-color: rgb(255, 166, 0);
+  --secondary-color: rgb(221, 125, 0);
+  --background-color: hsl(0, 4%, 10%);
+  --footer-color: rgb(13, 13, 13);
+  --text-color: rgb(255, 255, 255);
+  --link-color: rgb(0, 123, 255);
+  
+  --primary-font: 'Arial, Helvetica, sans-serif';
+  --secondary-font: 'Georgia', serif;
+  --base-font-size: 1rem;
+}
+  
+html{
+  color: var(--text-color);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+  
+*, 
+*::after, 
+*::before{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 100vh;
+}

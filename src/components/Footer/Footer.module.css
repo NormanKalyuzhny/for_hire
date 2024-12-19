@@ -1,0 +1,47 @@
+.footer{
+    margin-top: auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.containerFooter{
+    padding: 1rem 0;
+    background-color: var(--footer-color);
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    left: 0;
+    right: 0;
+}
+
+.footerListItem{
+    padding: 0.3rem 1rem;
+    border: 2px solid transparent;
+}
+
+.footerListItem:hover {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.copy{
+    display: flex;
+    margin-left: 1rem;
+}
+
+.footerMenu{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 5%;  
+}
+
+.footerMenuList{
+    display: flex;
+}
+
+.footerListLink{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
