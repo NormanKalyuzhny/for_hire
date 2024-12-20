@@ -24,6 +24,7 @@
   font-family: var(--primary-font);
   display: flex;
   margin-left: auto;
+  margin-right: 1rem;
 }
   
 .menuListLink{
@@ -53,6 +54,7 @@
   background-color: transparent;
   border-style: none;
   cursor: pointer;
+  padding-right: 1rem;
 }
 
 

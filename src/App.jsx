@@ -8,6 +8,7 @@ import DimensionCube from "./components/3D Cube/DimensionCube.jsx";
 import Circles from "./components/CircleDance/Circles.jsx";
 import ComponentBox from "./ComponentBox.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import APIFetch from "./components/APIFetch.jsx";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -58,10 +59,11 @@ export default function App() {
   }
 
   const stylesMain = {
-    display:"inline-block",
-    textAlign:"center",
-    width:"100%",
-    height:"100%",
+    display: "flex",
+    flexWrap: "wrap", 
+    justifyContent:"center",
+    margin: "0 0.5rem",
+    boxSizing: "border-box",
   }
 
   return(
@@ -71,6 +73,9 @@ export default function App() {
           {showSidebar && (
             <Sidebar handleShowSidebar={handleShowSidebar}/>
           )}
+          <ComponentBox>
+            <APIFetch/>
+          </ComponentBox>  
           <ComponentBox>
             <TodoContainer>
                 <TodoInput 
@@ -91,6 +96,7 @@ export default function App() {
           <ComponentBox>
             <DimensionCube/>
           </ComponentBox>  
+
         </div>
       <Footer/>
     </Wrapper>

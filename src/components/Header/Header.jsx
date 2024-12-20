@@ -1,5 +1,5 @@
-import brandLogo from '../../../public/logo.svg';
-import burgerBtn from '../../../public/burger-menu.svg'
+import brandLogo from '../../assets/svg/logo.svg';
+import burgerBtn from '../../assets/svg/burger-menu.svg'
 import styles from './Header.module.css';
 
 const menuItems = [
