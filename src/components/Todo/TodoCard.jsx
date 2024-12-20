@@ -16,6 +16,7 @@ const {children, handleDeleteTodo, index, handleEditTodo} = props
         display: "flex",
         marginLeft: "auto",
         gap: "10px",
+        marginLeft: "0.5rem",
     }
 
     const btnUnset = {
@@ -24,7 +25,8 @@ const {children, handleDeleteTodo, index, handleEditTodo} = props
         margin: "0",
         background:"transparent",
         color:"unset",
-        cursor:"pointer"
+        cursor:"pointer",
+        fontSize: "1.2rem",
     }
 
     return (

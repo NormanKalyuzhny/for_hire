@@ -60,8 +60,10 @@ export default function App() {
 
   const stylesMain = {
     display: "flex",
-    flexWrap: "wrap", 
+    flexFlow:"wrap",
+    alignSelf: "center",
     justifyContent:"center",
+    width:"70%",
     margin: "0 0.5rem",
     boxSizing: "border-box",
   }

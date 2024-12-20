@@ -1,6 +1,7 @@
 import React from 'react'
 
 const styles = {
+  textAlign: "center",
   height:"fit-content",
   maxWidth:"fit-content",
   backgroundColor: "hsl(240, 11%, 15%)",

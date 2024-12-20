@@ -1,6 +1,8 @@
 .logo__img{
-    width: 60px;
-    padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  padding-left: 1rem;
 }
 
 .container__header{
@@ -55,6 +57,7 @@
   border-style: none;
   cursor: pointer;
   padding-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 
