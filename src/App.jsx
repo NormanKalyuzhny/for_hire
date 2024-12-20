@@ -8,7 +8,7 @@ import DimensionCube from "./components/3D Cube/DimensionCube.jsx";
 import Circles from "./components/CircleDance/Circles.jsx";
 import ComponentBox from "./ComponentBox.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
-import APIFetch from "./components/APIFetch.jsx";
+import APIFetch from "./components/APIFetch";
 import { useState, useEffect } from "react";
 
 export default function App() {
