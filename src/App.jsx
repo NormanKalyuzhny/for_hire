@@ -1,13 +1,13 @@
-import Wrapper from "./Wrapper.jsx";
-import Header from "./components/Header/Header.jsx";
-import TodoInput from "./components/Todo/TodoInput.jsx";
-import TodoList from "./components/Todo/TodoList.jsx";
-import TodoContainer from "./components/Todo/TodoContainer.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-import DimensionCube from "./components/3D Cube/DimensionCube.jsx";
-import Circles from "./components/CircleDance/Circles.jsx";
-import ComponentBox from "./ComponentBox.jsx";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Wrapper from "./Wrapper";
+import Header from "./components/Header/Header";
+import TodoInput from "./components/Todo/TodoInput";
+import TodoList from "./components/Todo/TodoList";
+import TodoContainer from "./components/Todo/TodoContainer";
+import Footer from "./components/Footer/Footer";
+import DimensionCube from "./components/3D Cube/DimensionCube";
+import Circles from "./components/CircleDance/Circles";
+import ComponentBox from "./ComponentBox";
+import Sidebar from "./components/Sidebar/Sidebar";
 import APIFetch from "./components/APIFetch";
 import { useState, useEffect } from "react";
 
