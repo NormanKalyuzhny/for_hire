@@ -6,11 +6,11 @@ export default function TodoInput(props){
     const stylesContainer = {
         display:"flex",
         textAlign: "center",
-        height: "35px",
+        height: "45px",
         gap: "10px",
     }
     const inputStyles = {
-        height: "25px",
+        height: "2rem",
         borderStyle: "none",
         borderColor: "transparent",
         borderBottom: "2px solid orange",
@@ -18,6 +18,7 @@ export default function TodoInput(props){
         color: "#FFF",
         outline: "none",
         width: "-webkit-fill-available",
+        fontSize: "1.2rem",
     }
     const addBtnStyles = {
         border: "none",
@@ -28,10 +29,11 @@ export default function TodoInput(props){
         color: "inherit",
         outline: "none",
         cursor: "pointer",
-        height: "25px",
+        height: "2rem",
         width: "4rem",
         borderRadius: "0.3rem",
         marginLeft: "auto",
+        fontSize: "1.2rem",
     }
     return(
         <div style={stylesContainer} className="inputContainer">

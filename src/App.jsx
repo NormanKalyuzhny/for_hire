@@ -1,14 +1,14 @@
-import Wrapper from "./Wrapper";
-import Header from "./components/Header/Header";
-import TodoInput from "./components/Todo/TodoInput";
-import TodoList from "./components/Todo/TodoList";
-import TodoContainer from "./components/Todo/TodoContainer";
-import Footer from "./components/Footer/Footer";
-import DimensionCube from "./components/3D Cube/DimensionCube";
-import Circles from "./components/CircleDance/Circles";
-import ComponentBox from "./ComponentBox";
-import Sidebar from "./components/Sidebar/Sidebar";
-import APIFetch from "./components/APIFetch";
+import Wrapper from "./Wrapper.jsx";
+import Header from "./components/Header/Header.jsx";
+import TodoInput from "./components/Todo/TodoInput.jsx";
+import TodoList from "./components/Todo/TodoList.jsx";
+import TodoContainer from "./components/Todo/TodoContainer.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import DimensionCube from "./components/3D Cube/DimensionCube.jsx";
+import Circles from "./components/CircleDance/Circles.jsx";
+import ComponentBox from "./ComponentBox.jsx";
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import APIFetch from "./components/APIFetch.jsx";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -63,7 +63,7 @@ export default function App() {
     flexFlow:"wrap",
     alignSelf: "center",
     justifyContent:"center",
-    width:"70%",
+    width:"80%",
     margin: "0 0.5rem",
     boxSizing: "border-box",
   }
@@ -75,10 +75,10 @@ export default function App() {
           {showSidebar && (
             <Sidebar handleShowSidebar={handleShowSidebar}/>
           )}
-          <ComponentBox>
+          <ComponentBox title="APIFetch">
             <APIFetch/>
           </ComponentBox>  
-          <ComponentBox>
+          <ComponentBox title="Todo">
             <TodoContainer>
                 <TodoInput 
                   todoValue = {todoValue} 
@@ -92,13 +92,12 @@ export default function App() {
                 />
             </TodoContainer>
           </ComponentBox>
-          <ComponentBox>
+          <ComponentBox title="CSS only">
             <Circles/>
           </ComponentBox>
-          <ComponentBox>
+          <ComponentBox title="CSS only">
             <DimensionCube/>
           </ComponentBox>  
-
         </div>
       <Footer/>
     </Wrapper>

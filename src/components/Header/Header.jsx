@@ -3,9 +3,9 @@ import burgerBtn from '../../assets/svg/burger-menu.svg';
 import styles from './Header.module.css';
 
 const menuItems = [
-  { href: '#', label: 'Music' },
-  { href: '#', label: 'Photography' },
-  { href: '#', label: 'Picture' },
+  { href: '#', label: 'Link1' },
+  { href: '#', label: 'Link2' },
+  { href: '#', label: 'Link3' },
 ];
 
 export default  function Header({handleShowSidebar}) {
