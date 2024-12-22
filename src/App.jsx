@@ -9,6 +9,7 @@ import Circles from "./components/CircleDance/Circles.jsx";
 import ComponentBox from "./ComponentBox.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import APIFetch from "./components/APIFetch.jsx";
+import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -71,10 +72,12 @@ export default function App() {
   return(
     <Wrapper>
       <Header handleShowSidebar={handleShowSidebar}/>
+      <SVGNameAnimation/>
         <div className="mainContent" style={stylesMain}>
           {showSidebar && (
             <Sidebar handleShowSidebar={handleShowSidebar}/>
           )}
+
           <ComponentBox title="APIFetch">
             <APIFetch/>
           </ComponentBox>  

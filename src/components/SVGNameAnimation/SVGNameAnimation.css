@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.svg-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+#svgName{
+    stroke: white;
+    fill: transparent;
+    animation: line-fill 1s ease forwards 5.8s;
+}
+
+#svgName path:nth-child(1){
+    stroke-dasharray: 437;
+    stroke-dashoffset: 437;
+    animation: line-animation 2s ease forwards;
+}
+#svgName path:nth-child(2){
+    stroke-dasharray: 430;
+    stroke-dashoffset: 430;
+    animation: line-animation 2s ease forwards 0.3s;
+}
+#svgName path:nth-child(3){
+    stroke-dasharray: 382;
+    stroke-dashoffset: 382;
+    animation: line-animation 2s ease forwards 0.6s;
+}
+#svgName path:nth-child(4){
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    animation: line-animation 2s ease forwards 0.9s;
+}
+#svgName path:nth-child(5){
+    stroke-dasharray: 347;
+    stroke-dashoffset: 347;
+    animation: line-animation 2s ease forwards 1.2s;
+}
+#svgName path:nth-child(6){
+    stroke-dasharray: 437;
+    stroke-dashoffset: 437;
+    animation: line-animation 2s ease forwards 1.5s;
+}
+#svgName path:nth-child(7){
+    stroke-dasharray: 363;
+    stroke-dashoffset: 363;
+    animation: line-animation 2s ease forwards 1.8s;
+}
+#svgName path:nth-child(8){
+    stroke-dasharray: 347;
+    stroke-dashoffset: 347;
+    animation: line-animation 2s ease forwards 2.1s;
+}
+#svgName path:nth-child(9){
+    stroke-dasharray: 203;
+    stroke-dashoffset: 203;
+    animation: line-animation 2s ease forwards 2.4s;
+}
+#svgName path:nth-child(10){
+    stroke-dasharray: 261;
+    stroke-dashoffset: 261;
+    animation: line-animation 2s ease forwards 2.7s;
+}
+#svgName path:nth-child(11){
+    stroke-dasharray: 352;
+    stroke-dashoffset: 352;
+    animation: line-animation 2s ease forwards 3s;
+}
+#svgName path:nth-child(12){
+    stroke-dasharray: 364;
+    stroke-dashoffset: 364;
+    animation: line-animation 2s ease forwards 3.3s;
+}
+#svgName path:nth-child(13){
+    stroke-dasharray: 387;
+    stroke-dashoffset: 387;
+    animation: line-animation 2s ease forwards 3.6s;
+}
+#svgName path:nth-child(14){
+    stroke-dasharray: 437;
+    stroke-dashoffset: 437;
+    animation: line-animation 2s ease forwards 3.9s;
+}
+#svgName path:nth-child(15){
+    stroke-dasharray: 261;
+    stroke-dashoffset: 261;
+    animation: line-animation 2s ease forwards 4.2s;
+}
+
+@keyframes line-animation {
+    to{
+        stroke-dashoffset:0;
+    }
+}
+
+@keyframes line-fill {
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}

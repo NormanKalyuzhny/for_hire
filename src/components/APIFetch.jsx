@@ -3,6 +3,7 @@ const catURL = "https://catfact.ninja/fact";
 
 export default function APIFetch() {
     const [data, setData] = useState(null);
+    const [catFact, setCatFact] = useState(null);
 
     useEffect(() => {
         fetchData();
@@ -24,11 +25,12 @@ export default function APIFetch() {
 
             // Update the state with the fetched data
             setData(result);
+            setCatFact(result.fact);
         } catch (error) {
             console.error('Error fetching data:', error.message);
         }
     };
-
+    
     return (
         <>
             {data ? (
