@@ -10,6 +10,7 @@ import ComponentBox from "./ComponentBox.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import APIFetch from "./components/APIFetch.jsx";
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
+import AuthPage from "./components/AuthPage/AuthPage.jsx";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -64,7 +65,7 @@ export default function App() {
     flexFlow:"wrap",
     alignSelf: "center",
     justifyContent:"center",
-    width:"80%",
+    width:"85%",
     margin: "0 0.5rem",
     boxSizing: "border-box",
   }
@@ -77,7 +78,7 @@ export default function App() {
           {showSidebar && (
             <Sidebar handleShowSidebar={handleShowSidebar}/>
           )}
-
+          <div className="container-box">
           <ComponentBox title="APIFetch">
             <APIFetch/>
           </ComponentBox>  
@@ -95,11 +96,15 @@ export default function App() {
                 />
             </TodoContainer>
           </ComponentBox>
+          </div>
           <ComponentBox title="CSS only">
             <Circles/>
           </ComponentBox>
           <ComponentBox title="CSS only">
             <DimensionCube/>
+          </ComponentBox>  
+          <ComponentBox title="Authorization">
+            <AuthPage/>
           </ComponentBox>  
         </div>
       <Footer/>

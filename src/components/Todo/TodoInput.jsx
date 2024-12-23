@@ -34,6 +34,7 @@ export default function TodoInput(props){
         borderRadius: "0.3rem",
         marginLeft: "auto",
         fontSize: "1.2rem",
+        WebkitTapHighlightColor: "transparent",
     }
     return(
         <div style={stylesContainer} className="inputContainer">

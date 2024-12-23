@@ -58,6 +58,7 @@
   cursor: pointer;
   padding-right: 1rem;
   margin-right: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 

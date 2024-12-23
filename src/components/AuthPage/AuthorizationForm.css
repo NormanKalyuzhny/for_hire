@@ -1,0 +1,108 @@
+.auth-container{
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    flex-grow: 0;
+    overflow: hidden;
+
+}
+
+.container-login,
+.container-register,
+.container-forgotPassword{
+    position: relative;
+    z-index: 5;
+    padding: 0 1rem;
+}
+
+.container-login h1,
+.container-register h1,
+.container-forgotPassword h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 350px;
+}
+
+.input-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.input-box i{
+    position: absolute;
+    margin-left: 90%;
+}
+
+.input-box input{
+    background-color: transparent;
+    width: 100%;
+    height: 2rem;
+    outline: none;
+    color: azure;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.input-box input::placeholder{
+    position: absolute;
+}
+
+.input-box input:focus::placeholder {
+    transform: translateY(0);  /* Убираем центрирование */
+    color: #333;  /* Цвет текста при фокусе */
+    transition: color 0.2s ease;
+  }
+
+.container-login .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.container-login p button,
+.container-register p button,
+.container-forgotPassword p button{
+    border: none;
+    background-color: transparent;
+    color: azure;
+}
+
+
+.container-forgotPassword p button:hover,
+.container-login p button:hover,
+.container-register p button:hover{
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.container-login .btn,
+.container-register .btn,
+.container-forgotPassword .btn{
+    position: relative;
+    width: 100%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: hsl(0, 2%, 22%);
+}
+
+.btn{
+    margin-bottom: 1rem;
+}
+
+.container-login p,
+.container-register p,
+.container-forgotPassword p{
+    text-align: center;
+}
