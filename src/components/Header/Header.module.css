@@ -42,7 +42,7 @@
 }
 
 .menuListItem:hover{
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -50,8 +50,8 @@
   display: none;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   outline: none;
   background-color: transparent;
   border-style: none;
@@ -59,8 +59,8 @@
   padding-right: 1rem;
   margin-right: 0.5rem;
   -webkit-tap-highlight-color: transparent;
+  stroke: var(--secondary-color);
 }
-
 
 
 @media (max-width: 480px){

@@ -1,6 +1,6 @@
 import brandLogo from '../../assets/svg/logo.svg';
-import burgerBtn from '../../assets/svg/burger-menu.svg';
 import styles from './Header.module.css';
+
 
 const menuItems = [
   { href: '#', label: 'Link1' },
@@ -21,6 +21,7 @@ export default  function Header({handleShowSidebar}) {
               className={styles.logo__img}
             />
           </a>
+          
           <nav className={styles.menu}>
             <ul className={styles.menuList}>
               {menuItems.map((item, index) => (
@@ -32,7 +33,13 @@ export default  function Header({handleShowSidebar}) {
               ))}
             </ul>
             <button  onClick={handleShowSidebar} className={styles.burgerMenu} aria-label="Open menu">
-              <img src={burgerBtn} className='burger-icon'/>
+              <svg 
+                className='burger-icon'
+                width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 18L20 18" stroke="" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 12L20 12" stroke="" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 6L20 6" stroke="" stroke-width="2" stroke-linecap="round"/>
+            </svg>
             </button>
           </nav>
         </div>

@@ -1,4 +1,3 @@
-import Wrapper from "./Wrapper.jsx";
 import Header from "./components/Header/Header.jsx";
 import TodoInput from "./components/Todo/TodoInput.jsx";
 import TodoList from "./components/Todo/TodoList.jsx";
@@ -11,12 +10,15 @@ import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import APIFetch from "./components/APIFetch.jsx";
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
 import AuthPage from "./components/AuthPage/AuthPage.jsx";
+import DarkMode from "./components/DarkMode/DarkMode.jsx";
+import useLocalStorage from "use-local-storage";
 import { useState, useEffect } from "react";
 
 export default function App() {
   const [todos, setTodos] = useState([])
   const [todoValue,  setTodoValue] = useState('')
   const [showSidebar, setShowSidebar] = useState(false)
+  const [isDark, setIsDark] = useLocalStorage("isDark", false)
 
   function persistData(newList){
     localStorage.setItem('todos', JSON.stringify({todos:
@@ -71,31 +73,33 @@ export default function App() {
   }
 
   return(
-    <Wrapper>
+
+    <div className="wrapper" data-theme={isDark ? "light":"dark"}>
       <Header handleShowSidebar={handleShowSidebar}/>
+      <DarkMode isChecked={isDark} handleChange={()=>setIsDark(!isDark)}/>
       <SVGNameAnimation/>
         <div className="mainContent" style={stylesMain}>
           {showSidebar && (
             <Sidebar handleShowSidebar={handleShowSidebar}/>
           )}
           <div className="container-box">
-          <ComponentBox title="APIFetch">
-            <APIFetch/>
-          </ComponentBox>  
-          <ComponentBox title="Todo">
-            <TodoContainer>
-                <TodoInput 
-                  todoValue = {todoValue} 
-                  setTodoValue={setTodoValue}
-                  handleAddTodos = {handleAddTodos}
-                />
-                <TodoList 
-                  handleDeleteTodo = {handleDeleteTodo} 
-                  handleEditTodo = {handleEditTodo}
-                  todos = {todos}
-                />
-            </TodoContainer>
-          </ComponentBox>
+            <ComponentBox title="APIFetch">
+              <APIFetch/>
+            </ComponentBox>  
+            <ComponentBox title="Todo">
+              <TodoContainer>
+                  <TodoInput 
+                    todoValue = {todoValue} 
+                    setTodoValue={setTodoValue}
+                    handleAddTodos = {handleAddTodos}
+                  />
+                  <TodoList 
+                    handleDeleteTodo = {handleDeleteTodo} 
+                    handleEditTodo = {handleEditTodo}
+                    todos = {todos}
+                  />
+              </TodoContainer>
+            </ComponentBox>
           </div>
           <ComponentBox title="CSS only">
             <Circles/>
@@ -108,6 +112,6 @@ export default function App() {
           </ComponentBox>  
         </div>
       <Footer/>
-    </Wrapper>
+    </div>
   );
 }
