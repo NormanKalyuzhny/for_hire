@@ -78,7 +78,7 @@
 .container-login p button:hover,
 .container-register p button:hover{
     text-decoration: underline;
-    color: var(--secondary-color);
+    color: var(--link-color);
 }
 
 .container-login .btn,

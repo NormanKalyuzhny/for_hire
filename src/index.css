@@ -8,7 +8,7 @@
   --text-color: rgb(255, 255, 255);
   --link-color: hsl(48, 56%, 82%);
   --background-color: linear-gradient(to top, hsl(0, 4%, 25%), hsl(0, 6%, 77%));
-  --footer-color: rgb(13, 13, 13);
+  --footer-color: transparent;
   --border-color:hsl(31, 32%, 45%);
   --borderSecond-color: hsl(31deg 18.67% 28.66%);
 }
@@ -20,6 +20,7 @@
   --secondary-color: rgb(221, 125, 0);
   --third-color: hsl(240, 11%, 15%);
   --borderSecond-color: hsl(240, 11%, 17%);
+  --footer-color: rgb(13, 13, 13);
 }
 
 html{

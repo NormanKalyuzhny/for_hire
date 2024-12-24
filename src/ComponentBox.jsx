@@ -22,7 +22,7 @@ const stylesTitle = {
   backgroundColor: `var(--third-color)`,
   border: `2px solid var(--borderSecond-color)`,
   borderRadius:"0.3rem",
-  boxShadow:"3px 3px 5px hsla(240, 12.00%, 4.90%, 0.73)",
+  boxShadow:"0 0 5px hsla(240, 12.00%, 4.90%, 0.73)",
 }
 
 const stylesBox = {
@@ -30,7 +30,7 @@ const stylesBox = {
   backgroundColor: `var(--third-color)`,
   border: `2px solid var(--borderSecond-color)`,
   borderRadius:"0.3rem",
-  boxShadow:"3px 3px 5px hsla(240, 12.00%, 4.90%, 0.73)",
+  boxShadow:"0 0 5px hsla(240, 12.00%, 4.90%, 0.73)",
   padding:"0.5rem",
 }
 

@@ -13,9 +13,9 @@ const AuthPage = () => {
 
   return (
     <div className="auth-container">
-        {formState === 'login' && <LoginForm onSwitchForm={handleSwitchForm} />};
-        {formState === 'register' && <RegisterForm onSwitchForm={handleSwitchForm} />};
-        {formState === 'forgot' && <ForgotPasswordForm onSwitchForm={handleSwitchForm} />};
+        {formState === 'login' && <LoginForm onSwitchForm={handleSwitchForm} />}
+        {formState === 'register' && <RegisterForm onSwitchForm={handleSwitchForm} />}
+        {formState === 'forgot' && <ForgotPasswordForm onSwitchForm={handleSwitchForm} />}
     </div>
   )
 }
