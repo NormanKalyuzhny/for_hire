@@ -1,19 +1,25 @@
 :root{
-  --footer-color: rgb(13, 13, 13);
-  --text-color: rgb(255, 255, 255);
-  --link-color: rgb(0, 123, 255);
-  --background-color: linear-gradient(to top, hsl(0, 4%, 25%), hsl(0, 6%, 77%));
   --primary-font: 'Arial, Helvetica, sans-serif';
   --secondary-font: 'Georgia', serif;
-  --base-font-size: 1rem;
   --primary-color: hsl(0, 18%, 70%);
+  --secondary-color: hsl(31, 32%, 45%);
+  --third-color:hsl(28, 8%, 44%);
+  --base-font-size: 1rem;
+  --text-color: rgb(255, 255, 255);
+  --link-color: hsl(48, 56%, 82%);
+  --background-color: linear-gradient(to top, hsl(0, 4%, 25%), hsl(0, 6%, 77%));
+  --footer-color: rgb(13, 13, 13);
   --border-color:hsl(31, 32%, 45%);
+  --borderSecond-color: hsl(31deg 18.67% 28.66%);
 }
 
 [data-theme="dark"]{
   --background-color: linear-gradient(to top, hsl(0, 4%, 10%), hsl(0, 6%, 17%));
   --border-color: rgb(255, 166, 0);
+  --primary-color: rgb(255, 166, 0);
   --secondary-color: rgb(221, 125, 0);
+  --third-color: hsl(240, 11%, 15%);
+  --borderSecond-color: hsl(240, 11%, 17%);
 }
 
 html{

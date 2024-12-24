@@ -6,16 +6,16 @@ import './AuthorizationForm.css'
 import React, { useState } from 'react'
 
 const AuthPage = () => {
-    const [formState, setFormState] = useState('login')
+    const [formState, setFormState] = useState('login');
     const handleSwitchForm = (state) => {
         setFormState(state);
     };
 
   return (
     <div className="auth-container">
-        {formState === 'login' && <LoginForm onSwitchForm={handleSwitchForm} />}
-        {formState === 'register' && <RegisterForm onSwitchForm={handleSwitchForm} />}
-        {formState === 'forgot' && <ForgotPasswordForm onSwitchForm={handleSwitchForm} />}
+        {formState === 'login' && <LoginForm onSwitchForm={handleSwitchForm} />};
+        {formState === 'register' && <RegisterForm onSwitchForm={handleSwitchForm} />};
+        {formState === 'forgot' && <ForgotPasswordForm onSwitchForm={handleSwitchForm} />};
     </div>
   )
 }

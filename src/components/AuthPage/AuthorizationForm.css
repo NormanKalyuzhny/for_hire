@@ -50,11 +50,12 @@
 
 .input-box input::placeholder{
     position: absolute;
+    color:var(--primary-color);
 }
 
 .input-box input:focus::placeholder {
-    transform: translateY(0);  /* Убираем центрирование */
-    color: #333;  /* Цвет текста при фокусе */
+    transform: translateY(0);
+    color: #333;  
     transition: color 0.2s ease;
   }
 
@@ -69,7 +70,7 @@
 .container-forgotPassword p button{
     border: none;
     background-color: transparent;
-    color: azure;
+    color: var(--link-color);
 }
 
 
@@ -77,7 +78,7 @@
 .container-login p button:hover,
 .container-register p button:hover{
     text-decoration: underline;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .container-login .btn,

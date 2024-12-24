@@ -166,7 +166,6 @@
     }
 }
 
-/* Медиазапросы для адаптивного масштабирования SVG */
 @media (max-width: 1200px) {
     .svgName {
         transform: scale(0.65);

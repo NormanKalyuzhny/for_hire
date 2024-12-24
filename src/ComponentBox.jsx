@@ -19,18 +19,18 @@ const stylesTitle = {
   marginBottom:"0.3rem",
   textAlign: "center",
   height:"2rem",
-  backgroundColor: "hsl(240, 11%, 15%)",
-  border: "2px solid hsl(240, 11%, 17%)",
+  backgroundColor: `var(--third-color)`,
+  border: `2px solid var(--borderSecond-color)`,
   borderRadius:"0.3rem",
-  boxShadow:"0 0 5px hsl(240, 11%, 5%)",
+  boxShadow:"3px 3px 5px hsla(240, 12.00%, 4.90%, 0.73)",
 }
 
 const stylesBox = {
   boxSizing: "border-box",
-  backgroundColor: "hsl(240, 11%, 15%)",
-  border: "2px solid hsl(240, 11%, 17%)",
+  backgroundColor: `var(--third-color)`,
+  border: `2px solid var(--borderSecond-color)`,
   borderRadius:"0.3rem",
-  boxShadow:"0 0 5px hsl(240, 11%, 5%)",
+  boxShadow:"3px 3px 5px hsla(240, 12.00%, 4.90%, 0.73)",
   padding:"0.5rem",
 }
 

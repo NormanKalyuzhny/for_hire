@@ -34,7 +34,6 @@
   text-transform: uppercase;
 }
 
-
 .menuListItem{
     display: block;
     padding: 0.3rem 1rem;
@@ -61,7 +60,6 @@
   -webkit-tap-highlight-color: transparent;
   stroke: var(--secondary-color);
 }
-
 
 @media (max-width: 480px){
   .burgerMenu{

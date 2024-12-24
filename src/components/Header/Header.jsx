@@ -1,7 +1,6 @@
 import brandLogo from '../../assets/svg/logo.svg';
 import styles from './Header.module.css';
 
-
 const menuItems = [
   { href: '#', label: 'Link1' },
   { href: '#', label: 'Link2' },
