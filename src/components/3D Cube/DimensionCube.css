@@ -42,10 +42,6 @@
   .side {
     filter: brightness(130%);
     position: absolute;
-    border-top: 2px solid #3458a52d;
-    border-left: 2px solid #13213dd2;
-    border-right: 2px solid #13213dd2;
-    border-bottom: 2px solid #0c1933d2;
     background-color: #0e19302d;
     backdrop-filter: blur(15px);
   }
@@ -74,14 +70,13 @@
     transform: translateY(-var(--side-distance)) rotateX(90deg);
     animation: moveTopSide 6s infinite ease-in-out;
     background-color: #345daf2d;
-    border: 2px solid #3157a32d;
   }
   
   .bottom.side {
     transform: translateY(var(--side-distance)) rotateX(-90deg);
     animation: moveBottomSide 6s infinite ease-in-out;
-    background-color: #16254680;
-    border: 2px solid #162546cb;
+    background-color: hsla(221, 55%, 5%, 0.176);
+
   }
   
   @keyframes rotate {
