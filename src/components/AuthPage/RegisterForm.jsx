@@ -3,7 +3,7 @@ import "./AuthorizationForm.css";
 import { useRef, useState, useEffect } from "react";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
-const PWS_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const RegisterForm = ({ onSwitchForm }) => {
   const userRef = useRef();
@@ -33,7 +33,7 @@ const RegisterForm = ({ onSwitchForm }) => {
   }, [user])
 
   useEffect(() => {
-    setValidPwd(PWS_REGEX.test(pwd));
+    setValidPwd(PWD_REGEX.test(pwd));
     setValidMatch(pwd == matchPwd);
   },[pwd, matchPwd])
   
@@ -41,10 +41,20 @@ const RegisterForm = ({ onSwitchForm }) => {
     setErrMsg('')
   }, [user,pwd,matchPwd])
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // if button enabled with JS hack
+    const v1 = USER_REGEX.test(user);
+    const v2 = PWD_REGEX.test(pwd);
+    if (!v1 || !v2) {
+        setErrMsg("Invalid Entry");
+        return;
+    }
+   }
   return (
     <div className="container-register">
  
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <h1>Register</h1>
         <div className="input-box">
           <label htmlFor="username"></label>
@@ -62,7 +72,7 @@ const RegisterForm = ({ onSwitchForm }) => {
             onBlur={()=> setUserFocus(false)}
           />
             <i className="fa-solid fa-user"></i>
-            <p id="uidnote" className={user && !validName ? "instructions" : "offscreen"}>
+            <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
               4 to 24 characters.<br />
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
@@ -86,7 +96,7 @@ const RegisterForm = ({ onSwitchForm }) => {
             onBlur={()=> setPwdFocus(false)}
           />
           <i className="fa-solid fa-lock"></i>
-          <p id="pwdnote" className={!validPwd ? "instructions" : "offscreen"}>
+          <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
             8 to 24 characters.<br />
             Must include uppercase and lowercase letters, a number and a special character.<br />
             Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>

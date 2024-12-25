@@ -4,9 +4,9 @@ export default function TodoInput(props){
 
     
     return(
-        <div className='stylesContainer inputContainer'>
+        <div className='container'>
             <input 
-                className='inputStyles' 
+                
                 value={todoValue} 
                 type="text" placeholder="Enter todo..."
                 onChange={(e) => {

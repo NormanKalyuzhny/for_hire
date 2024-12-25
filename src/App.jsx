@@ -102,11 +102,11 @@ export default function App() {
             </ComponentBox>
           </div>
           <ComponentBox title="CSS only">
-            <Circles/>
-          </ComponentBox>
-          <ComponentBox title="CSS only">
             <DimensionCube/>
           </ComponentBox>  
+          <ComponentBox title="CSS only">
+            <Circles/>
+          </ComponentBox>
           <ComponentBox title="Authorization">
             <AuthPage/>
           </ComponentBox>  
