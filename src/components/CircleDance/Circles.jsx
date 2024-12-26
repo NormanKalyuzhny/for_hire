@@ -1,7 +1,7 @@
 import React from 'react'
 import './Circles.css'
 
-export default function Circles() {
+export const Circles = () => {
   return (
     <div>
         <div className="circles-container">

@@ -10,6 +10,7 @@ const stylesContainer = {
   marginLeft:"0.5rem",
   marginBottom:"0.5rem",
 }
+
 const stylesTitle = {
   boxSizing: "border-box",
   display:"flex",
@@ -34,8 +35,7 @@ const stylesBox = {
   padding:"0.5rem",
 }
 
-export default function ComponentBox({children, title}) {
-
+export const ComponentBox = ({children, title}) => {
   return (
     <div style={stylesContainer} className='component-container'>
       <div style={stylesTitle} className="component-title">

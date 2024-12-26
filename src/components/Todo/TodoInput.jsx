@@ -1,12 +1,10 @@
 import './Todo.css'
-export default function TodoInput(props){
-    const {handleAddTodos, todoValue, setTodoValue} = props
 
-    
+export const TodoInput = (props) => {
+    const {handleAddTodos, todoValue, setTodoValue} = props
     return(
         <div className='container'>
-            <input 
-                
+            <input   
                 value={todoValue} 
                 type="text" placeholder="Enter todo..."
                 onChange={(e) => {

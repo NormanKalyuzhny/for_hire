@@ -1,10 +1,8 @@
 import React from 'react'
 import './Todo.css'
 
-export default function TodoCard(props) {
-
-const {children, handleDeleteTodo, index, handleEditTodo} = props
-   
+export const TodoCard = (props) => {
+    const {children, handleDeleteTodo, index, handleEditTodo} = props
     return (
         <li className='todoItem'>
             {children}

@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoCard from './TodoCard'
 
-export default function TodoList(props) {
+export const TodoList = (props) => {
     const {todos} = props
     const styles = {
         gap: "1rem",
@@ -16,6 +16,8 @@ export default function TodoList(props) {
                     <p>{todo}</p>
                 </TodoCard>
             )
-    })}</ul>
+        }   
+        )}
+    </ul>
   )
 }

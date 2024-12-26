@@ -1,14 +1,13 @@
 import brandLogo from '../../assets/svg/logo.svg';
 import styles from './Header.module.css';
 
-const menuItems = [
+export const menuItems = [
   { href: '#', label: 'Link1' },
   { href: '#', label: 'Link2' },
   { href: '#', label: 'Link3' },
 ];
 
-export default  function Header({handleShowSidebar}) {
-
+export const Header = ({handleShowSidebar}) => {
   return (
     <header>
       <div className={styles.container__header}>
@@ -46,5 +45,3 @@ export default  function Header({handleShowSidebar}) {
     </header>
   );
 }
-
-export { menuItems };

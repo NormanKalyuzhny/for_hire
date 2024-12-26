@@ -1,10 +1,8 @@
 import React from 'react'
 import './AuthorizationForm.css'
 
- const LoginForm = ({ onSwitchForm }) => {
-  
+export const LoginForm = ({ onSwitchForm }) => {
   return (
-
     <div className='container-login'>
         <form action="">
             <h1>Login</h1>
@@ -31,5 +29,3 @@ import './AuthorizationForm.css'
     </div>
   )
 }
-
-export default LoginForm

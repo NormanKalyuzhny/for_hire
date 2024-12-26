@@ -1,7 +1,7 @@
 import React from 'react'
 import './DimensionCube.css'
 
-export default function DimensionCube(){
+export const DimensionCube = () => {
   return (
     <div className="cubeBGcolor">
       <div className="bg-circle"></div>

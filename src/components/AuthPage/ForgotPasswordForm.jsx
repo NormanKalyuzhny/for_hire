@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ForgotPasswordForm = ({onSwitchForm}) => {
+export const ForgotPasswordForm = ({onSwitchForm}) => {
   return (
     <div className='container-forgotPassword'>
         <h1>Forgot password</h1>
@@ -13,5 +13,3 @@ const ForgotPasswordForm = ({onSwitchForm}) => {
     </div>
   )
 }
-
-export default ForgotPasswordForm

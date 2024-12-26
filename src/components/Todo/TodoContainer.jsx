@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TodoContainer({children}) {
+export const TodoContainer = ({children}) => {
     const styles = {
         display: "flex",
         flexDirection: "column",

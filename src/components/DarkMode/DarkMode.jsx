@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./DarkMode.module.css"
 
- const DarkMode = ({handleChange,isChecked}) => {
+export const DarkMode = ({handleChange,isChecked}) => {
 
   return (
     <div className={styles.darkmodeToggle}>
@@ -17,5 +17,3 @@ import styles from "./DarkMode.module.css"
             </div>
     )
 }
-
-export default DarkMode
