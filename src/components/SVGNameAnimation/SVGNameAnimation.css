@@ -1,5 +1,6 @@
 :root{
     --line-speed: 2s;
+    --full-delay: 1.5s;
 }
 
 *{
@@ -32,123 +33,59 @@
 }
 
 .svgName path:nth-child(1){
-    stroke-dasharray: 437;
-    stroke-dashoffset: 437;
+    stroke-dasharray: 574;
+    stroke-dashoffset: 574;
     animation: 
         line-animation var(--line-speed) ease forwards, 
-        line-fill 0.3s ease forwards var(--line-speed);
+        line-fill 0.3s ease forwards var(--full-delay);
 }
 
 .svgName path:nth-child(2){
-    stroke-dasharray: 430;
-    stroke-dashoffset: 430;
+    stroke-dasharray: 376;
+    stroke-dashoffset: 376;
     animation: 
         line-animation var(--line-speed) ease forwards 0.3s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 0.3s);
+        line-fill 0.3s ease forwards calc(var(--full-delay) + 0.3s);
 }
 
 .svgName path:nth-child(3){
-    stroke-dasharray: 382;
-    stroke-dashoffset: 382;
+    stroke-dasharray: 229;
+    stroke-dashoffset: 229;
     animation: 
     line-animation var(--line-speed) ease forwards 0.6s, 
-    line-fill 0.5s ease forwards calc(var(--line-speed) + 0.6s);
+    line-fill 0.3s ease forwards calc(var(--full-delay) + 0.6s);
 }
 
 .svgName path:nth-child(4){
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
+    stroke-dasharray: 330;
+    stroke-dashoffset: 330;
     animation: 
         line-animation var(--line-speed) ease forwards 0.9s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 0.9s);
+        line-fill 0.3s ease forwards calc(var(--full-delay) + 0.9s);
 }
 
 .svgName path:nth-child(5){
-    stroke-dasharray: 347;
-    stroke-dashoffset: 347;
+    stroke-dasharray: 409;
+    stroke-dashoffset: 409;
     animation: 
-        line-animation var(--line-speed) ease forwards 1.2s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 1.2s);
+        line-animation 4.5s ease forwards 1.2s, 
+        line-fill 0.3s ease forwards calc(var(--full-delay) + 1.2s);
 }
 
 .svgName path:nth-child(6){
-    stroke-dasharray: 437;
-    stroke-dashoffset: 437;
+    stroke-dasharray: 542;
+    stroke-dashoffset: 542;
     animation: 
         line-animation var(--line-speed) ease forwards 1.5s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 1.5s);
+        line-fill 0.3s ease forwards calc(var(--full-delay) + 1.5s);
 }
 
 .svgName path:nth-child(7){
-    stroke-dasharray: 363;
-    stroke-dashoffset: 363;
+    stroke-dasharray: 376;
+    stroke-dashoffset: 376;
     animation: 
         line-animation var(--line-speed) ease forwards 1.8s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 1.8s);
-}
-
-.svgName path:nth-child(8){
-    stroke-dasharray: 347;
-    stroke-dashoffset: 347;
-    animation: 
-        line-animation var(--line-speed) ease forwards 2.1s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 2.1s);
-}
-
-.svgName path:nth-child(9){
-    stroke-dasharray: 203;
-    stroke-dashoffset: 203;
-    animation: 
-        line-animation var(--line-speed) ease forwards 2.4s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 2.4s);
-}
-
-.svgName path:nth-child(10){
-    stroke-dasharray: 261;
-    stroke-dashoffset: 261;
-    animation: 
-        line-animation var(--line-speed) ease forwards 2.7s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 2.7s);
-}
-
-.svgName path:nth-child(11){
-    stroke-dasharray: 352;
-    stroke-dashoffset: 352;
-    animation: 
-        line-animation var(--line-speed) ease forwards 3s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 3s);
-}
-
-.svgName path:nth-child(12){
-    stroke-dasharray: 364;
-    stroke-dashoffset: 364;
-    animation: 
-        line-animation var(--line-speed) ease forwards 3.3s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 3.3s);
-}
-
-.svgName path:nth-child(13){
-    stroke-dasharray: 387;
-    stroke-dashoffset: 387;
-    animation: 
-        line-animation var(--line-speed) ease forwards 3.6s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 3.6s);
-}
-
-.svgName path:nth-child(14){
-    stroke-dasharray: 437;
-    stroke-dashoffset: 437;
-    animation: 
-        line-animation var(--line-speed) ease forwards 3.9s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 3.9s);
-}
-
-.svgName path:nth-child(15){
-    stroke-dasharray: 261;
-    stroke-dashoffset: 261;
-    animation: 
-        line-animation var(--line-speed) ease forwards 4.2s, 
-        line-fill 0.5s ease forwards calc(var(--line-speed) + 4.2s);
+        line-fill 0.3s ease forwards calc(var(--full-delay) + 1.8s);
 }
 
 @keyframes line-animation {

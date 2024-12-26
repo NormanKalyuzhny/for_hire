@@ -4,27 +4,25 @@
   --side-distance: 50px;
 }
 
-.cubeBGcolor{
+.cubeBGcolor,
+.bg-circle{
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: var(--circle-size);
-  height: var(--circle-size);
   border-radius: 100%;
+  align-items: center;
   border: 3px solid hsl(246, 100%, 88%);
   animation: glow 3s infinite linear;
 }
 
+.cubeBGcolor{
+  width: var(--circle-size);
+  height: var(--circle-size);
+}
+
 .bg-circle{
-  display: flex;
   position: absolute;
-  justify-content: center;
-  align-items: center;
   width: calc(var(--circle-size) - 50px);
   height: calc(var(--circle-size) - 50px);
-  border-radius: 100%;
-  border: 3px solid hsl(246, 100%, 88%);
-  animation: glow 3s infinite linear;
 }
 
 .cube, .side{
@@ -76,7 +74,6 @@
     transform: translateY(var(--side-distance)) rotateX(-90deg);
     animation: moveBottomSide 6s infinite ease-in-out;
     background-color: hsla(221, 55%, 5%, 0.176);
-
   }
   
   @keyframes rotate {
