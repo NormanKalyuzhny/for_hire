@@ -5,7 +5,7 @@ import './AuthorizationForm.css'
 
 import React, { useState } from 'react'
 
-export const AuthPage = () => {
+const AuthPage = () => {
     const [formState, setFormState] = useState('login');
     const handleSwitchForm = (state) => {
         setFormState(state);
@@ -19,3 +19,5 @@ export const AuthPage = () => {
     </div>
   )
 }
+
+export default AuthPage

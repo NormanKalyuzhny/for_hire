@@ -1,6 +1,6 @@
 import './Todo.css'
 
-export const TodoInput = (props) => {
+export default function TodoInput(props){
     const {handleAddTodos, todoValue, setTodoValue} = props
     return(
         <div className='container'>

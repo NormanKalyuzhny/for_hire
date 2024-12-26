@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 const catURL = "https://catfact.ninja/fact";
 
-export const APIFetch = () => {
+export default function APIFetch() {
     const [data, setData] = useState(null);
     const [catFact, setCatFact] = useState(null);
 

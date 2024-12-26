@@ -7,7 +7,8 @@ export const menuItems = [
   { href: '#', label: 'Link3' },
 ];
 
-export const Header = ({handleShowSidebar}) => {
+export default  function Header({handleShowSidebar}) {
+
   return (
     <header>
       <div className={styles.container__header}>
@@ -45,3 +46,4 @@ export const Header = ({handleShowSidebar}) => {
     </header>
   );
 }
+

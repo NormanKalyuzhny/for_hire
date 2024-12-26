@@ -1,7 +1,7 @@
 import "./SVGNameAnimation.css"
 import React from 'react'
 
-export const SVGNameAnimation = () => {
+export default function SVGNameAnimation() {
     //full line lenth for letters 
     const svgName = document.querySelectorAll('.svgName path')
     for(let i = 0; i < svgName.length; i++){

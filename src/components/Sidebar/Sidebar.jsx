@@ -2,7 +2,7 @@ import React from 'react'
 import './Sidebar.css'
 import { menuItems } from '../Header/Header.jsx'
 
-export const Sidebar = ({handleShowSidebar}) => {
+export default function Sidebar({handleShowSidebar}) {
     return (
         <div className="sidebar">
             <div onClick={handleShowSidebar} className="bgOverlay"></div>
