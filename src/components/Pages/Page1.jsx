@@ -22,11 +22,11 @@ export default function Page1({tagArray = []}) {
             <p><b>SUMMARY</b></p>
             <hr/>
             <br/>
-              Have a long history in QA, that I won't spoil here.<br />
-              I will say it cost me a 12 years of life<br />
+              Have a long history in QA, that I won't spoil it here.<br />
+              I will say it cost me a 12 years of my life<br />
             <br/>
            
-              I completed Java Script automation courses at Hillel IT
+              I've completed a course on Java Script automation at Hillel IT
               school <a href="https://certificate.ithillel.ua/view/92804927">Hillel Certificate</a>
               <br />
           
