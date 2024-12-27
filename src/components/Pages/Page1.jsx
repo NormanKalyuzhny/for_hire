@@ -13,7 +13,7 @@ export default function Page1({tagArray = []}) {
   }
   return (
       <div class="page-area">
-        <i class="fa-solid fa-share"></i>
+        <i class="fa-solid fa-share" id='outer'></i>
         <div className='page-content'>
           <div className="main-content">
             <h1>Norman Kalyuzhny</h1>

@@ -1,6 +1,6 @@
 .page-area{
   position: absolute;
-  top: 200px;
+  top: 100px;
   width: 30px;
   height: 30px;
   background: var(--semiTransporent-color);
@@ -11,7 +11,7 @@
   padding: 1rem;
 }
 
-.page-area i{
+#outer.fa-share{
   width: 100%;
   height: 100%;
   display: flex;
@@ -19,8 +19,8 @@
   align-items: center;
 }
 
-.page-area:hover i{
-display: none;
+.page-area:hover #outer.fa-share{
+  display: none;
 }
 
 .page-content{
@@ -30,7 +30,7 @@ display: none;
 }
 
 .page-area:hover {
-  width: 40vw;
+  width: 710px;
   height: 100%;
   top: 0;
 }
@@ -43,7 +43,6 @@ display: none;
   display:flex;
   flex-direction: column;
   flex-grow: 1;
-
   border-radius: 0.3rem;
   width: 28vw;
   padding: 0.4rem 1rem;
@@ -53,7 +52,6 @@ display: none;
 .side-content{
   display:flex;
   flex-direction: column;
-
   border-radius: 0.3rem;
   width: 13vw;
   padding: 0.4rem 1rem;
@@ -108,20 +106,45 @@ display: none;
 }
 
 .tags{
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   gap: 0.5rem;
 }
 
 .tags li{
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style: none;
   width: fit-content;
   background: rgb(255, 154, 71);
   padding: 0.3rem 0.5rem;
   border-radius: 0.5rem;
+}
 
+@media (max-width: 710px) {
+  .page-area:hover {
+    width: 100%;
+    height: fit-content;
+
+  }
+
+  .page-area:hover .page-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-area:hover .main-content{
+    width: 100%;
+    padding: 0.4rem 1rem;
+  }
+  
+  .page-area:hover .side-content{
+    width: 100%;
+    padding: 0.4rem 1rem;
+  }
 }
