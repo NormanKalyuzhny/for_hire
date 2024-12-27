@@ -12,6 +12,8 @@ import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx
 import AuthPage from "./components/AuthPage/AuthPage.jsx";
 import DarkMode from "./components/DarkMode/DarkMode.jsx";
 import useLocalStorage from "use-local-storage";
+import CV from "./components/CV/CV.jsx";
+import Page1 from "./components/Pages/Page1.jsx";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -71,10 +73,10 @@ export default function App() {
     margin: "0 0.5rem",
     boxSizing: "border-box",
   }
-
   return(
 
     <div className="wrapper" data-theme={isDark ? "light":"dark"}>
+      <Page1/>
       <Header handleShowSidebar={handleShowSidebar}/>
       <DarkMode isChecked={isDark} handleChange={()=>setIsDark(!isDark)}/>
       <SVGNameAnimation/>
@@ -85,7 +87,7 @@ export default function App() {
           <div className="container-box">
             <ComponentBox title="APIFetch">
               <APIFetch/>
-            </ComponentBox>  
+            </ComponentBox>
             <ComponentBox title="Todo">
               <TodoContainer>
                   <TodoInput 
@@ -109,7 +111,7 @@ export default function App() {
           </ComponentBox>
           <ComponentBox title="Authorization">
             <AuthPage/>
-          </ComponentBox>  
+          </ComponentBox> 
         </div>
       <Footer/>
     </div>

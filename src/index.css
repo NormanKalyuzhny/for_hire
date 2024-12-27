@@ -14,6 +14,7 @@
   --secondary-color: hsl(28, 8%, 33%);
   --componentCircle-color: hsl(0, 0%, 0%);
   --headerItemBorder:hsl(31deg 8.67% 48.66%);
+  --semiTransporent-color:hsla(0, 9%, 15%, 0.5);
 }
 
 [data-theme="dark"]{
@@ -27,6 +28,7 @@
   --textSecondary-color:rgb(255, 255, 255);
   --componentCircle-color: hsl(0, 69%, 37%);
   --headerItemBorder:hsl(39, 100%, 61%);
+  --semiTransporent-color:hsla(234, 16%, 37%, 0.3);
 }
 
 html{
