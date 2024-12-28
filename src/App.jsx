@@ -12,7 +12,7 @@ import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx
 import AuthPage from "./components/AuthPage/AuthPage.jsx";
 import DarkMode from "./components/DarkMode/DarkMode.jsx";
 import useLocalStorage from "use-local-storage";
-import CV from "./components/CV/CV.jsx";
+import Droid from "./components/DroidRun/Droid.jsx";
 import Page1 from "./components/Pages/Page1.jsx";
 import { useState, useEffect } from "react";
 
@@ -112,6 +112,7 @@ export default function App() {
           <ComponentBox title="Authorization">
             <AuthPage/>
           </ComponentBox> 
+          <Droid/>
         </div>
       <Footer/>
     </div>

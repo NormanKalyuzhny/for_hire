@@ -31,7 +31,7 @@
 
 .page-area:hover {
   width: 710px;
-  height: 100%;
+  height: fit-content;
   top: 0;
 }
 
@@ -47,6 +47,7 @@
   width: 28vw;
   padding: 0.4rem 1rem;
   background-color: hsla(0, 9%, 15%, 0.5);
+  padding-bottom: 1rem;
 }
 
 .side-content{
@@ -128,8 +129,7 @@
 @media (max-width: 710px) {
   .page-area:hover {
     width: 100%;
-    height: fit-content;
-
+    height: 100%;
   }
 
   .page-area:hover .page-content{

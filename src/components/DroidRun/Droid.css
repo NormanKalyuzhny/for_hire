@@ -1,0 +1,71 @@
+.droid-block{
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 100px;
+  height: 200px;
+  animation: droidRun 5s linear infinite;
+}
+
+.droid-head{
+  position: absolute;
+  width: 112px;
+  height: 100%;
+  z-index: 1;
+  animation:linear bobHead 0.4s infinite;
+}
+
+.droid-body{
+  position: absolute;
+  top: 65px;
+  width: 112px;
+  height: 112px;
+  z-index: 1;
+  animation:linear spinBody 0.3s infinite;
+  filter: blur(0.5px);
+}
+
+.droidBody-shadow{
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  z-index: 2;
+  top: 65px;
+  opacity: 0.3;
+}
+
+@keyframes spinBody {
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bobHead {
+  0% {
+    transform: rotateZ(0deg) translateX(0);
+  }
+  25% {
+    transform: rotateZ(5deg) translateX(10px);
+  }
+  50% {
+    transform: rotateZ(10deg) translateX(10px);
+  }
+  75% {
+    transform: rotateZ(5deg) translateX(10px);
+  }
+  100% {
+    transform: rotateZ(0deg) translateX(0);
+  }
+}
+
+@keyframes droidRun {
+  0% {
+    transform: translateX(-20vw); /* Начало с левой стороны экрана */
+  }
+  100% {
+    transform: translateX(100vw); /* Конец, когда элемент выходит за правую сторону */
+  }
+}
