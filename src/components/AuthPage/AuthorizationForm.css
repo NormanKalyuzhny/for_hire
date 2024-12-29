@@ -3,13 +3,28 @@
     display: inline-flex;
     width: 100%;
     overflow: hidden;
+    
 }
 
 .container-login,
 .container-register,
 .container-forgotPassword{
     padding: 0 1rem;
+    transform: translateX(0); 
+    opacity: 1;
+
 }
+.container-login,
+.container-register,
+.container-forgotPassword{
+    position: relative;
+    transform: translateX(200px); 
+    animation: slide 0.3s forwards;
+}
+
+.animate-left {
+   animation: slideOut 0.3s forwards;
+  }
 
 .container-login h1,
 .container-register h1,
@@ -132,4 +147,17 @@ p#confirmnote.instructions{
 .offscreen {
     position: absolute;
     left: -9999px;
+}
+
+@keyframes slide {
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideOut {
+    to{
+        transform: translate(-400px);
+        opacity: 0;
+    }
 }

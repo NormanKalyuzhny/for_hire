@@ -5,7 +5,7 @@ import { useRef, useState, useEffect } from "react";
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
-const RegisterForm = ({ onSwitchForm }) => {
+const RegisterForm = ({ onSwitchForm, isDisabled }) => {
   const userRef = useRef();
   const errRef = useRef();
 
@@ -24,9 +24,9 @@ const RegisterForm = ({ onSwitchForm }) => {
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    userRef.current.focus();
-  }, [])
+  // useEffect(() => {
+  //   userRef.current.focus();
+  // }, [])
   
   useEffect(() => {
     setValidName(USER_REGEX.test(user))
@@ -70,6 +70,7 @@ const RegisterForm = ({ onSwitchForm }) => {
             aria-describedby="uidnote"
             onFocus={() => setUserFocus(true)}
             onBlur={()=> setUserFocus(false)}
+            disabled={isDisabled}
           />
             <i className="fa-solid fa-user"></i>
             <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
@@ -79,7 +80,12 @@ const RegisterForm = ({ onSwitchForm }) => {
             </p>
         </div>
         <div className="input-box">
-          <input type="email" placeholder="Email" required />
+          <input 
+            type="email" 
+            placeholder="Email" 
+            required 
+            disabled={isDisabled}
+          />
           <i className="fa-solid fa-envelope"></i>
         </div>
         <div className="input-box">
@@ -94,6 +100,7 @@ const RegisterForm = ({ onSwitchForm }) => {
             aria-describedby="pwdnote"
             onFocus={() => setPwdFocus(true)}
             onBlur={()=> setPwdFocus(false)}
+            disabled={isDisabled}
           />
           <i className="fa-solid fa-lock"></i>
           <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
@@ -115,6 +122,7 @@ const RegisterForm = ({ onSwitchForm }) => {
             aria-describedby="confirmnote"
             onFocus={() => setMatchFocus(true)}
             onBlur={()=> setMatchFocus(false)}
+            disabled={isDisabled}
           />
           <i className="fa-solid fa-lock"></i>
           <p id="confirmnote" className={!validMatch ? "instructions" : "offscreen"}>Must match the first password input field.

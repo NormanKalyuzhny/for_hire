@@ -1,7 +1,8 @@
 .droid-block{
   position: absolute;
+  display: block;
   left: 0;
-  bottom: 40px;
+  bottom: 28px;
   width: 100px;
   height: 200px;
   animation: droidRun 5s linear infinite;
@@ -63,9 +64,15 @@
 
 @keyframes droidRun {
   0% {
-    transform: translateX(-20vw); /* Начало с левой стороны экрана */
+    transform: translateX(-20vw) scale(0.8);/* Начало с левой стороны экрана */
   }
   100% {
-    transform: translateX(100vw); /* Конец, когда элемент выходит за правую сторону */
+    transform: translateX(100vw) scale(0.8);; /* Конец, когда элемент выходит за правую сторону */
+  }
+}
+
+@media (max-width:480px) {
+  .droid-block{
+    animation: droidRun 1s linear forwards;
   }
 }

@@ -4,6 +4,7 @@ import drodiBody  from '../../assets/img/droidBody.png'
 import drodiBodyShadow  from '../../assets/img/droidBodyShadow.png'
 import './Droid.css'
 export default function Droid() {
+
   return (
     <div className='droid-block'>
       <div className='droid-head'>
