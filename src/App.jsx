@@ -73,8 +73,8 @@ export default function App() {
     margin: "0 0.5rem",
     boxSizing: "border-box",
   }
-  return(
 
+  return(
     <div className="wrapper" data-theme={isDark ? "light":"dark"}>
       <Page1/>
       <Header handleShowSidebar={handleShowSidebar}/>
