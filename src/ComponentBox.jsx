@@ -6,7 +6,7 @@ const stylesContainer = {
   justifyContent:"flex-start",
   boxSizing: "border-box",
   width:"fit-content",
-  maxWidth:"400px",
+  maxWidth:"450px",
   marginLeft:"0.5rem",
   marginBottom:"0.5rem",
 }

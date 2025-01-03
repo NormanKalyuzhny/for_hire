@@ -7,8 +7,8 @@
   --link-color: hsl(48, 56%, 82%);
   --base-font-size: 1rem;
   --footer-color: transparent;
-  --main-color:hsl(28, 8%, 44%);
-  --borderMain-color: hsl(31deg 8.67% 48.66%);
+  --main-color:hsla(30, 6%, 63%, 0.301);
+  --borderMain-color: hsla(29, 13%, 63%, 0.705);
   --box-shadow: 0 0 4px hsla(240, 12.00%, 4.90%, 0.73);
   --primary-color: hsl(31, 24%, 81%);
   --secondary-color: hsl(28, 8%, 33%);

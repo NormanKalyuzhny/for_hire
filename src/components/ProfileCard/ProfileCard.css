@@ -1,0 +1,192 @@
+:root{
+  --gold-gradient: linear-gradient(45deg, #d4a53f, #e2c97b, #f1e6b9);
+  --darkBlue-gradient: linear-gradient(45deg,hsl(249, 16%, 4%),hsl(253, 10%, 20%));
+  --light-gradient: linear-gradient(45deg,hsl(240, 11%, 35%),hsl(252, 8%, 64%));
+}
+
+.card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  border-image: linear-gradient(40deg,hsl(250, 13%, 9%),hsl(250, 19%, 10%),hsl(252, 6%, 30%)) 1;
+  background-image: var(--darkBlue-gradient);
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.541);
+  height: 200px;
+  width: 400px;
+  overflow: hidden;
+  filter: brightness(130%);
+}
+
+.dark-stripes{
+  position: absolute;
+  top: -50px;
+  left: 100px;
+}
+
+.dark-stripes .stripes1,
+.dark-stripes .stripes2,
+.dark-stripes .stripes3,
+.dark-stripes .stripes4{
+  position: relative;
+  width: 40px;
+  height: 360px;
+  box-shadow: 0 0 3px hsla(0, 0%, 0%, 0.5);
+}
+
+.dark-stripes .stripes1,
+.dark-stripes .stripes2{
+  transform: scale(2) rotateZ(-60deg);
+  background-color: hsl(250, 17%, 14%);
+}
+
+.dark-stripes .stripes3,
+.dark-stripes .stripes4{
+  transform: scale(2) rotateZ(60deg);
+  background-color: hsl(0, 37%, 15%);
+}
+
+.dark-stripes .stripes1{
+  position: absolute;
+  left: 300px;
+  margin-top: 60px;
+  top: -155px;
+  z-index: 4;
+}
+
+.dark-stripes .stripes2{
+  position: absolute;
+  left: 300px;
+  top: -30px;
+  z-index: 3;
+}
+
+.dark-stripes .stripes4{
+  position: absolute;
+  left: 300px;
+  top: 35px;
+  z-index: 2;
+}
+
+.dark-stripes .stripes3{
+  position: absolute;
+  left: 300px;
+  top: -30px;
+  z-index: 1;
+}
+
+.frame{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 2px solid hsla(253, 8%, 34%, 0.5);
+  transform: rotate(45deg) scale(0.9);
+  left: 25px;
+}
+
+.card .profile-image{
+  position: absolute;
+  left: 25px;
+  border: 2px solid hsl(253, 8%, 24%);
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.card .profile-info{
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  left: 170px;
+}
+
+.card .profile-info .profile-skills{
+  margin-top: 0.5rem;
+}
+
+.card .profile-name,
+.card .profile-skills,
+.card .profile-note{
+  background: var(--light-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+.card .profile-skills{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card .profile-note{
+  position: absolute;
+  top: 8rem;
+  left: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(-30deg);
+}
+
+@media (max-width: 480px) {
+  .card{
+    height: 400px;
+    width: 250px;
+  }
+
+  .card .profile-image{
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+  }
+
+  .frame{
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.9) ;
+    transform-origin: center center;
+  }
+
+  .card .profile-info{
+    left: 50%;
+    top: 200px;
+    width: 100%;
+    transform: translate(-50%);
+    text-align: center; 
+  }
+
+  .dark-stripes .stripes1,
+  .dark-stripes .stripes2,
+  .dark-stripes .stripes3,
+  .dark-stripes .stripes4{
+    left: 0;
+    top: 250px;
+    transform: rotate(0);
+  }
+  .dark-stripes .stripes1,
+  .dark-stripes .stripes2{
+    transform: scale(2) rotate(45deg);
+    left: 45px;
+
+  }
+  .dark-stripes .stripes3,
+  .dark-stripes .stripes4{
+    left: -100px;
+    transform: scale(2) rotate(-45deg);
+
+  }
+  .dark-stripes .stripes3{
+    top: 190px;
+  }
+
+  .card .profile-note{
+    position: absolute;
+    top: 8.5rem;
+    left: 140px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(-45deg);
+  }
+}

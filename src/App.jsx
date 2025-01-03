@@ -14,6 +14,7 @@ import DarkMode from "./components/DarkMode/DarkMode.jsx";
 import useLocalStorage from "use-local-storage";
 import Droid from "./components/DroidRun/Droid.jsx";
 import Page1 from "./components/Pages/Page1.jsx";
+import ProfileCard from "./components/ProfileCard/ProfileCard.jsx";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -103,15 +104,19 @@ export default function App() {
               </TodoContainer>
             </ComponentBox>
           </div>
-          <ComponentBox title="CSS only">
+          <ComponentBox title="CSS">
             <DimensionCube/>
           </ComponentBox>  
-          <ComponentBox title="CSS only">
+          <ComponentBox title="CSS">
             <Circles/>
           </ComponentBox>
           <ComponentBox title="Authorization">
             <AuthPage/>
-          </ComponentBox> 
+          </ComponentBox>
+          <ComponentBox title="CSS">
+          <ProfileCard/> 
+          </ComponentBox>
+          
           <Droid/>
         </div>
       <Footer/>
