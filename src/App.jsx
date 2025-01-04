@@ -103,6 +103,9 @@ export default function App() {
                   />
               </TodoContainer>
             </ComponentBox>
+          <ComponentBox title="CSS">
+            <ProfileCard/> 
+          </ComponentBox>
           </div>
           <ComponentBox title="CSS">
             <DimensionCube/>
@@ -113,9 +116,7 @@ export default function App() {
           <ComponentBox title="Authorization">
             <AuthPage/>
           </ComponentBox>
-          <ComponentBox title="CSS">
-          <ProfileCard/> 
-          </ComponentBox>
+
           
           <Droid/>
         </div>

@@ -1,7 +1,7 @@
 :root{
   --gold-gradient: linear-gradient(45deg, #d4a53f, #e2c97b, #f1e6b9);
   --darkBlue-gradient: linear-gradient(45deg,hsl(249, 16%, 4%),hsl(253, 10%, 20%));
-  --light-gradient: linear-gradient(45deg,hsl(240, 11%, 35%),hsl(252, 8%, 64%));
+  --light-gradient: linear-gradient(45deg,hsl(240, 11%, 18%),hsl(252, 8%, 84%));
 }
 
 .card{
@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   border: 2px solid transparent;
-  border-image: linear-gradient(40deg,hsl(250, 13%, 9%),hsl(250, 19%, 10%),hsl(252, 6%, 30%)) 1;
+  border-image: linear-gradient(40deg,hsl(250, 13%, 10%),hsl(250, 19%, 10%),hsl(252, 6%, 50%)) 1;
   background-image: var(--darkBlue-gradient);
   box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.541);
   height: 200px;
@@ -79,7 +79,8 @@
   position: absolute;
   width: 150px;
   height: 150px;
-  border: 2px solid hsla(253, 8%, 34%, 0.5);
+  border: 2px solid transparent; 
+  border-image: linear-gradient(5deg, hsl(240, 11%,15%), hsl(252, 8%, 54%)) 1; 
   transform: rotate(45deg) scale(0.9);
   left: 25px;
 }
@@ -87,7 +88,8 @@
 .card .profile-image{
   position: absolute;
   left: 25px;
-  border: 2px solid hsl(253, 8%, 24%);
+  border-right: 2px solid hsl(252, 8%, 54%);
+  border-top: 2px solid hsl(252, 8%, 54%);
   width: 150px;
   height: 150px;
   border-radius: 100%;
