@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function SVGNameAnimation() {
     //full line lenth for letters 
-    const svgName = document.querySelectorAll('.svgName path')
-    for(let i = 0; i < svgName.length; i++){
-        console.log(`Letter line lenght ${i} is ${svgName[i].getTotalLength()}`)
-    }
+    // const svgName = document.querySelectorAll('.svgName path')
+    // for(let i = 0; i < svgName.length; i++){
+    //     console.log(`Letter line lenght ${i} is ${svgName[i].getTotalLength()}`)
+    // }
 
   return (
     <div className="svg-container">

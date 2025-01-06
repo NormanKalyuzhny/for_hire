@@ -2,18 +2,16 @@ import React, { useEffect } from 'react'
 import './Pages.css'
 import CV from '../CV/CV';
 
-export default function Page1({tagArray = []}) {
+export default function Page1() {
 
-  useEffect(() => {
-    console.log('tagArray',tagArray)
-  }, [tagArray]); // Следим за изменениями tagArray
 
   const styleText={
     color:'lightyellow',
   }
+  
   return (
-      <div class="page-area">
-        <i class="fa-solid fa-share" id='outer'></i>
+      <div className="page-area">
+        <i className="fa-solid fa-share" id='outer'></i>
         <div className='page-content'>
           <div className="main-content">
             <h1>Norman Kalyuzhny</h1>
@@ -22,10 +20,8 @@ export default function Page1({tagArray = []}) {
             <p><b>SUMMARY</b></p>
             <hr/>
             <br/>
-              Have a long history in QA, that I won't spoil it here.<br />
-              I will say it cost me a 12 years of my life<br />
+              Have a long history in QA, from junior QA specialist to team leader/mentor/project supervisor<br />
             <br/>
-           
               I've completed a course on Java Script automation at Hillel IT
               school <a href="https://certificate.ithillel.ua/view/92804927">Hillel Certificate</a>
               <br />
@@ -33,7 +29,7 @@ export default function Page1({tagArray = []}) {
               <p style={styleText}>After struggling to find a job, I immersed myself in learning Java Script, CSS and HTML. 
               Now I can create web applications.<br />
               <br />
-              0 years of experience (you all love it)
+              0 years of experience
               </p>
           
             <br />
