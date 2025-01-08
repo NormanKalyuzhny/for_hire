@@ -16,6 +16,7 @@ import Droid from "./components/DroidRun/Droid.jsx";
 import Page1 from "./components/Pages/Page1.jsx";
 import ProfileCard from "./components/ProfileCard/ProfileCard.jsx";
 import { useState, useEffect } from "react";
+import Card from "./components/Card/Card.jsx";
 
 export default function App() {
   const [todos, setTodos] = useState([])
@@ -103,10 +104,14 @@ export default function App() {
                   />
               </TodoContainer>
             </ComponentBox>
+            
           <ComponentBox title="CSS">
             <ProfileCard/> 
           </ComponentBox>
           </div>
+          <ComponentBox title="Simple version">
+            <Card/>
+          </ComponentBox>
           <ComponentBox title="CSS">
             <DimensionCube/>
           </ComponentBox>  
@@ -116,8 +121,6 @@ export default function App() {
           <ComponentBox title="Authorization">
             <AuthPage/>
           </ComponentBox>
-
-          
           <Droid/>
         </div>
       <Footer/>

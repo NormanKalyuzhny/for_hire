@@ -15,6 +15,9 @@
   --componentCircle-color: hsl(0, 0%, 0%);
   --headerItemBorder:hsl(31deg 8.67% 48.66%);
   --semiTransporent-color:hsla(0, 9%, 15%, 0.5);
+  --gold-gradient: linear-gradient(45deg, #d4a53f, #e2c97b, #f1e6b9);
+  --darkBlue-gradient: linear-gradient(45deg,hsl(249, 16%, 4%),hsl(253, 10%, 20%));
+  --light-gradient: linear-gradient(80deg,hsl(240, 11%, 10%),hsl(252, 8%, 94%));
 }
 
 [data-theme="dark"]{

@@ -20,7 +20,7 @@ const stylesTitle = {
   textAlign: "center",
   height:"2rem",
   backgroundColor: `var(--main-color)`,
-  border: `2px solid var(--borderMain-color)`,
+  //border: `2px solid var(--borderMain-color)`,
   borderRadius:"0.3rem",
   boxShadow:`var(--box-shadow)`,
 }
@@ -28,7 +28,7 @@ const stylesTitle = {
 const stylesBox = {
   boxSizing: "border-box",
   backgroundColor: `var(--main-color)`,
-  border: `2px solid var(--borderMain-color)`,
+  //border: `2px solid var(--borderMain-color)`,
   borderRadius:"0.3rem",
   boxShadow:`var(--box-shadow)`,
   padding:"0.5rem",

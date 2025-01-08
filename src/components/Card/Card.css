@@ -1,0 +1,107 @@
+.card-content{
+  transition: transform 0.3s ease;
+}
+
+.card-container{
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  perspective: 1000px;
+  height: 25rem;
+  width: 15rem;
+  transition: transform 0.3s ease;
+}
+
+.card-front-side,
+.card-back-side{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 7px hsla(0, 0%, 0%, 0.308);
+  border: 2px solid transparent;
+  border-image: linear-gradient(55deg,hsl(250, 13%, 15%),hsl(250, 19%, 10%),hsl(252, 6%, 50%)) 1;
+  background-image: var(--darkBlue-gradient);
+  padding: 0 1.5rem;
+  backface-visibility: hidden;
+  color: white;
+}
+
+.card-back-side{
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.card-front-side .front-side-text,
+.card-back-side .back-side-text{
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--light-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+.card-container.flipped{
+  transform: rotateY(180deg);
+  transition: transform 0.3s ease;
+}
+
+/*----------------------------------*/
+
+.top-contrainer{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  border-image: linear-gradient(12deg,hsl(250, 13%, 10%),hsl(250, 19%, 17%),hsl(252, 6%, 50%)) 1;
+  background-image: linear-gradient(45deg,hsl(249, 16%, 10%),hsl(253, 10%, 20%));;
+  width: 15rem;
+  padding: 0 1rem;
+}
+
+.card-content input{
+  width: 50px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.rnd-value-output{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#flipCounter,
+#critSuccess,
+#critFailure{
+  width: 30px;
+  height: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#critSuccess{
+  color: hsl(120, 100%, 35%);
+}
+#critFailure{
+  color: hsl(0, 100%, 45%);
+}
+
+@media (max-height:440px) {
+  .card-content{
+    transform: scale(0.7);
+  }
+}

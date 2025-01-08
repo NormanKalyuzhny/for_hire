@@ -1,14 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Pages.css'
 import CV from '../CV/CV';
 
 export default function Page1() {
-
-
   const styleText={
     color:'lightyellow',
   }
-  
   return (
       <div className="page-area">
         <i className="fa-solid fa-share" id='outer'></i>
@@ -20,7 +17,7 @@ export default function Page1() {
             <p><b>SUMMARY</b></p>
             <hr/>
             <br/>
-              Have a long history in QA, from junior QA specialist to team leader/mentor/project supervisor<br />
+              Have a long history in QA, from junior QA specialist to team leader / mentor / project supervisor<br />
             <br/>
               I've completed a course on Java Script automation at Hillel IT
               school <a href="https://certificate.ithillel.ua/view/92804927">Hillel Certificate</a>
