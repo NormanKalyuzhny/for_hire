@@ -7,7 +7,7 @@
   transform-style: preserve-3d;
   display: flex;
   perspective: 1000px;
-  height: 25rem;
+  height: 15rem;
   width: 15rem;
   transition: transform 0.3s ease;
 }
@@ -25,7 +25,7 @@
   background-image: var(--darkBlue-gradient);
   padding: 0 1.5rem;
   backface-visibility: hidden;
-  color: white;
+
 }
 
 .card-back-side{
@@ -79,6 +79,10 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  background: var(--light-gradient);
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
 }
 
 #flipCounter,
