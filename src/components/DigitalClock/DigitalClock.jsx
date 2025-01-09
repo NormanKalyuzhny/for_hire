@@ -59,9 +59,9 @@ export default function DigitalClock() {
         <li id='year'>{time.year % 100}</li>
       </ul>
       <ul className='clock-string'>
-        <li id='dayString'>{time.dayName}</li>
-        <li id='monthString'>{time.monthName}</li>
-        <li id='yearString'>Year</li>
+        <li id='dayString'>{time.dayName.toUpperCase()}</li>
+        <li id='monthString'>{time.monthName.toUpperCase()}</li>
+        <li id='yearString'>YEAR</li>
       </ul>
     </div>
   )
