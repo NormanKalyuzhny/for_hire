@@ -17,6 +17,7 @@ import Page1 from "./components/Pages/Page1.jsx";
 import ProfileCard from "./components/ProfileCard/ProfileCard.jsx";
 import { useState, useEffect } from "react";
 import Card from "./components/Card/Card.jsx";
+import DigitalClock from "./components/DigitalClock/DigitalClock.jsx";
 
 export default function App() {
   const [todos, setTodos] = useState([])
@@ -120,6 +121,9 @@ export default function App() {
           </ComponentBox>
           <ComponentBox title="Authorization">
             <AuthPage/>
+          </ComponentBox>
+          <ComponentBox title="Digital Clock">
+            <DigitalClock/>
           </ComponentBox>
           <Droid/>
         </div>

@@ -21,7 +21,7 @@
 }
 
 [data-theme="dark"]{
-  --background-color: linear-gradient(to top, hsl(0, 4%, 10%), hsl(0, 6%, 17%));
+  --background-color: linear-gradient(45deg,hsl(249, 16%, 4%),hsl(253, 10%, 20%));
   --footer-color: hsl(0, 0%, 5%);
   --main-color: hsl(240, 11%, 16%);
   --borderMain-color: hsl(240, 11%, 17%);
