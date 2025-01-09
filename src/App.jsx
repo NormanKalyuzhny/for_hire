@@ -105,7 +105,6 @@ export default function App() {
                   />
               </TodoContainer>
             </ComponentBox>
-            
           <ComponentBox title="CSS">
             <ProfileCard/> 
           </ComponentBox>

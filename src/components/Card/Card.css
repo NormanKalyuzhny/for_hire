@@ -10,6 +10,7 @@
   height: 15rem;
   width: 15rem;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .card-front-side,
@@ -25,7 +26,6 @@
   background-image: var(--darkBlue-gradient);
   padding: 0 1.5rem;
   backface-visibility: hidden;
-
 }
 
 .card-back-side{
@@ -100,6 +100,7 @@
 #critSuccess{
   color: hsl(120, 100%, 35%);
 }
+
 #critFailure{
   color: hsl(0, 100%, 45%);
 }
