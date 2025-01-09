@@ -21,7 +21,7 @@
   height: 100%;
   box-shadow: 5px 5px 7px hsla(0, 0%, 0%, 0.308);
   border: 2px solid transparent;
-  border-image: linear-gradient(55deg,hsl(250, 13%, 15%),hsl(250, 19%, 10%),hsl(252, 6%, 50%)) 1;
+  border-image: linear-gradient(55deg,hsl(250, 13%, 25%),hsl(250, 19%, 10%),hsl(252, 6%, 50%)) 1;
   background-image: var(--darkBlue-gradient);
   padding: 0 1.5rem;
   backface-visibility: hidden;
