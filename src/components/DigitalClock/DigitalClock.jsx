@@ -44,6 +44,9 @@ export default function DigitalClock() {
   }
   return (
     <div className='digital-clock-block'>
+      <ul className='clock-string'>
+        <li id='dayString'>{time.dayName.toUpperCase()}</li>
+      </ul>
       <ul className='clock-hour'>
         <li id='hour'>{time.hour < 10 ? '0'+ time.hour : time.hour}</li>
         <li>:</li>
@@ -59,9 +62,7 @@ export default function DigitalClock() {
         <li id='year'>{time.year % 100}</li>
       </ul>
       <ul className='clock-string'>
-        <li id='dayString'>{time.dayName.toUpperCase()}</li>
         <li id='monthString'>{time.monthName.toUpperCase()}</li>
-        <li id='yearString'>YEAR</li>
       </ul>
     </div>
   )

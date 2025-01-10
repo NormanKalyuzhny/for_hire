@@ -1,5 +1,6 @@
 .card-content{
   transition: transform 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card-container{
