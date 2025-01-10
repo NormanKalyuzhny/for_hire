@@ -76,10 +76,23 @@ a{
   -webkit-tap-highlight-color: transparent;
 }
 
-.container-box{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.mainContent{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  align-self: center;
   align-items: center;
-  justify-content: flex-start;
+  justify-items: center;
+}
+
+@media (max-width: 1200px) {
+  .mainContent {
+    grid-template-columns: repeat(2, 1fr); /* для экранов меньше 1024px будет 2 колонки */
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1fr; /* для экранов меньше 768px будет 1 колонка */
+  }
 }
