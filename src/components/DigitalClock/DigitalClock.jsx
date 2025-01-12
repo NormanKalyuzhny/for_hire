@@ -42,10 +42,14 @@ export default function DigitalClock() {
       monthName: monthsOfYear[today.getMonth()],
     })
   }
+
+  const styleText = {
+    lineHeight: 0.7,
+  }
   return (
     <div className='digital-clock-block'>
       <ul className='clock-string'>
-        <li id='dayString'>{time.dayName.toUpperCase()}</li>
+        <li style={styleText} id='dayString'>{time.dayName.toUpperCase()}</li>
       </ul>
       <ul className='clock-hour'>
         <li id='hour'>{time.hour < 10 ? '0'+ time.hour : time.hour}</li>

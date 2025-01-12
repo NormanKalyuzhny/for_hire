@@ -1,4 +1,4 @@
-import brandLogo from '../../assets/svg/logo.svg';
+import brandLogo from '../../assets/svg/MyLogoNK.svg';
 import styles from './Header.module.css';
 
 export const menuItems = [
