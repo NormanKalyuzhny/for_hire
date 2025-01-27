@@ -1,19 +1,35 @@
 import styles from './Footer.module.css';
 
-export default function Footer(){
+export default function Footer({setIsAboutVisible, setIsContactVisible}){
+
+    const handleVisibilityAbout = () => {
+        setIsAboutVisible(prev => !prev)
+        setIsContactVisible(false)
+    }
+    const handleVisibilityContact = () => {
+        setIsContactVisible(prev => !prev)
+        setIsAboutVisible(false)
+    }
+
     return(
-        <footer className={styles.footer}>
-            <div className={styles.containerFooter}>
-                <div className={styles.copy}>
+        <footer className='w-full color-white text-center'>
+            <div className='flex items-center min-w-[10rem] min-h-[4rem] max-h-[75px]'>
+                <div className='flex ml-[1rem]'>
                     <p>&copy; {new Date().getFullYear()} Norman Kalyuzhny. All rights reserved.</p>
                 </div>
-                <nav className={styles.footerMenu}>
-                    <ul className={styles.footerMenuList}>
+                <nav className='flex items-center ml-auto pr-[1rem]'>
+                    <ul className='footer-btns flex'>
                         <li className={styles.footerListItem}>
-                            <a href="#" className={styles.footerListLink}>about</a>
+                            <button 
+                                onClick={handleVisibilityAbout}
+                                className='uppercase'>about
+                            </button>
                         </li>
                         <li className={styles.footerListItem} id="open-modal-link">
-                            <p  className={styles.footerListLink}>contact</p>
+                            <button
+                                onClick={handleVisibilityContact} 
+                                className='uppercase'>contact
+                            </button>
                         </li>
                     </ul>
                 </nav>

@@ -1,8 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .shadow-container {
+    box-shadow: var(--shadow-container);
+  }
+  .bg-container{
+    background-color: var(--bg-container);
+  }
+  .bg-overlay{
+    background-color: var(--bg-overlay);
+  }
+  .text-shadow{
+    text-shadow:var(--text-shadow)
+  }
+}
+
+.transform-center {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
 :root{
-  --primary-font: 'Arial, Helvetica, sans-serif';
+  /* main page colors */
+  --primary-font: "Roboto", serif;
   --secondary-font: 'Georgia', serif;
   --background-color: linear-gradient(to top, hsl(0, 4%, 25%), hsl(0, 6%, 77%));
   --text-color: rgb(255, 255, 255);
+
+  /* app page colors */
+  --shadow-container: 5px 5px 10px hsla(240, 10.10%, 21.40%, 0.35);
+  --bg-container:hsla(240, 10.30%, 11.40%, 0.17);
+  --bg-overlay:hsla(240, 11%, 11%, 0.329);
+  --text-shadow: 2px 2px 5px hsla(240, 10.10%, 11.40%, 0.5);
+
+  /* other page colors */
   --textSecondary-color:rgb(255, 255, 255);
   --link-color: hsl(48, 56%, 82%);
   --base-font-size: 1rem;
@@ -22,7 +54,6 @@
 
 [data-theme="dark"]{
   --background-color: linear-gradient(45deg,hsl(249, 16%, 4%),hsl(253, 10%, 20%));
-  --footer-color: hsl(0, 0%, 5%);
   --main-color: hsl(240, 11%, 16%);
   --borderMain-color: hsl(240, 11%, 17%);
   --primary-color: hsl(39, 100%, 61%);
@@ -48,10 +79,19 @@ html{
 
 html,
 body{
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  background-image: var(--background-color);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
   overflow-x: hidden;
+}
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 ul{
@@ -63,36 +103,57 @@ a{
   color: inherit;
 }
 
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 100%;
-  min-height: 100vh;
-  background: var(--background-color);
-}
-
 .logo{
   -webkit-tap-highlight-color: transparent;
 }
 
-.mainContent{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  align-self: center;
-  align-items: center;
-  justify-items: center;
+.download-btn{
+  background-color: hsl(133, 39%, 56%);
+  box-shadow: 0 2px 4px hsla(40, 4%, 26%, 0.541);
+  border-bottom: 4px solid hsl(133, 39%, 43%);
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 1200px) {
-  .mainContent {
-    grid-template-columns: repeat(2, 1fr); /* для экранов меньше 1024px будет 2 колонки */
+.download-btn:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 2px 10px hsla(40, 4%, 21%, 0.541);
+}
+
+@media (max-width:1150px) {
+  .viewport{
+    width: 95%;
+  }
+  .component-container{
+    gap: 0;
+    flex-direction: column;
   }
 }
 
-@media (max-width: 768px) {
-  .mainContent {
-    grid-template-columns: 1fr; /* для экранов меньше 768px будет 1 колонка */
+@media (max-width:750px) {
+  .top-container{
+  }
+}
+
+@media (max-width:550px) {
+  .dicePost{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .dicePostText{
+    width: 100%;
+  }
+  .footer-btns{
+    flex-direction: column;
+  }
+  .contact-block,
+  .about-block{
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width:320px) {
+  #iconsContainer{
+    width: 100%;
   }
 }

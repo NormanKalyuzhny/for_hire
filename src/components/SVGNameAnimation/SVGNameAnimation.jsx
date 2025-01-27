@@ -9,9 +9,9 @@ export default function SVGNameAnimation() {
     // }
 
   return (
-    <div className="svg-container">
+    <div className="svg-container flex justify-center flex-shrink-0 mb-[2rem] w-full h-fit">
       <svg 
-        className="svgName"
+        className="svgName flex w-[1092px] h-[72.802px] flex-shrink-0"
         width="508.3" 
         height="74.701" 
         viewBox="0 0 508.3 74.701" 

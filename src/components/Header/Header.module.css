@@ -1,47 +1,11 @@
-.logo__img{
-  display: flex;
-  align-items: center;
-  width: 85px;
-  padding-left: 1rem;
-}
-
-.container__header{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.header__inner{
-  display: flex;
-  align-items: center;
-  max-height: 30px;
-}
-
-.menu{
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-  
-.menuList{
-  font-family: var(--primary-font);
-  display: flex;
-  margin-left: auto;
-  margin-right: 1rem;
-}
-  
 .menuListLink{
   color: white;
   text-transform: uppercase;
 }
 
-.menuListItem{
-    display: block;
-    padding: 0.3rem 1rem;
-    border: 2px solid transparent;
-}
-
 .menuListItem:hover{
     border: 2px solid var(--headerItemBorder);
+    background-color: var(--headerItemBorder);
     border-radius: 8px;
 }
 
