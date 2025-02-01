@@ -24,14 +24,14 @@ import { useState } from "react";
 export default function App() {
   const [isAboutVisible, setIsAboutVisible] = useState(false)
   const [isContactVisible, setIsContactVisible] = useState(false)
-  const [isAppContentVisible,setIsAppContentVisible] = useState(true)
+  const [isAppContentVisible,setIsAppContentVisible] = useState('app')
 
   return (
     <Wrapper>
       <Marketing/>
-      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px]" >
+      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative z-10" >
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
-        <div className={`content-app w-full ${!isAppContentVisible ? 'hidden' : ''}`}>
+        <div className={`content-app w-full ${isAppContentVisible !== 'app'? 'hidden' : ''}`}>
           <div className="main flex items-center flex-col h-full w-full">
             <AppTopImage/>
             <FTCPostWrapper>
@@ -51,8 +51,8 @@ export default function App() {
             <DicePost3/>
           </div>
         </div>
-        <div className={`content-other w-full ${!isAppContentVisible ? '' : 'hidden'}`}>
-          <div className="main flex flex-col">
+        <div className={`content-other flex flex-col flex-grow w-full ${isAppContentVisible !== 'other' ? 'hidden' : ''}`}>
+          <div className="main ">
             <SVGNameAnimation/>
             <div className="movie-block flex flex-col items-center h-full w-full">
               <MoviesBlock/>

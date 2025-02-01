@@ -22,6 +22,6 @@ export const genres = [
   {id:'history', label:'History'},
   {id:'adventure', label:'Adventure'},
   {id:'fantasy', label:'Fantasy'},
-  {id:'sci_fi', label:'Sci-fi'},
+  {id:'sci-fi', label:'Sci-fi'},
   {id:'romance', label:'Romance'},
 ];

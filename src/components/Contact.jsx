@@ -1,59 +1,64 @@
-import React from 'react'
 
 export default function Contact({isContactVisible,setIsContactVisible}) {
+
   return (
+    <>
+    {isContactVisible &&(
     <form action="https://api.web3forms.com/submit" method="POST" id="form"
-      className={`${!isContactVisible ? 'hidden' : ''} contact-block absolute flex flex-col items-center justify-center bottom-0 mb-[64px] w-full min-h-[300px] backdrop-blur-md bg-overlay`}
+      className={`contact-block absolute flex flex-center flex-col bottom-0 mb-[64px] w-full sm:w-[540px] min-h-[300px]  bg-modal rounded-xl shadow-container`}
     >
       <input type="hidden" name="access_key" value="84fa6896-627f-486e-9c95-ad8be50787a0"/>
       <input type="hidden" name="subject" value="New message from My App website"/>
       <div className="modal-container w-full flex justify-center" id="modal-open">
         <div id="sectionBlock" className='py-5 flex flex-col items-center w-[400px]'>
-          <div className="contact-form flex flex-col min-w-[200px] w-full h-full px-4">
+          <div className="contact-form flex flex-col min-w-[200px] w-full h-full px-4 gap-2">
             <p className=''></p>
             <input 
-              type="name" 
+              type="text" 
               name="name" 
               id="form-name" 
-              required 
+              required
+              autoFocus 
               autoComplete="off" 
               placeholder="Enter your name"
-              className="box pl-2 bg-transparent border-b-[1px] border-gray-300/90 outline-none focus:placeholder-gray-400/30 rounded-[0.3rem]" 
+              className="box input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive] " 
             />
-            <p className='mt-5'></p>
+            <p className=''></p>
             <input 
               type="email" 
               name="email" 
               id="form-email" 
               required 
               placeholder="Enter your email" 
-              className="box pl-2 bg-transparent border-b-[1px] border-gray-300/90 outline-none focus:placeholder-gray-400/30 rounded-[0.3rem]" 
+              className="box input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]" 
             />
-            <p className='mt-5'></p>
+            <p className=''></p>
             <textarea 
               name="message" 
               id="form-message"  
               required 
               placeholder="Enter your message"
-              className="box max-h-[400px] min-h-[50px] bg-transparent  border-b-[1px] border-gray-300/90 outline-none focus:placeholder-gray-400/30 px-2 rounded-[0.3rem]"
+              className="box max-h-[400px] min-h-[50px] input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive] px-2"
             ></textarea>
             </div>
-            <div className="flex justify-center gap-5 mt-5">
+            <div className="flex justify-center gap-5 mt-6">
                 <input 
                   type="submit"  
                   id="send-data-btn"
-                  className="button w-20 rounded-[0.5rem] border-2 border-gray-300/50 text-gray-400 hover:text-green-500 hover:border-green-500 transition duration-300" 
+                  className="button w-20 btn-inactive hover:btn-submit-active transition duration-300" 
                 />
                 <button 
                   onClick={()=>setIsContactVisible(false)}
                   type="cancel" 
                   id="cancel-btn"
-                  className="cancel-btn button w-20 rounded-[0.5rem] border-2 border-gray-300/50 text-gray-400 hover:text-red-500 hover:border-red-500 transition duration-300" 
+                  className="cancel-btn button w-20 btn-inactive hover:btn-cancel-active transition duration-300" 
                 >Cancel</button>
             </div>
           </div> 
         <div id="result"></div>
       </div>
     </form>
+    )}
+    </>
   )
 }

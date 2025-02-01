@@ -16,7 +16,7 @@ const DarkMode = forwardRef(({ isDark, onChange }, ref) => {
   return (
     <div className={styles.darkmodeToggle}>
       <input 
-        ref={ref} // передаем ref в input
+        ref={ref}
         type='checkbox' 
         id='darkmode-toggle'
         className='toggle'

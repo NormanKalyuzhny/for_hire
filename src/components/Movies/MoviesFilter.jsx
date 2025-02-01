@@ -7,6 +7,7 @@ export default function MoviesFilter({query, setQuery, isTagSelected, setIsTagSe
   const handleCheckboxChange = (genreId) => {
     setIsTagSelected(prevSelected => {
       if(prevSelected.includes(genreId)){
+        console.log(isTagSelected)
         return prevSelected.filter(id => id !== genreId)
       } else {
         return [...prevSelected, genreId]
@@ -16,9 +17,9 @@ export default function MoviesFilter({query, setQuery, isTagSelected, setIsTagSe
 
   return (
     <>
-    <div className='container-filter flex w-full min-w-[250px] h-[50px] text-black items-center bg-overlay rounded-lg'>
+    <div className='container-filter flex w-full min-w-[250px] h-[50px] text-black items-center bg-container shadow-container rounded-lg'>
       <div className='relative flex items-center gap-2 pr-[0.5rem] w-full'>
-        <button onClick={()=>setIsTagVisible(prev=>!prev)}><i className="fa-solid fa-sort flex items-center justify-center text-white w-7 h-7 border-2 rounded-xl ml-2"></i></button>
+        <button onClick={()=>setIsTagVisible(prev=>!prev)}><i className="fa-solid fa-sort flex flex-center text-white w-7 h-7 border-2 rounded-xl ml-2"></i></button>
         <input 
           type="text" 
           placeholder='Search by title'
@@ -30,7 +31,7 @@ export default function MoviesFilter({query, setQuery, isTagSelected, setIsTagSe
       </div>
     </div>
     <div className='flex w-full'>
-      <div className={`${!isTagVisible?'hidden':''} absolute mt-[0.3rem] mr-auto text-black flex z-50 max-w-[250px]  bg-gray-300 p-[0.5rem] rounded-lg bg-overlay`}>
+      <div className={`${!isTagVisible?'hidden':''} absolute mt-[0.3rem] mr-auto text-black flex z-50 max-w-[250px] p-[0.5rem] rounded-lg bg-container`}>
         <div className="genre-filter flex justify-start items-center gap-[0.5rem] flex-wrap">
           {genres.map((genre)=>(
             <div key={genre.id}>

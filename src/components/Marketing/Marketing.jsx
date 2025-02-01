@@ -65,7 +65,7 @@ export default function Marketing() {
   return (
     <>
     {isVisible && (
-      <motion.div ref={scope} className='back-layout'>       
+      <motion.div ref={scope} className='back-layout bg-container'>       
         <div className='text-items'>
           <p id='text1'>the one</p>
           <p id='text2'>and only</p>

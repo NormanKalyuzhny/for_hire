@@ -9,34 +9,104 @@
   .bg-container{
     background-color: var(--bg-container);
   }
+  .bg-modal{
+    background-color: var(--bg-modal);
+  }
   .bg-overlay{
     background-color: var(--bg-overlay);
   }
   .text-shadow{
     text-shadow:var(--text-shadow)
   }
+  .btn-d-color{
+    background:var(--btn-downloadColor);
+    border-bottom: var(--btn-downloadBorder);
+    box-shadow: var(--btn-downloadShadows);
+  }
+  .btn-inactive{
+    border: 2px solid var(--btn-inactive);
+    color: var(--btn-inactive);
+    border-radius: 0.5rem;
+  }
+  .btn-close-active{
+    border: 2px solid transparent;
+    color: var(--text-secondaryColor);
+    border-radius: 0.5rem;
+    background: var(--btn-closeActive);
+  }
+  .btn-submit-active{
+    border: 2px solid transparent;
+    color: var(--text-secondaryColor);
+    border-radius: 0.5rem;
+    background: var(--btn-submitActive);
+    font-weight: bolder;
+  }
+  .btn-cancel-active{
+    border: 2px solid transparent;
+    color: var(--text-secondaryColor);
+    border-radius: 0.5rem;
+    background: var(--btn-cancelActive);
+    font-weight: bolder;
+  }
+  .btn-header-active{
+    border: 2px solid transparent;
+    color: var(--text-color);
+    border-radius: 0.5rem;
+    background: var(--bg-container);
+  }
+  .bg-gradient{
+    background: var(--background-color);
+  }
+  .flex-center{
+    justify-content: center;
+    align-items: center;
+  }
+  .input-style {
+    padding-left: 0.5rem;
+    background: transparent;
+    border-bottom: 1px solid var(--btn-closeActive);
+    border-radius: 0.3rem;
+    outline: none;
+  }
+
 }
 
 .transform-center {
   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+.flex-center-all__breaksLogic{
+  @apply flex items-center justify-center
+}
+.full-size {
+  @apply w-full h-full;
 }
 
 :root{
   /* main page colors */
   --primary-font: "Roboto", serif;
   --secondary-font: 'Georgia', serif;
-  --background-color: linear-gradient(to top, hsl(0, 4%, 25%), hsl(0, 6%, 77%));
-  --text-color: rgb(255, 255, 255);
+  --background-color: linear-gradient(to top,hsl(210, 9%, 58%),hsl(210, 53%, 94%));
+  --text-color: #2a3c4f;
 
   /* app page colors */
-  --shadow-container: 5px 5px 10px hsla(240, 10.10%, 21.40%, 0.35);
-  --bg-container:hsla(240, 10.30%, 11.40%, 0.17);
+  --bg-container:hsla(213, 21%, 42%, 0.247);
+  --bg-modal: hsl(214, 12%, 62%);
   --bg-overlay:hsla(240, 11%, 11%, 0.329);
-  --text-shadow: 2px 2px 5px hsla(240, 10.10%, 11.40%, 0.5);
+  --shadow-container: 0 5px 8px hsla(214, 39%, 32%, 0.651);
+  --text-shadow: 1px 2px 3px hsla(240, 46%, 19%, 0);
+  --btn-downloadColor: hsl(133, 39%, 56%);
+  --btn-downloadBorder: 4px solid hsl(133, 39%, 43%);
+  --btn-downloadShadows: 0 2px 4px hsla(40, 4%, 26%, 0.541);
+  --btn-downloadShadowsHover: 0 2px 10px hsla(40, 4%, 21%, 0.541);
+  --btn-inactive: hsla(210, 31%, 24%, 0.486);
+  --btn-closeActive: hsl(211, 31%, 24%);
+  --btn-submitActive: hsl(151, 32%, 35%);
+  --btn-cancelActive: hsl(350, 51%, 43%);
+  --text-secondaryColor: hsl(0, 0%, 100%);
+
 
   /* other page colors */
-  --textSecondary-color:rgb(255, 255, 255);
-  --link-color: hsl(48, 56%, 82%);
+  --link-color: hsl(47, 78%, 96%);
   --base-font-size: 1rem;
   --footer-color: transparent;
   --main-color:hsla(30, 6%, 63%, 0.301);
@@ -53,13 +123,28 @@
 }
 
 [data-theme="dark"]{
-  --background-color: linear-gradient(45deg,hsl(249, 16%, 4%),hsl(253, 10%, 20%));
+    /* app page colors */
+    --bg-container:#4a5859;
+    --bg-modal: hsl(185, 8%, 32%);
+    --bg-overlay:hsla(240, 11%, 11%, 0.329);
+    --shadow-container: 0 0 18px hsl(180, 51%, 55%);
+    --text-shadow: 2px 2px 5px hsla(240, 10.10%, 11.40%, 0.5);
+    --btn-downloadColor: hsl(185, 24%, 43%);
+    --btn-downloadBorder: 4px solid hsl(185, 24%, 33%);
+    --btn-downloadShadows: 0 3px 4px hsla(180, 51%, 65%, 0.658);
+    --btn-downloadShadowsHover: 0 3px 15px hsl(180, 51%, 75%);
+    --btn-inactive: hsla(186, 71%, 85%, 0.486);
+    --btn-closeActive: hsl(185, 70%, 85%);
+    --btn-submitActive: hsl(75, 80%, 60%) ;
+    --btn-cancelActive: #F8B43F;
+    --text-secondaryColor: #1A2828;
+   
+  --text-color: hsl(185, 70%, 85%);   
+  --background-color: #32373B ;
   --main-color: hsl(240, 11%, 16%);
   --borderMain-color: hsl(240, 11%, 17%);
   --primary-color: hsl(39, 100%, 61%);
   --secondary-color: hsl(34, 70%, 52%);
-  --text-color: rgb(53, 33, 33);
-  --textSecondary-color:rgb(255, 255, 255);
   --componentCircle-color: hsl(0, 69%, 37%);
   --headerItemBorder:hsl(39, 100%, 61%);
   --semiTransporent-color:hsla(234, 16%, 37%, 0.3);
@@ -81,7 +166,7 @@ html,
 body{
   color: var(--text-color);
   font-family: var(--primary-font);
-  background-image: var(--background-color);
+  background: var(--background-color);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -108,15 +193,12 @@ a{
 }
 
 .download-btn{
-  background-color: hsl(133, 39%, 56%);
-  box-shadow: 0 2px 4px hsla(40, 4%, 26%, 0.541);
-  border-bottom: 4px solid hsl(133, 39%, 43%);
   transition: all 0.2s ease;
 }
 
 .download-btn:hover{
   transform: translateY(-6px);
-  box-shadow: 0 2px 10px hsla(40, 4%, 21%, 0.541);
+  box-shadow: var(--btn-downloadShadowsHover);
 }
 
 @media (max-width:1150px) {

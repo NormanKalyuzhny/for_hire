@@ -2,14 +2,15 @@ import React from "react";
 
 export default function DownloadBtn() {
   const handleDownload = () => {
-    window.location.href = "https://drive.usercontent.google.com/uc?export=download&id=1r-G6svfkCu9V_3IPGe7HjVi-f2L4pKYH";
+    window.location.href = "";
   };
-//https://drive.usercontent.google.com/uc?id=1r-G6svfkCu9V_3IPGe7HjVi-f2L4pKYH&export=download
+
   return (
     <div>
       <button 
-        className="download-btn flex items-center justify-center w-[110px] h-[40px] rounded-[0.5rem] text-[1rem] font-semibold"
-        onClick={handleDownload}>Download</button>
+        className="download-btn btn-d-color flex-center-all w-[110px] h-[40px] rounded-[0.5rem] text-[1rem] text-white font-semibold disabled:bg-container disabled:border-b-gray-500 disabled:cursor-not-allowed"
+        onClick={handleDownload} >Download
+      </button>
     </div>
   );
 }

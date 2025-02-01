@@ -11,7 +11,7 @@ export default {
         '500': '500px',
       },
       screens: {
-        'md+': '850px',
+        'vsm': '480px',
       }
     },
   },
