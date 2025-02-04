@@ -7,7 +7,7 @@ export default function MoviesBlock() {
   const [isTagSelected, setIsTagSelected] = useState([])
 
   return (
-    <>
+    <div className='flex flex-col'>
       <MoviesFilter 
         setQuery={setQuery} 
         setIsTagSelected={setIsTagSelected}
@@ -17,6 +17,6 @@ export default function MoviesBlock() {
         query={query}
         isTagSelected={isTagSelected}
       />
-    </>
+    </div>
   );
 }

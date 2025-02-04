@@ -9,7 +9,7 @@ export default function AppTopImage() {
   return (
     <div className='app-overview relative flex w-[full] min-w-[280px] vsm:w-full sm:h-400 text-4xl rounded-2xl text-shadow rounded-2xl shadow-container bg-container overflow-hidden'>
       <div className='flex size-full'>
-        <div className="text-container flex flex-col justify-center px-6 py-4 text-left z-10 bg-container w-full md:w-[460px] transition-all duration-300 ease-in-out">
+        <div className="text-container flex flex-col justify-center px-6 py-4 text-left z-10 bg-modal w-full md:w-[460px] transition-all duration-300 ease-in-out">
           <h3>FlipTheCard</h3> <p className='text-sm text-red-600 font-bold'>...in progress</p>
           <ul className='text-xl sm:text-2xl list-disc ml-7 mt-6'>
             <li>{t('li_1')}</li>

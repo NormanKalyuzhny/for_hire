@@ -5,9 +5,9 @@ import { dataList } from './dataList';
 const DataBlock = ({ name, year, rating, image, genre }) => {
 
   return (
-    <div className="movie-card relative flex flex-col w-[200px] h-[300px]">
+    <div className="movie-card relative flex flex-col w-[300px] h-[400px]">
       {image && <img src={image} alt={name} className="movie-image full-size object-cover" />}
-      <div className='movie-info absolute flex flex-col items-center text-center bottom-0 w-full bg-gray-500/80 p-[0.3rem]'>
+      <div className='movie-info  flex flex-col items-center text-center bottom-0 w-full bg-container  p-[0.3rem]'>
         <h3>{name}</h3>
         <p>Year: {year}</p>
         <p>Genre: {genre}</p>

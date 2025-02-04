@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .text-color{
+    color: var(--text-color);
+  }
   .shadow-container {
     box-shadow: var(--shadow-container);
   }

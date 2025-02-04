@@ -61,7 +61,7 @@ export default function App() {
           </div>
         </div>
         <div className={`content-other flex flex-col flex-grow w-full ${isAppContentVisible !== 'other' ? 'hidden' : ''}`}>
-          <div className="main ">
+          <div className="main">
             <SVGNameAnimation/>
             <div className="movie-block flex flex-col items-center h-full w-full">
               <MoviesBlock/>
