@@ -25,14 +25,14 @@ export default function Header({ setIsAppContentVisible }) {
 
 
   return (
-    <header className='mt-[1rem] w-full h-[60px] flex items-center '>
+    <header className='my-[1rem] w-full h-[60px] flex items-center '>
       <div className='w-full'>
         <div className='flex items-center '>
           <a href="#" className="logo drop-shadow-lg ">
             <img
               src={brandLogo}
               alt="Brand logo"
-              className='flex items-center w-[85px] pl-1 drop-'
+              className='flex w-[85px] pl-1 drop-'
             />
           </a>
           <nav className='flex items-center w-full'>
@@ -48,7 +48,7 @@ export default function Header({ setIsAppContentVisible }) {
               </div>
 
             </div>
-            <div className='vsm:hidden'>
+            <div className='vsm:hidden flex'>
               <Sidebar 
                 setIsSidebarVisible={setIsSidebarVisible}
                 isSidebarVisible={isSidebarVisible}

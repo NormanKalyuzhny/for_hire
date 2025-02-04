@@ -7,7 +7,7 @@ export default function About({isAboutVisible,setIsAboutVisible}) {
   }
 
   return (
-    <div id='aboutStripe' className={`about-block absolute flex flex-center bottom-0 mb-[64px] w-full sm:w-[540px] min-h-[300px] bg-modal rounded-xl shadow-container ${!isAboutVisible? 'hidden': ''}`}>
+    <div id='aboutStripe' className={`about-block absolute flex flex-center bottom-0 mb-[64px] w-full sm:w-[540px] min-h-[300px] bg-modal sm:rounded-xl shadow-container backdrop-blur-md ${!isAboutVisible? 'hidden': ''}`}>
       <div id="sectionBlock" className="flex flex-col items-center w-[400px] gap-6">
         <div className='p-[1rem] min-w-[200px]  color-white text-xl'>
          {t('about')}

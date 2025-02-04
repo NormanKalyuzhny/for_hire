@@ -38,7 +38,7 @@ export default function App() {
   return (
     <Wrapper>
       <Marketing/>
-      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative z-10" >
+      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10" >
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
         <div className={`content-app w-full ${isAppContentVisible !== 'app'? 'hidden' : ''}`}>
           <div className="main flex items-center flex-col h-full w-full">

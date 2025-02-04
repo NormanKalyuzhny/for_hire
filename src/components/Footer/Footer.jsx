@@ -12,23 +12,23 @@ export default function Footer({setIsAboutVisible, setIsContactVisible}){
     }
 
     return(
-      <footer className='w-full color-white text-center'>
-        <div className='flex items-center min-w-[10rem] min-h-[4rem] max-h-[75px]'>
-          <div className='flex ml-[1rem]'>
+      <footer className='w-full color-white pl-2 sm:px-4'>
+        <div className='flex items-center min-h-[4rem] max-h-[75px]'>
+          <div className='flex max-w-[200px] sm:max-w-full'>
             <p>&copy; {new Date().getFullYear()} Norman Kalyuzhny. All rights reserved.</p>
           </div>
-          <nav className='flex items-center ml-auto pr-[1rem]'>
-            <ul className='footer-btns flex'>
+          <nav className='flex ml-auto '>
+            <ul className='footer-btns flex '>
               <li className=''>
                 <button 
                   onClick={handleVisibilityAbout}
-                  className='uppercase border-2 border-transparent py-1 px-2 hover:btn-header-active'>{t('btnAbout')}
+                  className='uppercase border-2 border-transparent sm:py-1 px-2 hover:btn-header-active text-nowrap'>{t('btnAbout')}
                 </button>
               </li>
               <li className='' id="open-modal-link">
                 <button
                   onClick={handleVisibilityContact} 
-                  className='uppercase border-2 border-transparent py-1 px-2 hover:btn-header-active'>{t('contactForm:btnContact')}
+                  className='uppercase border-2 border-transparent sm:py-1 px-2 hover:btn-header-active'>{t('contactForm:btnContact')}
                 </button>
               </li>
             </ul>
