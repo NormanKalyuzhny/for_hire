@@ -6,7 +6,7 @@ import useLocalStorage from 'use-local-storage';
 import Sidebar from '../Sidebar';
 import ContentVisibility from '../ContentVisibility';
 
-import LanguageSelector from '../languageSelector';
+import LanguageSelector from '../LanguageSelector';
 import { useTranslation } from 'react-i18next';
 
 export default function Header({ setIsAppContentVisible }) {
