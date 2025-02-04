@@ -5,12 +5,14 @@ import cover2Front from "../assets/img/cover2a.webp"
 import cover2Back from "../assets/img/cover2b.jpg"
 import coverIconFTC from "../assets/img/icoFTC.png"
 import coverIconGold from "../assets/img/icoGold.png"
+import { useTranslation } from "react-i18next";
 import "./DicePost3.css"
 
 export default function DicePost3() {
 const [isCoverVisible, setIsCoverVisible] = useState('coverFTC')
+const {t} = useTranslation('dicePost3')
   return (
-     <div className="dicePost text-shadow flex justify-between items-center rounded-2xl shadow-container bg-container px-[1rem] py-[0.4rem] w-[530px] mb-10 ">
+     <div className="dicePost text-shadow flex justify-between items-center rounded-2xl shadow-container bg-container px-[1rem] py-[0.4rem] w-[530px] mb-10">
         <div className="img-container2 min-w-[150px]">
           <div id='coverDefault' className={`card-inner  h-[230px] ${isCoverVisible !== 'coverFTC'? 'hidden': ''}`} >
             <div className="card-front absolute full-size">
@@ -47,7 +49,7 @@ const [isCoverVisible, setIsCoverVisible] = useState('coverFTC')
             </button>
           </div>
           <div className="dicePostText flex w-[300px] text-[1.2rem]" >
-              <p> I will be adding new cards covers over time, I will also be optimising and refactoring the code for your better expirience </p>
+              <p>{t('dicePost3')}</p>
           </div>
         </div>
     </div>

@@ -6,6 +6,9 @@ import useLocalStorage from 'use-local-storage';
 import Sidebar from '../Sidebar';
 import ContentVisibility from '../ContentVisibility';
 
+import LanguageSelector from '../languageSelector';
+import { useTranslation } from 'react-i18next';
+
 export default function Header({ setIsAppContentVisible }) {
   const [isDark, setIsDark] = useLocalStorage('isDark',false); 
   const [isSidebarVisible, setIsSidebarVisible] = React.useState(false)
@@ -14,6 +17,12 @@ export default function Header({ setIsAppContentVisible }) {
   const handleThemeChange = () => {
     setIsDark(prevIsDark => !prevIsDark);
   };
+
+  const { i18n } = useTranslation();
+  const handleLanguageChange = (newLang) => {
+    i18n.changeLanguage(newLang);
+  };
+
 
   return (
     <header className='mt-[1rem] w-full h-[60px] flex items-center '>
@@ -28,6 +37,7 @@ export default function Header({ setIsAppContentVisible }) {
           </a>
           <nav className='flex items-center w-full'>
             <div className='flex ml-auto pr-1 gap-1'>
+            <LanguageSelector onLanguageChange={handleLanguageChange} />
               <DarkMode 
                 ref={toggleRef} 
                 isDark={isDark} 

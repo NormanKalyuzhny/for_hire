@@ -5,9 +5,13 @@ import Footer from "./components/Footer/Footer.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 
+//Localization 
+import i18n from "./i18n";
+import { useTranslation } from "react-i18next";
+
 //app page
 import Marketing from "./components/Marketing/Marketing.jsx";
-import AppTopImage from "./components/AppTopImage.jsx";
+import AppOverview from "./components/AppOverview.jsx";
 import Notes from "./components/Notes.jsx";
 import DicePost from "./components/DicePost.jsx";
 import DicePost2 from "./components/DicePost2.jsx";
@@ -19,12 +23,17 @@ import FTCPostWrapperSingle from "./FTCPostWrapperSingle.jsx";
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
 import MoviesBlock from "./components/Movies/MoviesBlock.jsx";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const [isAboutVisible, setIsAboutVisible] = useState(false)
   const [isContactVisible, setIsContactVisible] = useState(false)
   const [isAppContentVisible,setIsAppContentVisible] = useState('app')
+  const {t, i18n} = useTranslation('notes');
+
+  useEffect(()=>{
+    i18n.changeLanguage(navigator.language)
+  },[])
 
   return (
     <Wrapper>
@@ -33,21 +42,21 @@ export default function App() {
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
         <div className={`content-app w-full ${isAppContentVisible !== 'app'? 'hidden' : ''}`}>
           <div className="main flex items-center flex-col h-full w-full">
-            <AppTopImage/>
+            <AppOverview/>
             <FTCPostWrapper>
               <FTCPostWrapperSingle>
-                <Notes title={'Do you like board games?'} 
-                  p={'Now you don\'t have to worry about forgetting your dice!'}/>
+                <Notes title={t("title_1")} 
+                  p={t("p_1")}/>
                 <DicePost/>
               </FTCPostWrapperSingle>
               <FTCPostWrapperSingle>
-                <Notes title={'Use it anywhere!'} 
-                  p={'Supported by most android devices.'}/>
+                <Notes title={t("title_2")} 
+                  p={t("p_2")}/>
                 <DicePost2/>
               </FTCPostWrapperSingle>
             </FTCPostWrapper>
-            <Notes title={'Individuality and self-expression!'} 
-              p={'Themes and card covers will emphasize your style!'}/>
+            <Notes title={t("title_3")} 
+              p={t("p_3")}/>
             <DicePost3/>
           </div>
         </div>

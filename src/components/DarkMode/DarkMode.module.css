@@ -15,7 +15,6 @@
     background: var(--text-color);
     cursor: pointer;
     transition: 0.3s;
-
   }
   
   .darkmodeToggle label:after{

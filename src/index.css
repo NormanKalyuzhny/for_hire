@@ -27,6 +27,7 @@
     border: 2px solid var(--btn-inactive);
     color: var(--btn-inactive);
     border-radius: 0.5rem;
+    padding: 0 0.3rem;
   }
   .btn-close-active{
     border: 2px solid transparent;
@@ -39,14 +40,12 @@
     color: var(--text-secondaryColor);
     border-radius: 0.5rem;
     background: var(--btn-submitActive);
-    font-weight: bolder;
   }
   .btn-cancel-active{
     border: 2px solid transparent;
     color: var(--text-secondaryColor);
     border-radius: 0.5rem;
     background: var(--btn-cancelActive);
-    font-weight: bolder;
   }
   .btn-header-active{
     border: 2px solid transparent;
@@ -68,7 +67,19 @@
     border-radius: 0.3rem;
     outline: none;
   }
-
+  .lang-toggle{
+    width: 55px;
+    height: 30px;
+    background: var(--text-secondaryColor);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .lang-label input:checked + .lang-toggle {
+    transform: translateY(100%);
+  }
 }
 
 .transform-center {
@@ -171,6 +182,7 @@ body{
   background-repeat: no-repeat;
   position: relative;
   overflow-x: hidden;
+  transition: background 0.3s ease-in-out;
 }
 
 .poppins-regular {
@@ -211,11 +223,6 @@ a{
   }
 }
 
-@media (max-width:750px) {
-  .top-container{
-  }
-}
-
 @media (max-width:550px) {
   .dicePost{
     flex-direction: column;
@@ -231,6 +238,9 @@ a{
   .contact-block,
   .about-block{
     margin-bottom: 75px;
+  }
+  .app-overview{
+    width: 100%;
   }
 }
 

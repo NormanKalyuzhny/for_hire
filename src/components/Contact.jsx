@@ -1,6 +1,6 @@
-
+import { useTranslation } from "react-i18next"
 export default function Contact({isContactVisible,setIsContactVisible}) {
-
+  const {t} = useTranslation('contactForm')
   return (
     <>
     {isContactVisible &&(
@@ -20,7 +20,7 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
               required
               autoFocus 
               autoComplete="off" 
-              placeholder="Enter your name"
+              placeholder={t('name')}
               className="box input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive] " 
             />
             <p className=''></p>
@@ -29,7 +29,7 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
               name="email" 
               id="form-email" 
               required 
-              placeholder="Enter your email" 
+              placeholder={t('email')} 
               className="box input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]" 
             />
             <p className=''></p>
@@ -37,7 +37,7 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
               name="message" 
               id="form-message"  
               required 
-              placeholder="Enter your message"
+              placeholder={t('msg')} 
               className="box max-h-[400px] min-h-[50px] input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive] px-2"
             ></textarea>
             </div>
@@ -45,14 +45,15 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
                 <input 
                   type="submit"  
                   id="send-data-btn"
-                  className="button w-20 btn-inactive hover:btn-submit-active transition duration-300" 
+                  className="button min-w-20 btn-inactive hover:btn-submit-active transition duration-300"
+                  value={t('submit')}
                 />
                 <button 
                   onClick={()=>setIsContactVisible(false)}
                   type="cancel" 
                   id="cancel-btn"
-                  className="cancel-btn button w-20 btn-inactive hover:btn-cancel-active transition duration-300" 
-                >Cancel</button>
+                  className="cancel-btn button min-w-20 btn-inactive hover:btn-cancel-active transition duration-300" 
+                >{t('cancel')}</button>
             </div>
           </div> 
         <div id="result"></div>

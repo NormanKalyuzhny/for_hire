@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function DicePost() {
+  const {t} = useTranslation('dicePost')
   return (
     <div className="dicePost text-shadow flex justify-between rounded-2xl shadow-container bg-container p-[1rem] w-[530px]">
       <div className="overflow-hidden rounded-[1rem] min-w-[200px] h-[200px]">
@@ -10,7 +12,7 @@ export default function DicePost() {
         />
       </div>
       <div className="dicePostText flex w-[300px] text-[1.2rem] pl-[1rem] items-center">
-        <p>One dice maximum number is 6. Two dice is 12. What about 999? With a simple but elegant input, you can set the maximum number up to 999! No need to carry around a dice bag.</p>
+        <p>{t('dicePost')}</p>
       </div>
     </div>
   );
