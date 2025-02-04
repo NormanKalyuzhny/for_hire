@@ -31,7 +31,7 @@ const {t} = useTranslation('dicePost3')
             </div>
           </div>
         </div>
-        <div className="flex flex-col pl-[1rem] h-full justify-center vsm:gap-[1rem]">
+        <div className="flex flex-col vsm:pl-[1rem] h-full justify-center vsm:gap-[1rem]">
           <div id="iconsContainer" className="w-full vsm:w-[300px] flex gap-[1rem] justify-center vsm:justify-start">
             <button 
               id="iconFtc" 
