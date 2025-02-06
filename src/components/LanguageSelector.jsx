@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 export default function LanguageSelector({ onLanguageChange }) {
   const [isLang,setIsLang] = useState('en')
 

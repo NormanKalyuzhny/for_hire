@@ -11,12 +11,12 @@ export default function Marketing() {
   const [isSkipped, setIsSkipped] = useState(false)
 
   const textSequence = [
-    ['#text1', { opacity: 1, x: 20 }, { duration: 2 }],
+    ['#text1', { opacity: 1, x: 20 }, { duration: 1 }],
     ['#text1', { opacity: 0 }, { duration: 1 }],
-    ['#text2', { opacity: 1, x: 20 }, { duration: 2 }],
+    ['#text2', { opacity: 1, x: 20 }, { duration: 1 }],
     ['#text2', { opacity: 0 }, { duration: 1 }],
-    ['#text3', { opacity: 1, scale: 1.2 }, { duration: 2 }],
-    ['#text3', { opacity: 0 }, { duration: 0.3 }, {transition: "spring", stiffness: 100}],
+    ['#text3', { opacity: 1, x: 20}, { duration: 2 }],
+    ['#text3', { opacity: 0 }, { duration: 0.3 }],
   ];
 
   const imageAnimations = [
@@ -65,23 +65,23 @@ export default function Marketing() {
   return (
     <>
     {isVisible && (
-      <motion.div ref={scope} className='back-layout bg-container'>       
-        <div className='text-items'>
-          <p id='text1'>the one</p>
-          <p id='text2'>and only</p>
-          <p id='text3'>app you'll ever need</p>
+      <motion.div ref={scope} className='back-layout bg-container w-full h-[100dvh] fixed z-[100] flex flex-center overflow-hidden'>       
+        <div className='text-items w-full [&>p]:absolute [&>p]:w-full [&>p]:flex [&>p]:justify-center [&>p]:left-[-20px] text-[3rem] [&>p]:opacity-0'>
+          <p id='text1' >the one</p>
+          <p id='text2' >and only</p>
+          <p id='text3' className='vsm:whitespace-normal text-center'>app you'll ever need</p>
         </div>
-        <div className="title">
+        <div className="title absolute top-[-250px] text-3xl">
           <h1>FlipTheCard!</h1>
         </div>
-        <div className="shell">
-          <div className="img-container">
+        <div className="shell absolute">
+          <div className="relative img-container w-[500px] h-[500px]">
             <motion.img id="imgSide1" src={appImgSide1} alt="image" />
             <motion.img id="imgSide2" src={appImgSide2} alt="image" />
-            <img id='imgSideMiddle' src={appImgSideMiddle} alt="image" />
+            <img className=' ' id='imgSideMiddle' src={appImgSideMiddle} alt="image"/>
           </div>
         </div>
-        <button onClick={() => setIsSkipped(true)} id='skipBtn'>Skip</button>
+        <button onClick={() => setIsSkipped(true)} id='skipBtn' className='opacity-25 hover:opacity-100 cursor-pointer right-0 bottom-0 absolute py-2 px-4 border-none outline-none rounded-tl-md bg-overlay '>Skip</button>
       </motion.div>
     )}
     </>
