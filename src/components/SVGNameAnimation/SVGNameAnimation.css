@@ -9,45 +9,18 @@
     shape-rendering:geometricPrecision;
     transform-origin: center;
     transform: scale(0.75);
-    transition: transform 0.3s ease;
+    transition: transform 1s ease;
     animation:
         text-move-left 1s ease forwards calc(var(--full-delay) + 2.5s),
         text-move-up 1s forwards calc(var(--full-delay) + 3.7s);
 }
 .svgName path {
     transition: fill 0.3s ease-in-out;
-  }
-
-@keyframes text-move-left {
-    to{margin-left: -10%;}
-}
-
-@keyframes text-move-up {
-    to{
-        margin-top: -20%;
-        opacity: 0;
-        display: none;
-        visibility: hidden;
-    }
 }
 
 @media (max-width: 1200px) {
-    .svgName {transform: scale(0.70);
+    .svgName {transform: scale(0.70);}
 }
-}
-@media (max-width: 992px) {
-    .svgName {transform: scale(0.60);
-    }
-}
-@media (max-width: 768px) {
-    .svgName {transform: scale(0.50);
-    }
-}
-@media (max-width: 576px) {
-    .svgName {transform: scale(0.40);
-    }
-}
-@media (max-width: 480px) {
-    .svgName {transform: scale(0.40);
-    }
+@media (max-width: 800px) {
+    .svgName {transform: scale(0.60);}
 }

@@ -71,11 +71,11 @@ export default function Marketing() {
           <p id='text2' >and only</p>
           <p id='text3' className='vsm:whitespace-normal text-center'>app you'll ever need</p>
         </div>
-        <div className="title absolute top-[-250px] text-3xl">
+        <div className="title absolute top-[-300px] text-3xl">
           <h1>FlipTheCard!</h1>
         </div>
         <div className="shell absolute">
-          <div className="relative img-container w-[500px] h-[500px]">
+          <div className="relative img-container w-[400px] h-[400px] md:w-[500px] md:h-[500px]">
             <motion.img id="imgSide1" src={appImgSide1} alt="image" />
             <motion.img id="imgSide2" src={appImgSide2} alt="image" />
             <img className=' ' id='imgSideMiddle' src={appImgSideMiddle} alt="image"/>
