@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './CV.css';
+import './TagsInput.css';
 
 let tagArray = []
 
-export default function CV(props) {
+export default function TagsInput(props) {
   const [inputValue, setInputValue] = useState('') //trackin input value
   const [tagArray, setTagArray] = useState([])
 

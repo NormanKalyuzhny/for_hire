@@ -1,47 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const stylesContainer = {
-  display:"flex",
-  flexDirection:"column",
-  justifyContent:"flex-start",
-  boxSizing: "border-box",
-  width:"fit-content",
-  maxWidth:"450px",
-  marginLeft:"0.5rem",
-  marginBottom:"0.5rem",
-}
-const stylesTitle = {
-  boxSizing: "border-box",
-  display:"flex",
-  alignItems:"center",
-  width:"fit-content",
-  padding:"0.5rem",
-  marginBottom:"0.3rem",
-  textAlign: "center",
-  height:"2rem",
-  backgroundColor: `var(--main-color)`,
-  //border: `2px solid var(--borderMain-color)`,
-  borderRadius:"0.3rem",
-  boxShadow:`var(--box-shadow)`,
-}
-
-const stylesBox = {
-  boxSizing: "border-box",
-  backgroundColor: `var(--main-color)`,
-  //border: `2px solid var(--borderMain-color)`,
-  borderRadius:"0.3rem",
-  boxShadow:`var(--box-shadow)`,
-  padding:"0.5rem",
-}
-
-export default function ComponentBox({children, title}) {
+export default function ComponentBox({children}) {
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   return (
-    <div style={stylesContainer} className='component-container'>
-      <div style={stylesTitle} className="component-title">
-        <h3>{title}</h3>
+    <div className='relative flex flex-col items-center w-fit'>
+      <div onClick={() => setIsCollapsed(prev => !prev)} className='cursor-pointer w-full h-[25px] my-4 bg-container shadow-container rounded-md'>
+      <p className='flex items-center justify-center'>Curriculum Vitae</p>
       </div>
-      <div style={stylesBox} className='component-box'>
+      <div className={`flex justify-center w-full overflow-hidden  ${isCollapsed ? 'h-0':'h-auto'} transition-all duration-300 ease-in-out`}>
           {children}
       </div>
     </div>

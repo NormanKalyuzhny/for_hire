@@ -22,6 +22,8 @@ import FTCPostWrapperSingle from "./FTCPostWrapperSingle.jsx";
 //other page
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
 import MoviesBlock from "./components/Movies/MoviesBlock.jsx";
+import ComponentBox from "./ComponentBox.jsx";
+import MyCV from "./components/temp/Pages/MyCV.jsx";
 
 import { useEffect, useState } from "react";
 
@@ -61,11 +63,15 @@ export default function App() {
           </div>
         </div>
         <div className={`content-other flex flex-col flex-grow w-full ${isAppContentVisible !== 'other' ? 'hidden' : ''}`}>
-          <div className="main">
+          <div className="main flex flex-col items-center">
             <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
+            <ComponentBox>
+              <MyCV/>
+            </ComponentBox>
             <div className="movie-block flex flex-col items-center h-full w-full">
               <MoviesBlock/>
             </div>
+
           </div>
         </div>
         <About 

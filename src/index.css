@@ -221,7 +221,7 @@ ul{
 
 a{
   text-decoration: none;
-  color: inherit;
+  color: hsl(219, 90%, 53%);
 }
 
 .logo{
