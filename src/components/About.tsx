@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next"
-export default function About({isAboutVisible,setIsAboutVisible}) {
+import { AboutVisibility } from "./types"
+
+
+export default function About({isAboutVisible,setIsAboutVisible}:AboutVisibility){
   const {t} = useTranslation('about')
 
   const handleCloseBtn = () => {

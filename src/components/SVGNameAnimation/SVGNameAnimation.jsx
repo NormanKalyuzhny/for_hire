@@ -1,5 +1,5 @@
 import "./SVGNameAnimation.css"
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {useAnimate, motion, AnimatePresence} from 'framer-motion';
 
 export default function SVGNameAnimation({isAppContentVisible}) {

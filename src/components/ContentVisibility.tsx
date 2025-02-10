@@ -1,6 +1,6 @@
-import React from 'react'
+import { ContentVisibilityValues } from "./types"
 
-export default function ContentVisibility({setIsAppContentVisible}) {
+export default function ContentVisibility({setIsAppContentVisible}:ContentVisibilityValues) {
   return (
     <>
       <button

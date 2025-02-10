@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-export default function ComponentBox({children}) {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+export default function ComponentBox({children}: {children:React.ReactNode}) {
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
 
   return (
     <div className='relative flex flex-col items-center w-fit'>

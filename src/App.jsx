@@ -1,8 +1,8 @@
 //every page
-import Wrapper from "./components/Wrapper.jsx";
+import Wrapper from "./components/Wrapper.tsx";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import About from "./components/About.jsx";
+import About from "./components/About.tsx";
 import Contact from "./components/Contact.jsx";
 
 //Localization 
@@ -11,18 +11,18 @@ import { useTranslation } from "react-i18next";
 
 //app page
 import Marketing from "./components/Marketing/Marketing.jsx";
-import AppOverview from "./components/AppOverview.jsx";
-import Notes from "./components/Notes.jsx";
-import DicePost from "./components/DicePost.jsx";
-import DicePost2 from "./components/DicePost2.jsx";
-import DicePost3 from "./components/DicePost3.jsx";
-import FTCPostWrapper from "./FTCPostWrapper.jsx";
-import FTCPostWrapperSingle from "./FTCPostWrapperSingle.jsx";
+import AppOverview from "./components/AppOverview.tsx";
+import Notes from "./components/Notes.tsx";
+import DicePost from "./components/DicePost.tsx";
+import DicePost2 from "./components/DicePost2.tsx";
+import DicePost3 from "./components/DicePost3.tsx";
+import FTCPostWrapper from "./FTCPostWrapper.tsx";
+import FTCPostWrapperSingle from "./FTCPostWrapperSingle.tsx";
 
 //other page
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
 import MoviesBlock from "./components/Movies/MoviesBlock.jsx";
-import ComponentBox from "./ComponentBox.jsx";
+import ComponentBox from "./ComponentBox.tsx";
 import MyCV from "./components/temp/Pages/MyCV.jsx";
 
 import { useEffect, useState } from "react";

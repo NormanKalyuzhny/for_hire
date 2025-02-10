@@ -1,4 +1,3 @@
-import React from 'react'
 import ContentVisibility from './ContentVisibility'
 
 export default function Sidebar({setIsSidebarVisible,isSidebarVisible,setIsAppContentVisible }) {

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { onLanguageChangeProp } from "./types";
 
-export default function LanguageSelector({ onLanguageChange }) {
-  const [isLang,setIsLang] = useState('en')
+export default function LanguageSelector({ onLanguageChange }:onLanguageChangeProp) {
+  const [isLang, setIsLang] = useState('en')
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newLang = event.target.checked ? 'uk' : 'en';
     setIsLang(newLang);
     onLanguageChange(newLang);

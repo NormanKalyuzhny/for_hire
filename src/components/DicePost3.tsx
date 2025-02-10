@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import cover1Front from "../assets/img/cover1a.webp"
 import cover1Back from "../assets/img/cover1b.jpg"
 import cover2Front from "../assets/img/cover2a.webp"
@@ -7,6 +6,7 @@ import coverIconFTC from "../assets/img/icoFTC.png"
 import coverIconGold from "../assets/img/icoGold.png"
 import { useTranslation } from "react-i18next";
 import "./DicePost3.css"
+import { useState } from "react"
 
 export default function DicePost3() {
 const [isCoverVisible, setIsCoverVisible] = useState('coverFTC')

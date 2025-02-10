@@ -1,4 +1,3 @@
-import React from 'react'
 import appWide from '../assets/img/AppBackground.webp'
 import DownloadBtn from './DownloadBtn'
 import { useTranslation } from 'react-i18next'

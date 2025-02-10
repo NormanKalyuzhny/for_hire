@@ -1,4 +1,3 @@
-// Header.jsx
 import React, { useRef } from 'react';
 import brandLogo from '../../assets/svg/MyLogoNK.svg';
 import DarkMode from '../DarkMode/DarkMode';
