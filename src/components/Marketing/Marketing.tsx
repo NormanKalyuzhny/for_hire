@@ -3,14 +3,24 @@ import './Marketing.css';
 import appImgSide1 from '../../assets/img/AppLogo1Side.png';
 import appImgSide2 from '../../assets/img/AppLogo2Side.png';
 import appImgSideMiddle from '../../assets/img/AppLogoMiddleSide.png';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Marketing() {
+export default function Marketing (): JSX.Element  {
   const [scope, animate] = useAnimate();
-  const [isVisible, setIsVisible] = useState(true)
-  const [isSkipped, setIsSkipped] = useState(false)
+  const [isVisible, setIsVisible] = useState<boolean>(true)
+  const [isSkipped, setIsSkipped] = useState<boolean>(false)
 
-  const textSequence = [
+  interface AnimationOptions {
+    duration?: number;
+    opacity?: number;
+    x?: number;
+    y?: number;
+    scale?: number;
+    rotate?: number;
+    delay?: number;
+  }
+
+  const textSequence: Array<[string, Record<string, any>, AnimationOptions]> = [
     ['#text1', { opacity: 1, x: 20 }, { duration: 1 }],
     ['#text1', { opacity: 0 }, { duration: 1 }],
     ['#text2', { opacity: 1, x: 20 }, { duration: 1 }],
@@ -19,9 +29,9 @@ export default function Marketing() {
     ['#text3', { opacity: 0 }, { duration: 0.3 }],
   ];
 
-  const imageAnimations = [
+  const imageAnimations: Array<Array<[string, Record<string, any>, AnimationOptions]>> = [
     [
-      ['.img-container', { scale: 0.8 }],
+      ['.img-container', { scale: 0.8 },{}],
       ['#imgSide1', { x: 2948 }, { duration: 0.3}],
       ['#imgSideMiddle',{x:-2999, y:2999}, { duration: 0.4}],
       ['#imgSide2', { x: -2948 }, { duration: 0.3}],
