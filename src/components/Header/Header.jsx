@@ -7,6 +7,7 @@ import ContentVisibility from '../ContentVisibility';
 
 import LanguageSelector from '../LanguageSelector';
 import { useTranslation } from 'react-i18next';
+import '../../i18n'
 
 export default function Header({ setIsAppContentVisible }) {
   const [isDark, setIsDark] = useLocalStorage('isDark',false); 

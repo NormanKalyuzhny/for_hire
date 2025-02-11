@@ -41,38 +41,42 @@ export default function App(): JSX.Element {
       <Marketing/>
       <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10">
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
-        <div className={`content-app w-full ${isAppContentVisible !== 'app'? 'hidden' : ''}`}>
-          <div className="main flex items-center flex-col h-full w-full">
-            <AppOverview/>
-            <FTCPostWrapper>
-              <FTCPostWrapperSingle>
-                <Notes title={t("title_1")} 
-                  p={t("p_1")}/>
-                <DicePost/>
-              </FTCPostWrapperSingle>
-              <FTCPostWrapperSingle>
-                <Notes title={t("title_2")} 
-                  p={t("p_2")}/>
-                <DicePost2/>
-              </FTCPostWrapperSingle>
-            </FTCPostWrapper>
-            <Notes title={t("title_3")} 
-              p={t("p_3")}/>
-            <DicePost3/>
-          </div>
-        </div>
-        <div className={`content-other flex flex-col flex-grow w-full ${isAppContentVisible !== 'other' ? 'hidden' : ''}`}>
-          <div className="main flex flex-col items-center">
-            <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
-            <ComponentBox>
-              <MyCV/>
-            </ComponentBox>
-            <div className="movie-block flex flex-col items-center h-full w-full">
-              <MoviesBlock/>
+        {isAppContentVisible === 'app' &&(
+          <div className='content-app w-full'>
+            <div className="main flex items-center flex-col h-full w-full">
+              <AppOverview/>
+              <FTCPostWrapper>
+                <FTCPostWrapperSingle>
+                  <Notes title={t("title_1")} 
+                    p={t("p_1")}/>
+                  <DicePost/>
+                </FTCPostWrapperSingle>
+                <FTCPostWrapperSingle>
+                  <Notes title={t("title_2")} 
+                    p={t("p_2")}/>
+                  <DicePost2/>
+                </FTCPostWrapperSingle>
+              </FTCPostWrapper>
+              <Notes title={t("title_3")} 
+                p={t("p_3")}/>
+              <DicePost3/>
             </div>
-
           </div>
-        </div>
+        )}
+        {isAppContentVisible === 'other' &&(
+          <div className='content-other flex flex-col flex-grow w-full'>
+            <div className="main flex flex-col items-center">
+              <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
+              <ComponentBox>
+                <MyCV/>
+              </ComponentBox>
+              <div className="movie-block flex flex-col items-center h-full w-full">
+                <MoviesBlock/>
+              </div>
+
+            </div>
+          </div>
+        )}
         <About 
           isAboutVisible={isAboutVisible} 
           setIsAboutVisible={setIsAboutVisible}
