@@ -33,8 +33,7 @@ export default function App(): JSX.Element {
   const {t, i18n} = useTranslation('notes');
 
   useEffect(()=>{
-    i18n.changeLanguage(navigator.language)
-    console.log(navigator.language.slice(0,2))
+    i18n.changeLanguage(navigator.language.slice(0,2))
   },[])
 
   return (
