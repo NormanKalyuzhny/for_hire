@@ -34,6 +34,7 @@ export default function App(): JSX.Element {
 
   useEffect(()=>{
     i18n.changeLanguage(navigator.language)
+    console.log(navigator.language.slice(0,2))
   },[])
 
   return (
