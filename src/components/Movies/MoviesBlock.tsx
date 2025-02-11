@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import MoviesFilter from './MoviesFilter';
 import MoviesData from './MoviesData';
 export default function MoviesBlock() {
-  const [query, setQuery] = useState("");
-  const [isTagSelected, setIsTagSelected] = useState([])
+  const [query, setQuery] = useState<string>("");
+  const [isTagSelected, setIsTagSelected] = useState<string[]>([])
 
   return (
     <div className='flex flex-col'>
       <MoviesFilter 
-        setQuery={setQuery} 
+        setQuery={setQuery}
         setIsTagSelected={setIsTagSelected}
-        isTagSelected={isTagSelected}
-      />
+        isTagSelected={isTagSelected} query={''}/>
       <MoviesData 
         query={query}
         isTagSelected={isTagSelected}

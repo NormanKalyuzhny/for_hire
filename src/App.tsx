@@ -1,36 +1,35 @@
 //every page
-import Wrapper from "./components/Wrapper.tsx";
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-import About from "./components/About.tsx";
-import Contact from "./components/Contact.jsx";
+import Wrapper from "./components/Wrapper";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 //Localization 
-import i18n from "./i18n";
 import { useTranslation } from "react-i18next";
 
 //app page
-import Marketing from "./components/Marketing/Marketing.jsx";
-import AppOverview from "./components/AppOverview.tsx";
-import Notes from "./components/Notes.tsx";
-import DicePost from "./components/DicePost.tsx";
-import DicePost2 from "./components/DicePost2.tsx";
-import DicePost3 from "./components/DicePost3.tsx";
-import FTCPostWrapper from "./FTCPostWrapper.tsx";
-import FTCPostWrapperSingle from "./FTCPostWrapperSingle.tsx";
+import Marketing from "./components/Marketing/Marketing";
+import AppOverview from "./components/AppOverview";
+import Notes from "./components/Notes";
+import DicePost from "./components/DicePost";
+import DicePost2 from "./components/DicePost2";
+import DicePost3 from "./components/DicePost3";
+import FTCPostWrapper from "./FTCPostWrapper";
+import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
 
 //other page
-import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation.jsx";
-import MoviesBlock from "./components/Movies/MoviesBlock.jsx";
-import ComponentBox from "./ComponentBox.tsx";
-import MyCV from "./components/temp/Pages/MyCV.jsx";
+import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation";
+import MoviesBlock from "./components/Movies/MoviesBlock";
+import ComponentBox from "./ComponentBox";
+import MyCV from "./components/temp/Pages/MyCV";
 
 import { useEffect, useState } from "react";
 
-export default function App() {
-  const [isAboutVisible, setIsAboutVisible] = useState(false)
-  const [isContactVisible, setIsContactVisible] = useState(false)
-  const [isAppContentVisible,setIsAppContentVisible] = useState('app')
+export default function App(): JSX.Element {
+  const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false)
+  const [isContactVisible, setIsContactVisible] = useState<boolean>(false)
+  const [isAppContentVisible,setIsAppContentVisible] = useState<string>('app')
   const {t, i18n} = useTranslation('notes');
 
   useEffect(()=>{
@@ -40,7 +39,7 @@ export default function App() {
   return (
     <Wrapper>
       <Marketing/>
-      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10" >
+      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10">
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
         <div className={`content-app w-full ${isAppContentVisible !== 'app'? 'hidden' : ''}`}>
           <div className="main flex items-center flex-col h-full w-full">

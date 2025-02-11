@@ -1,5 +1,10 @@
 import { useTranslation } from "react-i18next"
-export default function Footer({setIsAboutVisible, setIsContactVisible}){
+
+type visibilityProps = {
+  setIsAboutVisible:React.Dispatch<React.SetStateAction<boolean>>;
+  setIsContactVisible:React.Dispatch<React.SetStateAction<boolean>>;
+}
+export default function Footer({setIsAboutVisible, setIsContactVisible}:visibilityProps){
   const {t} = useTranslation(['about','contactForm'])
 
     const handleVisibilityAbout = () => {

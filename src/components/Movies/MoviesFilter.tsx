@@ -1,13 +1,19 @@
 import React from 'react'
 import { genres } from './dataList'
 
-export default function MoviesFilter({query, setQuery, isTagSelected, setIsTagSelected}) {
-  const [isTagVisible, setIsTagVisible] = React.useState(false)
+type moviesFilterProp = {
+  query:string;
+  setQuery:React.Dispatch<React.SetStateAction<string>>;
+  isTagSelected:string[];
+  setIsTagSelected:React.Dispatch<React.SetStateAction<string[]>>;
+}
 
-  const handleCheckboxChange = (genreId) => {
+export default function MoviesFilter({query, setQuery, isTagSelected, setIsTagSelected}:moviesFilterProp) {
+  const [isTagVisible, setIsTagVisible] = React.useState<boolean>(false)
+
+  const handleCheckboxChange = (genreId:string) => {
     setIsTagSelected(prevSelected => {
       if(prevSelected.includes(genreId)){
-        console.log(isTagSelected)
         return prevSelected.filter(id => id !== genreId)
       } else {
         return [...prevSelected, genreId]

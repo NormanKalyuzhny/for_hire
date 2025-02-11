@@ -2,8 +2,15 @@ import React from 'react';
 import { dataList } from './dataList';
 
 // DataBlock component
-const DataBlock = ({ name, year, rating, image, genre }) => {
+type dataBlockProps = {
+  name:string;
+  year:number;
+  rating:number;
+  image: string;
+  genre: string;
+}
 
+const DataBlock = ({ name, year, rating, image, genre }:dataBlockProps) => {
   return (
     <div className=''>
       <div className="movie-card relative flex flex-col full-size vsm:w-[300px] vsm:h-[400px]">
@@ -19,8 +26,13 @@ const DataBlock = ({ name, year, rating, image, genre }) => {
   );
 };
 
+type moviesDataProp = {
+  query:string;
+  isTagSelected:string[];
+}
+
 // MovieData component
-export default function MoviesData({query, isTagSelected}) {
+export default function MoviesData({query, isTagSelected}:moviesDataProp) {
   const filteredData = dataList.filter((data)=>{
     const matchesQuery = query.toLowerCase() === '' || data.name.toLowerCase().includes(query.toLowerCase())
     const matchesTags = isTagSelected.every(tag => data.genre.includes(tag));
