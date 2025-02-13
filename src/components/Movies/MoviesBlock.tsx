@@ -10,7 +10,7 @@ export default function MoviesBlock() {
       <MoviesFilter 
         setQuery={setQuery}
         setIsTagSelected={setIsTagSelected}
-        isTagSelected={isTagSelected} query={''}/>
+        isTagSelected={isTagSelected} query={query}/>
       <MoviesData 
         query={query}
         isTagSelected={isTagSelected}

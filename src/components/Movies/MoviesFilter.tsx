@@ -2,10 +2,10 @@ import React from 'react'
 import { genres } from './dataList'
 
 type moviesFilterProp = {
-  query:string;
-  setQuery:React.Dispatch<React.SetStateAction<string>>;
-  isTagSelected:string[];
-  setIsTagSelected:React.Dispatch<React.SetStateAction<string[]>>;
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
+  isTagSelected: string[];
+  setIsTagSelected: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 export default function MoviesFilter({query, setQuery, isTagSelected, setIsTagSelected}:moviesFilterProp) {
