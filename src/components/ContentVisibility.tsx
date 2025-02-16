@@ -11,6 +11,10 @@ export default function ContentVisibility({setIsAppContentVisible}:ContentVisibi
         onClick={()=> setIsAppContentVisible('other')} 
         className='uppercase border-2 border-transparent py-1 px-2 hover:btn-header-active'>OTHER
       </button>
+      <button
+        onClick={()=> setIsAppContentVisible('music')} 
+        className='uppercase border-2 border-transparent py-1 px-2 hover:btn-header-active'>MUSIC
+      </button>
     </>
   )
 }

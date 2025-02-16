@@ -21,12 +21,13 @@ import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
 //other page
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation";
 import MoviesBlock from "./components/Movies/MoviesBlock";
-import ComponentBox from "./ComponentBox";
-import MyCV from "./components/temp/Pages/MyCV";
-
 import { useEffect, useState } from "react";
 
+import MusicList from "./components/AudioPlayer/MusicList";
+
+
 export default function App(): JSX.Element {
+
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false)
   const [isContactVisible, setIsContactVisible] = useState<boolean>(false)
   const [isAppContentVisible,setIsAppContentVisible] = useState<string>('app')
@@ -67,13 +68,16 @@ export default function App(): JSX.Element {
           <div className='content-other flex flex-col flex-grow w-full'>
             <div className="main flex flex-col items-center">
               <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
-              <ComponentBox>
-                <MyCV/>
-              </ComponentBox>
               <div className="movie-block flex flex-col items-center h-full w-full">
                 <MoviesBlock/>
               </div>
-
+            </div>
+          </div>
+        )}
+        {isAppContentVisible === 'music' &&(
+          <div className='content-other flex flex-col flex-grow w-full'>
+            <div className="main flex flex-col items-center">
+              <MusicList/>
             </div>
           </div>
         )}

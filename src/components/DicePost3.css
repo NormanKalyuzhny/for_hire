@@ -10,7 +10,3 @@
 .img-container2:hover .card-inner{
   transform: rotateY(-180deg);
 }
-
-.mycard{
-  image-rendering: smooth; /* или image-rendering: smooth; */
-}

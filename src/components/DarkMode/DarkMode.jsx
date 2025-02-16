@@ -1,5 +1,5 @@
 // DarkMode.jsx
-import React, { useEffect, forwardRef } from 'react';
+import { useEffect, forwardRef } from 'react';
 import styles from './DarkMode.module.css';
 
 
