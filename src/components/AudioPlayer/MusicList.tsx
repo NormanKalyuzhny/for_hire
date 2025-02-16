@@ -22,7 +22,7 @@ export default function MusicList() {
         const metadata = audioMetadata[index];
         return (
           <div key={item._id} className="flex flex-col">
-            <section className="flex">
+            <section className="flex mb-2">
               <AudioItem 
                 fileId={item._id}
                 isCurrentlyPlaying={currentAudio?.id === item._id}
@@ -40,11 +40,12 @@ export default function MusicList() {
               )}
             </section> 
             {currentAudio && currentAudio.id === item._id && (
-              <>
-                <div className="time-display">
+              <div className="py-1">
+                <div className="time-display flex justify-end">
                   {Math.floor(currentAudio.currentTime)} / {(currentAudio.duration/60).toFixed(2)}
                 </div>
-                <input 
+                <input
+                  className="w-full appearance-none rounded-sm h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:bg-[#dd7d00] [&::-webkit-slider-thumb]:cursor-pointer" 
                   type="range" 
                   min="0" 
                   max={currentAudio.duration} 
@@ -55,7 +56,7 @@ export default function MusicList() {
                     
                   }} 
                 />
-              </>
+              </div>
             )}
           </div>
         );
