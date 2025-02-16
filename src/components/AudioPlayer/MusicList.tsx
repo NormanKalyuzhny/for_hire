@@ -134,4 +134,4 @@ function AudioItem({ fileId, isCurrentlyPlaying, onPlay, onTimeUpdate,onSeek}: {
       </div>
     </div>
   );
-}
+} 
