@@ -22,12 +22,9 @@ import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation";
 import MoviesBlock from "./components/Movies/MoviesBlock";
 import { useEffect, useState } from "react";
-
-import MusicList from "./components/AudioPlayer/MusicList";
-
+import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 
 export default function App(): JSX.Element {
-
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false)
   const [isContactVisible, setIsContactVisible] = useState<boolean>(false)
   const [isAppContentVisible,setIsAppContentVisible] = useState<string>('app')
@@ -77,7 +74,7 @@ export default function App(): JSX.Element {
         {isAppContentVisible === 'music' &&(
           <div className='content-other flex flex-col flex-grow w-full'>
             <div className="main flex flex-col items-center">
-              <MusicList/>
+            <AudioPlayer/>
             </div>
           </div>
         )}
