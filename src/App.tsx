@@ -25,13 +25,13 @@ import { useEffect, useState } from "react";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 
 export default function App(): JSX.Element {
-  const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false)
-  const [isContactVisible, setIsContactVisible] = useState<boolean>(false)
-  const [isAppContentVisible,setIsAppContentVisible] = useState<string>('app')
+  const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
+  const [isContactVisible, setIsContactVisible] = useState<boolean>(false);
+  const [isAppContentVisible,setIsAppContentVisible] = useState<string>('app');
   const {t, i18n} = useTranslation('notes');
 
   useEffect(()=>{
-    i18n.changeLanguage(navigator.language.slice(0,2))
+    i18n.changeLanguage(navigator.language.slice(0,2));
   },[])
 
   return (
