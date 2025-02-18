@@ -27,7 +27,7 @@ export default function AudioPlayer() {
   const [volume, setVolume] = useState<number>(90);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const currentSongTitle = audioData[currentSongIndex].title;
-  const [isCoverAvailable, setCoverTo] = useState<string>()
+  const [isBtnActive, setBtnActive] = useState<boolean>(false)
 
   useEffect(() => {
     if (audioRef.current) {
@@ -95,7 +95,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="music-container flex flex-col w-[250px] h-full bg-gray-800 rounded-t-xl" id="music-container">
+    <div className="music-container flex flex-col w-full vsm:w-[250px] h-3/4 vsm:h-fit bg-gray-800 rounded-t-xl justify-between vsm:justify-center" id="music-container">
       <audio
         ref={audioRef}
         src={audioData[currentSongIndex].src}
@@ -103,7 +103,7 @@ export default function AudioPlayer() {
         onEnded={handleEnded}
       ></audio>
 
-      <div className="relative absolute flex justify-center h-[250px] img-container">
+      <div className="relative absolute flex justify-center h-full p-4 vsm:p-0 vsm:h-[250px] img-container">
         <img 
           src={audioData[currentSongIndex].cover} 
           alt="music-cover" 
@@ -111,64 +111,66 @@ export default function AudioPlayer() {
           className="size-full object-contain rounded-xl p-2"
         />
       </div>
-      <div className='text-[#dd7d00] py-4 flex flex-center'>{currentSongTitle}</div>
-      <div className="navigation flex flex-col flex-center h-fit mt-auto px-4 pb-4">
-        <div className="main-btn flex flex-center gap-3">
-          <button
-            id="prev"
-            className="action-btn text-[#dd7d00] cursor-pointer border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem]"
-            onClick={prevSong}
-          >
-            <i className="fas fa-backward mr-[2px] mt-1"></i>
-          </button>
+      <section>
+        <div className='text-[#dd7d00] py-4 flex flex-center'>{currentSongTitle}</div>
+        <div className="navigation flex flex-col h-fit px-4 pb-4">
+          <div className="main-btn flex flex-center gap-3">
+            <button
+              id="prev"
+              className="action-btn text-[#dd7d00] cursor-pointer border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
+              onClick={prevSong}
+            >
+              <i className="fas fa-backward mr-[2px] mt-1"></i>
+            </button>
 
-          <button
-            id="stop"
-            className="action-btn text-[#dd7d00] cursor-pointer  border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem]"
-            onClick={toggleStop}
-          >
-            <i className="fas fa-stop mt-[5px]"></i>
-          </button>
+            <button
+              id="stop"
+              className="action-btn text-[#dd7d00] cursor-pointer  border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
+              onClick={toggleStop}
+            >
+              <i className="fas fa-stop mt-[5px]"></i>
+            </button>
 
-          <button
-            id="play"
-            className="flex flex-center w-[3rem] h-[3rem] action-btn action-btn-big border-[2px] border-[#dd7d00] rounded-full text-[#dd7d00] text-2xl "
-            onClick={togglePlay}
-          >
-            <i className='fas fa-play ml-1'></i>
-          </button>
+            <button
+              id="play"
+              className="flex flex-center w-[3rem] h-[3rem] action-btn action-btn-big border-[2px] border-[#dd7d00] rounded-full text-[#dd7d00] text-2xl hover:border-white hover:text-white"
+              onClick={togglePlay}
+            >
+              <i className='fas fa-play ml-1 '></i>
+            </button>
 
-          <button
-            id="pause"
-            className="action-btn text-[#dd7d00] cursor-pointer  border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem]"
-            onClick={togglePause}
-          >
-            <i className="fas fa-pause mt-[5px]"></i>
-          </button>
+            <button
+              id="pause"
+              className="action-btn text-[#dd7d00] cursor-pointer  border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
+              onClick={togglePause}
+            >
+              <i className="fas fa-pause mt-[5px]"></i>
+            </button>
 
-          <button
-            id="next"
-            className="action-btn text-[#dd7d00] cursor-pointer flex flex-center border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem]"
-            onClick={nextSong}
-          >
-            <i className="fas fa-forward flex ml-[2px]"></i>
-          </button>
+            <button
+              id="next"
+              className="action-btn text-[#dd7d00] cursor-pointer flex flex-center border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
+              onClick={nextSong}
+            >
+              <i className="fas fa-forward flex ml-[2px]"></i>
+            </button>
+          </div>
+
+          <div className="volume flex items-center mt-[0.5rem] w-full text-[#dd7d00] gap-2">
+            <p id="volume_show" className="w-[40px] flex justify-center mt-[2px]">{volume}</p>
+            <i className="fa fa-volume-up cursor-pointer" aria-hidden="true" id="volume_icon"></i>
+            <input
+              className="w-full appearance-none rounded-sm h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:bg-[#dd7d00] [&::-webkit-slider-thumb]:cursor-pointer"
+              type="range"
+              min="0"
+              max="100"
+              value={volume}
+              id="volume"
+              onChange={changeVolume}
+            />
+          </div>
         </div>
-
-        <div className="volume flex items-center mt-[0.5rem] w-full text-[#dd7d00] gap-2">
-          <p id="volume_show" className="w-[40px] flex justify-center mt-[2px]">{volume}</p>
-          <i className="fa fa-volume-up cursor-pointer" aria-hidden="true" id="volume_icon"></i>
-          <input
-            className="w-full appearance-none rounded-sm h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[16px] [&::-webkit-slider-thumb]:w-[16px] [&::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:bg-[#dd7d00] [&::-webkit-slider-thumb]:cursor-pointer"
-            type="range"
-            min="0"
-            max="100"
-            value={volume}
-            id="volume"
-            onChange={changeVolume}
-          />
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

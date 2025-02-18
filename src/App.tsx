@@ -73,7 +73,7 @@ export default function App(): JSX.Element {
         )}
         {isAppContentVisible === 'music' &&(
           <div className='content-other flex flex-col flex-grow w-full'>
-            <div className="main flex flex-col items-center">
+            <div className="main flex flex-col items-center size-full">
             <AudioPlayer/>
             </div>
           </div>
