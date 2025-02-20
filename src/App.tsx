@@ -17,6 +17,7 @@ import DicePost2 from "./components/DicePost2";
 import DicePost3 from "./components/DicePost3";
 import FTCPostWrapper from "./FTCPostWrapper";
 import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
+import Ghost from "./components/Ghost";
 
 //other page
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation";
@@ -36,6 +37,7 @@ export default function App(): JSX.Element {
 
   return (
     <Wrapper>
+      <Ghost/>
       <Marketing/>
       <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10">
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
