@@ -3,7 +3,7 @@ import ghostHappyGif from '../assets/img/GhostHappy.gif'
 import ghostScaredGif from '../assets/img/GhostScared.gif'
 
 const Ghost: React.FC = () => {
-  const [coordinates,setCoordinates] = useState<{bottom:number,left:number}>({bottom:200, left:100})
+  const [coordinates,setCoordinates] = useState<{bottom:number,left:number}>({bottom:200, left:30})
   const [isScared,setIsScared] = useState<boolean>(false)
   const ghostRef = useRef<HTMLDivElement | null>(null)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -45,7 +45,7 @@ const Ghost: React.FC = () => {
       setTransitionTime(2)
       setCoordinates({
         bottom: 200, 
-        left: 100,
+        left: 30,
       });
     },2000)
   }
