@@ -104,6 +104,9 @@
   .lang-label input:checked + .lang-toggle {
     transform: translateY(100%);
   }
+  .pixelated{
+    image-rendering: pixelated;
+  }
 }
 
 .transform-center {

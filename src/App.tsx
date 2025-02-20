@@ -37,7 +37,6 @@ export default function App(): JSX.Element {
 
   return (
     <Wrapper>
-      <Ghost/>
       <Marketing/>
       <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10">
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
@@ -45,6 +44,7 @@ export default function App(): JSX.Element {
           <div className='content-app w-full'>
             <div className="main flex items-center flex-col h-full w-full">
               <AppOverview/>
+              <Ghost/>
               <FTCPostWrapper>
                 <FTCPostWrapperSingle>
                   <Notes title={t("title_1")} 
