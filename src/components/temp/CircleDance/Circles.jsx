@@ -3,7 +3,7 @@ import './Circles.css'
 
 export default function Circles() {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <div className="circles-container">
         <div className="circle1">
           <div className="circle2">
@@ -13,7 +13,6 @@ export default function Circles() {
                   <div className="circle6">
                     <div className="circle7">
                       <div className="circle8">
-                        
                       </div>
                     </div>
                   </div>

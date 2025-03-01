@@ -1,4 +1,3 @@
-import React from "react";
 import "./AuthorizationForm.css";
 import { useRef, useState, useEffect } from "react";
 
@@ -52,13 +51,13 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
     }
    }
   return (
-    <div className="container-register">
- 
-      <form onSubmit={handleSubmit}>
-        <h1>Register</h1>
-        <div className="input-box">
+    <div className="w-[350px] px-4">
+      <form onSubmit={handleSubmit} className="flex flex-col flex-center">
+        <h1 className="text-center">Register</h1>
+        <div className="relative flex flex-center mb-4 w-full">
           <label htmlFor="username"></label>
-          <input 
+          <input
+            className="w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]" 
             type="text" 
             placeholder="Username" 
             id="username"
@@ -72,25 +71,27 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
             onBlur={()=> setUserFocus(false)}
             disabled={isDisabled}
           />
-            <i className="fa-solid fa-user"></i>
+            <i className="fa-solid fa-user absolute ml-[90%]"></i>
             <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
               4 to 24 characters.<br />
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
             </p>
         </div>
-        <div className="input-box">
+        <div className="relative flex flex-center mb-4 w-full">
           <input 
+            className="w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]"
             type="email" 
             placeholder="Email" 
             required 
             disabled={isDisabled}
           />
-          <i className="fa-solid fa-envelope"></i>
+          <i className="fa-solid fa-envelope absolute ml-[90%]"></i>
         </div>
-        <div className="input-box">
+        <div className="relative flex flex-col items-center mb-4 w-full">
           <label htmlFor="password"></label>
           <input
+            className="w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]"
             type="password" 
             placeholder="Password"
             id="password"
@@ -102,7 +103,7 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
             onBlur={()=> setPwdFocus(false)}
             disabled={isDisabled}
           />
-          <i className="fa-solid fa-lock"></i>
+          <i className="fa-solid fa-lock absolute ml-[90%]"></i>
           <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
             8 to 24 characters.<br />
             Must include uppercase and lowercase letters, a number and a special character.<br />
@@ -110,9 +111,11 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
           </p>
         </div>
 
-        <div className="input-box">
+        <div className="relative flex flex-col items-center mb-4 w-full">
           <label htmlFor="confirm_pwd"></label>
+          <i className="fa-solid fa-lock absolute ml-[90%]"></i>
           <input 
+            className="relative w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]"
             type="password" 
             placeholder="Confirm Password" 
             id="confirm_pwd"
@@ -124,18 +127,17 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
             onBlur={()=> setMatchFocus(false)}
             disabled={isDisabled}
           />
-          <i className="fa-solid fa-lock"></i>
           <p id="confirmnote" className={!validMatch ? "instructions" : "offscreen"}>Must match the first password input field.
           </p>
         </div>
-        <button type="submit" className="btn" disabled={!validName || !validPwd || !validMatch ? true : false}>
+        <button type="submit" className="max-w-20 hover:underline transition duration-300 mb-1 disabled:text-[--btn-inactive] disabled:cursor-not-allowed" disabled={!validName || !validPwd || !validMatch ? true : false}>
           Register
         </button>
         <div className="register-link"></div>
 
         <p>
           Already have an account?{" "}
-          <button onClick={() => onSwitchForm("login")} id="btnLink">
+          <button onClick={() => onSwitchForm("login")} id="btnLink" className="hover:underline">
             Login
           </button>{" "}
         </p>

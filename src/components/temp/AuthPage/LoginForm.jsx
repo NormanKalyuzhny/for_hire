@@ -1,37 +1,52 @@
-import React from 'react'
 import './AuthorizationForm.css'
 
  const LoginForm = ({ onSwitchForm, isDisabled }) => {
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Это предотвращает отправку формы, и перезагрузку страницы
-    // Ваш код для обработки данных формы
+    e.preventDefault(); 
   };
   
   return (
-
-    <div className='container-login'>
-        <form onSubmit={handleSubmit}>
-            <h1>Login</h1>
-            <div className="input-box">
-                <input type="text" placeholder='Username' required disabled={isDisabled}/>
-                <i className="fa-solid fa-user"></i>
+    <div className='flex w-[350px] px-4'>
+        <form onSubmit={handleSubmit} className='relative w-full flex flex-col '>
+            <h1 className='text-center'>Login</h1>
+            <div className="relative flex flex-center mb-4 w-full">
+                <input 
+                  type="text" 
+                  placeholder='Username' 
+                  required disabled={isDisabled} 
+                  className='w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]'
+                />
+                <i className="fa-solid fa-user absolute ml-[90%]"></i>
             </div>
 
-            <div className="input-box">
-                <input type="password" placeholder='Password' required disabled={isDisabled}/>
-                <i className="fa-solid fa-lock"></i>
+            <div className="relative flex flex-center mb-4 w-full">
+                <input 
+                  type="password" 
+                  placeholder='Password' 
+                  required 
+                  disabled={isDisabled} 
+                  className='w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]'/>
+                <i className="fa-solid fa-lock absolute ml-[90%]"></i>
             </div>
 
-            <div className="remember-forgot">
-              <label>
+            <div className="flex justify-between">
+              <label className='cursor-pointer'>
                 <input type="checkbox"/> Remember me
               </label>
-             <p> <button onClick={() => onSwitchForm('forgot')}> Forgot password?</button></p>
+             <p> <button onClick={() => onSwitchForm('forgot')} className='hover:underline'> Forgot password?</button></p>
             </div>
-            <button type="submit" className='btn'>Login</button>
-            <div className="register-link"></div>
-            <p>Don't have an account? <button onClick={() => onSwitchForm('register')} >Register</button> </p>
+            <div className='w-full flex justify-center'>
+              <button
+                className='max-w-20 hover:underline transition duration-300 mb-1 disabled:text-[--btn-inactive] disabled:cursor-not-allowed' 
+                type="submit"
+                disabled
+              >Login</button>
+            </div>
+            <div className="flex justify-between">
+            <p>Don't have an account?</p>
+            <button onClick={() => onSwitchForm('register')} className='hover:underline'>Register</button>
+            </div>
         </form>
     </div>
   )

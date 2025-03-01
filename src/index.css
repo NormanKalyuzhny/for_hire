@@ -129,7 +129,7 @@
   /* app page colors */
   --bg-container:#b5c3d4;
   --bg-modal: #b5c3d4;
-  --bg-overlay:hsla(214, 39%, 32%, 0.342);
+  --bg-overlay:hsla(214, 39%, 67%, 0.342);
   --shadow-container: 0 5px 8px hsla(214, 39%, 32%, 0.651);
   --text-shadow: 1px 2px 3px hsla(240, 46%, 19%, 0);
   --btn-downloadColor: hsl(133, 39%, 56%);
@@ -146,7 +146,7 @@
   --link-color: hsl(47, 78%, 96%);
   --base-font-size: 1rem;
   --footer-color: transparent;
-  --main-color:hsla(30, 6%, 63%, 0.301);
+  --main-color:hsla(229, 20%, 49%, 0.938);
   --borderMain-color: hsla(29, 13%, 63%, 0.705);
   --box-shadow: 0 0 4px hsla(240, 12.00%, 4.90%, 0.73);
   --primary-color: hsl(31, 24%, 81%);

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import './DigitalClock.css'
 
 export default function DigitalClock() {
   const [time, setTime] = useState({
@@ -13,13 +12,6 @@ export default function DigitalClock() {
      monthName:'',
   });
 
-  useEffect(()=>{
-    const intervalId = setInterval(()=>{
-      digitalClock();
-    }, 1000)
-    return () => clearInterval(intervalId);
-  },[])
-  
   useEffect(()=>{
     const intervalId = setInterval(()=>{
       digitalClock();
@@ -47,25 +39,25 @@ export default function DigitalClock() {
     lineHeight: 0.7,
   }
   return (
-    <div className='digital-clock-block'>
-      <ul className='clock-string'>
+    <div className='digital-clock-block flex flex-col flex-center leading-none text-container'>
+      <ul className='clock-string text-2xl'>
         <li style={styleText} id='dayString'>{time.dayName.toUpperCase()}</li>
       </ul>
-      <ul className='clock-hour'>
+      <ul className='clock-hour flex text-2xl gap-1'>
         <li id='hour'>{time.hour < 10 ? '0'+ time.hour : time.hour}</li>
         <li>:</li>
         <li id='minutes'>{time.minutes < 10 ? '0'+ time.minutes : time.minutes}</li>
         <li>:</li>
         <li id='seconds'>{time.seconds < 10 ? '0'+ time.seconds : time.seconds}</li>
       </ul>
-      <ul className='clock-day'>
+      <ul className='clock-day flex text-md'>
         <li id='day'>{time.day}</li>
         <li>.</li>
         <li id='month'>{time.month}</li>
         <li>.</li>
         <li id='year'>{time.year % 100}</li>
       </ul>
-      <ul className='clock-string'>
+      <ul className='clock-string text-2xl'>
         <li id='monthString'>{time.monthName.toUpperCase()}</li>
       </ul>
     </div>

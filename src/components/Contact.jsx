@@ -38,7 +38,7 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
               id="form-message"  
               required 
               placeholder={t('msg')} 
-              className="box max-h-[400px] min-h-[50px] input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive] px-2"
+              className="box max-h-[400px] min-h-[50px] input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive] px-2 overflow-hidden"
             ></textarea>
             </div>
             <div className="flex justify-center gap-5 mt-6">

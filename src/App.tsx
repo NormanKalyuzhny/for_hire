@@ -24,6 +24,11 @@ import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation";
 import MoviesBlock from "./components/Movies/MoviesBlock";
 import { useEffect, useState } from "react";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
+import DimensionCube from "./components/temp/3D Cube/DimensionCube";
+import AuthPage from "./components/temp/AuthPage/AuthPage";
+import Card from "./components/temp/Card/Card";
+import Circles from "./components/temp/CircleDance/Circles";
+import DigitalClock from "./components/DigitalClock";
 
 export default function App(): JSX.Element {
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
@@ -44,7 +49,6 @@ export default function App(): JSX.Element {
           <div className='content-app w-full'>
             <div className="main flex items-center flex-col h-full w-full">
               <AppOverview/>
-              <Ghost/>
               <FTCPostWrapper>
                 <FTCPostWrapperSingle>
                   <Notes title={t("title_1")} 
@@ -67,8 +71,16 @@ export default function App(): JSX.Element {
           <div className='content-other flex flex-col flex-grow w-full'>
             <div className="main flex flex-col items-center">
               <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
+              <Ghost/>
               <div className="movie-block flex flex-col items-center h-full w-full">
                 <MoviesBlock/>
+                <span className="flex gap-4 flex-wrap mt-4 justify-evenly">
+                  <DimensionCube/>
+                  <Circles/>
+                  <Card/>
+                  <AuthPage/>
+                  <DigitalClock/>
+                </span>
               </div>
             </div>
           </div>

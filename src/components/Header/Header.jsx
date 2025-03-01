@@ -22,7 +22,6 @@ export default function Header({ setIsAppContentVisible }) {
     i18n.changeLanguage(newLang);
   };
 
-
   return (
     <header className='my-[1rem] w-full h-[60px] flex items-center '>
       <div className='w-full'>

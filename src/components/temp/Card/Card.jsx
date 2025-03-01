@@ -51,7 +51,7 @@ export default function Card() {
         onClick={() => setIsFlipped(prev => !prev)} 
       >
         <div className='card-front-side'>
-          <div className="front-side-text">
+          <div className="front-side-text flex justify-center">
             <h2> Do you feel lucky?</h2>
           </div>
         </div>

@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
-import LoginForm from './LoginForm'; // Импорт компонентов
+import LoginForm from './LoginForm'; 
 import RegisterForm from './RegisterForm';
 import ForgotPasswordForm from './ForgotPasswordForm';
-import './AuthorizationForm.css'; // Стили для анимации
+import './AuthorizationForm.css'; 
 
 const AuthPage = () => {
   const [formState, setFormState] = useState('login');
-  const [isAnimating, setIsAnimating] = useState(false); // Состояние для анимации
+  const [isAnimating, setIsAnimating] = useState(false); 
   const [isDisabled, setIsDisabled] = useState(false)
 
   const handleSwitchForm = (state) => {
-    setIsAnimating(true); // Начинаем анимацию
+    setIsAnimating(true); 
     setIsDisabled(true)
     setTimeout(() => {
-      setFormState(state); // Меняем форму после завершения анимации
-      setIsAnimating(false); // Завершаем анимацию
+      setFormState(state); 
+      setIsAnimating(false); 
       setIsDisabled(false)
-    }, 300); // Задержка, соответствующая времени анимации
+    }, 300);
   };
 
-  
-
   return (
-    <div className="auth-container">
+    <div className="auth-container py-2 overflow-hidden w-fit h-fit relative bg-container rounded-md">
       {formState === 'login' && (
-        <div className={`form-container ${isAnimating ? 'animate-left' : ''}`}>
+        <div className={`form-container ${isAnimating ? 'animate-left' : ''} `}>
           <LoginForm onSwitchForm={handleSwitchForm} isDisabled={isDisabled}/>
         </div>
       )}

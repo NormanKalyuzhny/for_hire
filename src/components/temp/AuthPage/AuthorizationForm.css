@@ -1,19 +1,9 @@
-.auth-container{
-    position: relative;
-    display: inline-flex;
-    width: 100%;
-    overflow: hidden;
-    
-}
-
 .container-login,
 .container-register,
 .container-forgotPassword{
-    padding: 0 1rem;
-    transform: translateX(0); 
-    opacity: 1;
-
+    transform: translateX(0);
 }
+
 .container-login,
 .container-register,
 .container-forgotPassword{
@@ -24,28 +14,6 @@
 
 .animate-left {
    animation: slideOut 0.3s forwards;
-  }
-
-.container-login h1,
-.container-register h1,
-.container-forgotPassword h1{
-    text-align: center;
-    margin-bottom: 1rem;
-    width: 350px;
-}
-
-.input-box{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.input-box i{
-    position: absolute;
-    margin-left: 90%;
-    top: 10px;
 }
 
 .input-box input{
@@ -53,78 +21,12 @@
     width: 100%;
     height: 2rem;
     outline: none;
-    color: azure;
-    border: none;
-    border-bottom: 2px solid var(--primary-color);
     padding-left: 0.5rem;
     font-size: 1rem;
 }
 
 .input-box input::placeholder{
     position: absolute;
-    color:var(--primary-color);
-}
-
-.input-box input:focus::placeholder {
-    opacity: 30%;
-    transition: opacity 0.2s ease;
-  }
-
-.container-login .remember-forgot{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.container-login p button,
-.container-register p button,
-.container-forgotPassword p button{
-    border: none;
-    background-color: transparent;
-    color: var(--link-color);
-}
-
-
-.container-forgotPassword p button:hover,
-.container-login p button:hover,
-.container-register p button:hover{
-    text-decoration: underline;
-    color: var(--link-color);
-}
-
-.container-login .btn,
-.container-register .btn,
-.container-forgotPassword .btn{
-    position: relative;
-    width: 100%;
-    height: 2rem;
-    border: none;
-    outline: none;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    color: hsl(0, 2%, 32%);
-}
-
-.container-register .btn:disabled{
- color: hsla(0, 0%, 0%, 0.24);
- cursor: unset;
-}
-
-.btn{
-    margin-bottom: 1rem;
-}
-
-.container-login p,
-.container-register p,
-.container-forgotPassword p{
-    text-align: center;
-}
-
-.container-register .input-box{
-    display: flex;
-    flex-direction: column;
 }
 
 p#uidnote.instructions,
@@ -138,10 +40,11 @@ p#confirmnote.instructions{
     margin-top: 0.5rem;
     font-size: 0.9rem;
     border-radius: 0.3rem;
-    background: var(--secondary-color);
+    font-style: italic;
     color: var(--text-color);
     padding: 0.25rem;
     width: 100%;
+    background-color: var(--bg-overlay);
 }
 
 .offscreen {
