@@ -52,9 +52,9 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
    }
   return (
     <div className="w-[350px] px-4">
-      <form onSubmit={handleSubmit} className="flex flex-col flex-center">
+      <form onSubmit={handleSubmit} className="flex flex-col items-center">
         <h1 className="text-center">Register</h1>
-        <div className="relative flex flex-center mb-4 w-full">
+        <div className="relative flex flex-col items-center mb-4 w-full">
           <label htmlFor="username"></label>
           <input
             className="w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]" 
@@ -71,7 +71,7 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
             onBlur={()=> setUserFocus(false)}
             disabled={isDisabled}
           />
-            <i className="fa-solid fa-user absolute ml-[90%]"></i>
+            <i className="fa-solid fa-user absolute ml-[90%] top-1"></i>
             <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
               4 to 24 characters.<br />
               Must begin with a letter.<br />
@@ -103,7 +103,7 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
             onBlur={()=> setPwdFocus(false)}
             disabled={isDisabled}
           />
-          <i className="fa-solid fa-lock absolute ml-[90%]"></i>
+          <i className="fa-solid fa-lock absolute ml-[90%] top-1"></i>
           <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
             8 to 24 characters.<br />
             Must include uppercase and lowercase letters, a number and a special character.<br />
@@ -113,7 +113,7 @@ const RegisterForm = ({ onSwitchForm, isDisabled }) => {
 
         <div className="relative flex flex-col items-center mb-4 w-full">
           <label htmlFor="confirm_pwd"></label>
-          <i className="fa-solid fa-lock absolute ml-[90%]"></i>
+          <i className="fa-solid fa-lock absolute ml-[90%] top-1"></i>
           <input 
             className="relative w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]"
             type="password" 
