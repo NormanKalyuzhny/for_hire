@@ -5,11 +5,11 @@ import ForgotPasswordForm from './ForgotPasswordForm';
 import './AuthorizationForm.css'; 
 
 const AuthPage = () => {
-  const [formState, setFormState] = useState('login');
-  const [isAnimating, setIsAnimating] = useState(false); 
-  const [isDisabled, setIsDisabled] = useState(false)
+  const [formState, setFormState] = useState<string>('login');
+  const [isAnimating, setIsAnimating] = useState<boolean>(false); 
+  const [isDisabled, setIsDisabled] = useState<boolean>(false)
 
-  const handleSwitchForm = (state) => {
+  const handleSwitchForm = (state: React.SetStateAction<string>) => {
     setIsAnimating(true); 
     setIsDisabled(true)
     setTimeout(() => {

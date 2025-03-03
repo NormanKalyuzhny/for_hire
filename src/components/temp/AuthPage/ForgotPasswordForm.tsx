@@ -1,8 +1,13 @@
 import { useState } from "react"
 
-const ForgotPasswordForm = ({onSwitchForm}) => {
+interface onSwitch{
+  onSwitchForm:(value:string) => void
+  isDisabled:boolean
+}
+
+const ForgotPasswordForm = ({onSwitchForm,isDisabled}:onSwitch) => {
   const [queryValue,setQueryValue] = useState('')
-  const emailRegEx = /^(?=.*@)(?=.*\.).+$/
+  const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
   return (
  
     <div className='container-forgotPassword flex flex-col items-center w-[350px] px-4'>

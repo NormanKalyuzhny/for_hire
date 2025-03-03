@@ -1,8 +1,12 @@
 import './AuthorizationForm.css'
 
- const LoginForm = ({ onSwitchForm, isDisabled }) => {
+ interface LoginFormProps{
+  onSwitchForm:(value:string) => void;
+  isDisabled:boolean;
+ } 
+ const LoginForm = ({ onSwitchForm, isDisabled }:LoginFormProps) => {
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault(); 
   };
   
@@ -25,6 +29,7 @@ import './AuthorizationForm.css'
                   type="password" 
                   placeholder='Password' 
                   required 
+                  autoComplete=''
                   disabled={isDisabled} 
                   className='w-full input-style placeholder-[--text-color] focus:placeholder-[--btn-inactive]'/>
                 <i className="fa-solid fa-lock absolute ml-[90%]"></i>
