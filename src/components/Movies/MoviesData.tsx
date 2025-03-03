@@ -13,7 +13,7 @@ type dataBlockProps = {
 const DataBlock = ({ name, year, rating, image, genre }:dataBlockProps) => {
   return (
     <div className=''>
-      <div className="movie-card relative flex flex-col full-size vsm:w-[300px] vsm:h-[400px]">
+      <div className="movie-card  flex flex-col full-size vsm:w-[300px] vsm:h-[400px]">
         {image && <img src={image} alt={name} className="movie-image full-size object-cover" />}
       </div>
       <div className='movie-info  flex flex-col flex-center text-center bottom-0 vsm:w-[300px] h-[140px] bg-container text-color p-[0.3rem]'>
@@ -40,7 +40,7 @@ export default function MoviesData({query, isTagSelected}:moviesDataProp) {
   })
 
   return (
-    <div className="container flex flex-wrap justify-center sm:justify-start items-center gap-[1rem] mt-[1rem] ext-[0.8rem] w-full">
+    <div className="container flex flex-wrap justify-center sm:justify-evenly items-center gap-[1rem] mt-[1rem] ext-[0.8rem] w-full">
        {filteredData.length === 0 ? (
         <div className="flex text-shadow text-[--text-color] flex-center w-full text-xl flex-grow">No movies found matching your criteria.</div>
       ) : (

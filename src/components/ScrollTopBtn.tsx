@@ -6,8 +6,8 @@ const ScrollTopBtn:React.FC  = () => {
   return (
     <div 
       onClick={handleTopScroll}
-      className="cursor-pointer w-[50px] h-[50px] m-4 absolute z-50 right-0 bottom-0 rounded-full bg-container shadow-container ">
-        <p className="flex flex-center size-full">UP</p>
+      className="cursor-pointer w-[100px] h-[30px]  z-50   rounded-md bg-container shadow-container hover:w-[150px] transition-all ease-in-out">
+        <i className="fa-solid fa-arrows-up-to-line flex flex-center size-full"></i>
     </div>
   );
 };

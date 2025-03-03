@@ -18,6 +18,7 @@ import DicePost3 from "./components/DicePost3";
 import FTCPostWrapper from "./FTCPostWrapper";
 import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
 import Ghost from "./components/Ghost";
+import ScrollTopBtn from "./components/ScrollTopBtn";
 
 //other page
 import SVGNameAnimation from "./components/SVGNameAnimation/SVGNameAnimation";
@@ -65,6 +66,7 @@ export default function App(): JSX.Element {
               <Notes title={t("title_3")} 
                 p={t("p_3")}/>
               <DicePost3/>
+              <ScrollTopBtn/>
             </div>
           </div>
         )}
