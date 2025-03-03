@@ -29,6 +29,7 @@ import AuthPage from "./components/temp/AuthPage/AuthPage";
 import Card from "./components/temp/Card/Card";
 import Circles from "./components/temp/CircleDance/Circles";
 import DigitalClock from "./components/DigitalClock";
+import APIFetch from "./components/APIFetch";
 
 export default function App(): JSX.Element {
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
@@ -74,12 +75,13 @@ export default function App(): JSX.Element {
               <Ghost/>
               <div className="movie-block flex flex-col items-center h-full w-full">
                 <MoviesBlock/>
-                <span className="flex gap-4 flex-wrap mt-4 justify-evenly">
+                <span className="flex gap-4 flex-wrap mt-4 justify-evenly items-center">
+                  <APIFetch/>
+                  <AuthPage/>
+                  <DigitalClock/>
                   <DimensionCube/>
                   <Circles/>
                   <Card/>
-                  <AuthPage/>
-                  <DigitalClock/>
                 </span>
               </div>
             </div>

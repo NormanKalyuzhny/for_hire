@@ -20,7 +20,7 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="auth-container py-2 overflow-hidden w-fit h-fit relative bg-container rounded-md">
+    <div className="auth-container py-2 overflow-hidden w-fit h-fit relative bg-container shadow-container rounded-md">
       {formState === 'login' && (
         <div className={`form-container ${isAnimating ? 'animate-left' : ''} `}>
           <LoginForm onSwitchForm={handleSwitchForm} isDisabled={isDisabled}/>

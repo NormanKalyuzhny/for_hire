@@ -6,7 +6,17 @@ export default function APIFetch() {
     const [catFact, setCatFact] = useState(null);
 
     useEffect(() => {
-        fetchData();
+        const lastFetched = localStorage.getItem('lastFetched');
+        const currentTime = new Date().getTime();
+    
+        if (!lastFetched || currentTime - lastFetched > 86400000) {  // 86400000 ms = 24 hours
+            fetchData();  
+        } else {
+            const cachedData = localStorage.getItem('data');
+            if (cachedData) {
+                setData(JSON.parse(cachedData));
+            }
+        }
     }, []); 
 
     // Function to fetch data
@@ -22,6 +32,8 @@ export default function APIFetch() {
 
             // Parse the JSON data from the response
             const result = await response.json();
+            localStorage.setItem('data', JSON.stringify(result));
+            localStorage.setItem('lastFetched', new Date().getTime().toString());
 
             // Update the state with the fetched data
             setData(result);
@@ -32,14 +44,15 @@ export default function APIFetch() {
     };
     
     return (
-        <>
+        <div>
+            <p className='w-fit bg-container text-center h-fit rounded-md shadow-container px-2 py-1 mb-1'>catfact.ninja api</p>
             {data ? (
                 // Display only the fact text
-                <p>{data.fact}</p>
+                <p className='max-w-[350px] bg-container text-center h-fit rounded-md shadow-container py-2'>{data.fact}</p>
             ) : (
                 // Display a loading message or other UI while data is being fetched
                 <p>Loading...</p>
             )}
-        </>
+        </div>
     );
 }
