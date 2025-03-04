@@ -79,11 +79,11 @@ export default function App(): JSX.Element {
                 <MoviesBlock/>
                 <span className="flex gap-4 flex-wrap mt-4 justify-evenly items-center">
                   <APIFetch/>
-                  <AuthPage/>
                   <DigitalClock/>
                   <DimensionCube/>
                   <Circles/>
                   <Card/>
+                  <AuthPage/>
                 </span>
               </div>
             </div>
