@@ -1,9 +1,8 @@
-import React from 'react'
 import './Circles.css'
 
 export default function Circles() {
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden p-2 flex flex-center'>
       <div className="circles-container">
         <div className="circle1">
           <div className="circle2">

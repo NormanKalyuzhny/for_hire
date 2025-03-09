@@ -3,7 +3,7 @@ import ghostHappyGif from '../assets/img/GhostHappy.gif'
 import ghostScaredGif from '../assets/img/GhostScared.gif'
 
 const Ghost: React.FC = () => {
-  const [coordinates,setCoordinates] = useState<{bottom:number,left:number}>({bottom:200, left:30})
+  const [coordinates,setCoordinates] = useState<{bottom?:number,left:number,top?:number}>({top:350, left:0})
   const [isScared,setIsScared] = useState<boolean>(false)
   const [transitionTime,setTransitionTime] = useState<number>(0.5)
   const [rndVectorInterval, setRndVectorInterval] = useState<number | undefined>(undefined)
@@ -21,7 +21,9 @@ const Ghost: React.FC = () => {
       setCoordinates({
         bottom:rect.bottom,
         left:rect.left,
+        top:rect.top,
       })
+      console.log(coordinates)
     }
   },[])
 

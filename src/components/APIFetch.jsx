@@ -45,10 +45,10 @@ export default function APIFetch() {
     
     return (
         <div>
-            <p className='w-fit bg-container text-center h-fit rounded-md shadow-container px-2 py-1 mb-1'>catfact.ninja api</p>
+            <p className='w-fit bg-container text-center h-fit rounded-md shadow-container px-2 py-1 mb-1 relative z-10'>catfact.ninja api</p>
             {data ? (
                 // Display only the fact text
-                <p className='max-w-[350px] bg-container text-center h-fit rounded-md shadow-container p-2'>{data.fact}</p>
+                <p className='max-w-[350px] bg-container  h-fit rounded-md shadow-container p-2'>{data.fact}</p>
             ) : (
                 // Display a loading message or other UI while data is being fetched
                 <p>Loading...</p>
