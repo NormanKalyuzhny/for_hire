@@ -7,7 +7,6 @@ import ContentVisibility from '../ContentVisibility';
 
 import LanguageSelector from '../LanguageSelector';
 import { useTranslation } from 'react-i18next';
-
 export default function Header({ setIsAppContentVisible }) {
   const [isDark, setIsDark] = useLocalStorage('isDark',false); 
   const [isSidebarVisible, setIsSidebarVisible] = React.useState(false)

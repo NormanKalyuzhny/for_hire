@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { AboutVisibility } from "./types"
 
-
 export default function About({isAboutVisible,setIsAboutVisible}:AboutVisibility){
   const {t} = useTranslation('about')
 

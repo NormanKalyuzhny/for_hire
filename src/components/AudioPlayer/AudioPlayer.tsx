@@ -29,6 +29,15 @@ export default function AudioPlayer() {
   const currentSongTitle = audioData[currentSongIndex].title;
   const [isBtnActive, setBtnActive] = useState<boolean>(false)
 
+  useEffect(()=>{
+    audioData.forEach(song=>{
+      if(song.cover){
+        const img = new Image()
+        img.src = song.cover
+      }
+    })
+  })
+
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.load();
@@ -119,6 +128,8 @@ export default function AudioPlayer() {
               id="prev"
               className="action-btn text-[#dd7d00] cursor-pointer border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
               onClick={prevSong}
+              aria-label="Previous"
+              role="button"
             >
               <i className="fas fa-backward mr-[2px] mt-1"></i>
             </button>
@@ -127,6 +138,8 @@ export default function AudioPlayer() {
               id="stop"
               className="action-btn text-[#dd7d00] cursor-pointer  border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
               onClick={toggleStop}
+              aria-label="Stop"
+              role="button"
             >
               <i className="fas fa-stop mt-[5px]"></i>
             </button>
@@ -135,6 +148,8 @@ export default function AudioPlayer() {
               id="play"
               className="flex flex-center w-[3rem] h-[3rem] action-btn action-btn-big border-[2px] border-[#dd7d00] rounded-full text-[#dd7d00] text-2xl hover:border-white hover:text-white"
               onClick={togglePlay}
+              aria-label='Play'
+              role='button'
             >
               <i className='fas fa-play ml-1 '></i>
             </button>
@@ -143,6 +158,8 @@ export default function AudioPlayer() {
               id="pause"
               className="action-btn text-[#dd7d00] cursor-pointer  border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
               onClick={togglePause}
+              aria-label='Pause'
+              role='button'
             >
               <i className="fas fa-pause mt-[5px]"></i>
             </button>
@@ -151,6 +168,8 @@ export default function AudioPlayer() {
               id="next"
               className="action-btn text-[#dd7d00] cursor-pointer flex flex-center border-[2px] border-[#dd7d00] rounded-full w-[2rem] h-[2rem] hover:border-white hover:text-white"
               onClick={nextSong}
+              aria-label='Next'
+              role='button'
             >
               <i className="fas fa-forward flex ml-[2px]"></i>
             </button>
@@ -167,6 +186,7 @@ export default function AudioPlayer() {
               value={volume}
               id="volume"
               onChange={changeVolume}
+              aria-label='Volume'
             />
           </div>
         </div>

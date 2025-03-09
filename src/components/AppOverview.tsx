@@ -1,10 +1,9 @@
+import { useEffect } from 'react';
 import appWide from '../assets/img/AppBackground.webp'
 import DownloadBtn from './DownloadBtn'
 import { useTranslation } from 'react-i18next'
-
 export default function AppTopImage() {
   const {t} = useTranslation('appOverview')
-
   return (
     <div className='app-overview relative flex w-[full] min-w-[280px] vsm:w-full sm:h-400 text-4xl rounded-2xl text-shadow rounded-2xl shadow-container bg-container overflow-hidden'>
       <div className='flex size-full'>

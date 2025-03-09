@@ -15,16 +15,16 @@ const {t} = useTranslation('dicePost3')
      <div className="dicePost text-shadow flex justify-between items-center rounded-2xl shadow-container bg-container px-[1rem] w-[530px] mb-10 transition-all ease-in-out">
         <div className="img-container2 w-full py-4">
           <div id='coverDefault' className={`card-inner h-[290px] vsm:h-[230px] ${isCoverVisible !== 'coverFTC'? 'hidden': ''}`} >
-            <div className="card-front  absolute full-size">
-              <img srcSet={cover1Front} className="mycard w-full h-full object-contain"/>
+            <div className="card-front absolute full-size">
+              <img srcSet={cover1Front} className="mycard w-full h-full object-contain" alt="On the front cover is a picture of a dragon"/>
             </div>
             <div className="card-back y-180deg backface-hidden absolute full-size">
               <img srcSet={cover1Back} className="mycard w-full h-full object-contain"/>
             </div>
           </div>
           <div id='coverGold' className={`card-inner h-[290px] vsm:h-[230px] ${isCoverVisible !== 'coverGold'? 'hidden': ''}`}>
-            <div className="card-front  absolute full-size">
-              <img srcSet={cover2Front} className="full-size object-contain"/>
+            <div className="card-front absolute full-size">
+              <img srcSet={cover2Front} className="full-size object-contain" alt="On the front cover is a picture of dice"/>
             </div>
             <div className="card-back y-180deg backface-hidden absolute full-size">
               <img srcSet={cover2Back} className="full-size object-contain"/>
