@@ -12,7 +12,7 @@ export default function DicePost3() {
 const [isCoverVisible, setIsCoverVisible] = useState('coverFTC')
 const {t} = useTranslation('dicePost3')
   return (
-     <div className="dicePost text-shadow flex justify-between items-center rounded-2xl shadow-container bg-container px-[1rem] w-[530px] mb-10 transition-all ease-in-out">
+     <div className="dicePost text-shadow flex justify-between items-center rounded-2xl shadow-container bg-container px-[1rem] w-[530px] mb-4 transition-all ease-in-out">
         <div className="img-container2 w-full py-4">
           <div id='coverDefault' className={`card-inner h-[290px] vsm:h-[230px] ${isCoverVisible !== 'coverFTC'? 'hidden': ''}`} >
             <div className="card-front absolute full-size">

@@ -1,7 +1,7 @@
 // DarkMode.jsx
 import { useEffect, forwardRef, useState } from 'react';
 import styles from './DarkMode.module.css';
-import Ghost from '../Ghost';
+
 
 const DarkMode = forwardRef(({ isDark, onChange }, ref) => {
   useEffect(() => {
@@ -24,7 +24,6 @@ const DarkMode = forwardRef(({ isDark, onChange }, ref) => {
       />
       <label htmlFor="darkmode-toggle"></label>
       <div className={styles.backgroundColor}></div>
-      <Ghost ghostVisibility={!isDark}/>
     </div>
   );
 });

@@ -6,7 +6,7 @@ const ScrollTopBtn:React.FC  = () => {
   return (
     <button 
       onClick={handleTopScroll}
-      className="cursor-pointer w-[100px] h-[30px] rounded-md bg-container shadow-container hover:w-[150px] transition-all ease-in-out"
+      className="cursor-pointer w-[100px] h-[30px] rounded-md bg-container shadow-container hover:w-[150px] transition-all ease-in-out mb-4"
       aria-label="scroll up"
     >
       <i className="fa-solid fa-arrows-up-to-line flex flex-center size-full"></i>

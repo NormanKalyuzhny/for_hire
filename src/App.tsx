@@ -31,6 +31,7 @@ import Card from "./components/temp/Card/Card";
 import Circles from "./components/temp/CircleDance/Circles";
 import DigitalClock from "./components/DigitalClock";
 import APIFetch from "./components/APIFetch";
+import ProgressBar from "./components/ProgressBar";
 
 export default function App(): JSX.Element {
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
@@ -45,7 +46,7 @@ export default function App(): JSX.Element {
   return (
     <Wrapper>
       <Marketing/>
-      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10">
+      <div className="viewport flex flex-col justify-between items-center min-h-screen w-[1280px] relative px-4 z-10 ">
         <Header setIsAppContentVisible={setIsAppContentVisible}/>
         {isAppContentVisible === 'app' &&(
           <div className='content-app w-full'>
@@ -66,15 +67,15 @@ export default function App(): JSX.Element {
               <Notes title={t("title_3")} 
                 p={t("p_3")}/>
               <DicePost3/>
-              <ScrollTopBtn/>
+              
             </div>
           </div>
         )}
         {isAppContentVisible === 'other' &&(
-          <div className='content-other flex flex-col flex-grow w-full'>
+          <div className='content-other flex flex-col flex-grow w-full '>
             <div className="main flex flex-col items-center">
               <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
-              <Ghost/>
+              
               <div className="movie-block flex flex-col items-center h-full w-full">
                 <MoviesBlock/>
                 <span className="flex gap-4 flex-wrap mt-4 justify-evenly items-center">
@@ -84,6 +85,8 @@ export default function App(): JSX.Element {
                   <Circles/>
                   <Card/>
                   <AuthPage/>
+                  <ProgressBar/>
+                  <ScrollTopBtn/>
                 </span>
               </div>
             </div>
@@ -93,6 +96,7 @@ export default function App(): JSX.Element {
           <div className='content-other flex flex-col flex-grow w-full'>
             <div className="main flex flex-col items-center size-full">
             <AudioPlayer/>
+            <Ghost/>
             </div>
           </div>
         )}
