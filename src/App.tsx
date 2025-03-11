@@ -32,6 +32,7 @@ import Circles from "./components/temp/CircleDance/Circles";
 import DigitalClock from "./components/DigitalClock";
 import APIFetch from "./components/APIFetch";
 import ProgressBar from "./components/ProgressBar";
+import TypingGame from "./components/TypingGame";
 
 export default function App(): JSX.Element {
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
@@ -86,6 +87,7 @@ export default function App(): JSX.Element {
                   <Card/>
                   <AuthPage/>
                   <ProgressBar/>
+                  <TypingGame/>
                   <ScrollTopBtn/>
                 </span>
               </div>
