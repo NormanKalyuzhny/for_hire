@@ -67,8 +67,7 @@ export default function App(): JSX.Element {
               </FTCPostWrapper>
               <Notes title={t("title_3")} 
                 p={t("p_3")}/>
-              <DicePost3/>
-              
+              <DicePost3/> 
             </div>
           </div>
         )}
@@ -76,7 +75,6 @@ export default function App(): JSX.Element {
           <div className='content-other flex flex-col flex-grow w-full '>
             <div className="main flex flex-col items-center">
               <SVGNameAnimation isAppContentVisible={isAppContentVisible}/>
-              
               <div className="movie-block flex flex-col items-center h-full w-full">
                 <MoviesBlock/>
                 <span className="flex gap-4 flex-wrap mt-4 justify-evenly items-center">

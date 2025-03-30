@@ -4,8 +4,7 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
   return (
     <>
     {isContactVisible &&(
-    <form action="https://api.web3forms.com/submit" method="POST" id="form"
-      className={`contact-block absolute flex flex-center flex-col bottom-0 mb-[64px] w-full sm:w-[540px] min-h-[300px] bg-modal sm:rounded-xl shadow-container backdrop-blur-md`}
+    <div className={`contact-block absolute flex flex-center flex-col bottom-0 mb-[64px] w-full sm:w-[540px] min-h-[300px] bg-modal sm:rounded-xl shadow-container backdrop-blur-md`}
     >
       <input type="hidden" name="access_key" value="84fa6896-627f-486e-9c95-ad8be50787a0"/>
       <input type="hidden" name="subject" value="New message from My App website"/>
@@ -58,7 +57,7 @@ export default function Contact({isContactVisible,setIsContactVisible}) {
           </div> 
         <div id="result"></div>
       </div>
-    </form>
+    </div>
     )}
     </>
   )

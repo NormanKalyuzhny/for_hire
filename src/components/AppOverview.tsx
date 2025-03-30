@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 export default function AppTopImage() {
   const {t} = useTranslation('appOverview')
   return (
-    <div className='app-overview relative flex w-[full] min-w-[280px] vsm:w-full sm:h-400 text-4xl rounded-2xl text-shadow rounded-2xl shadow-container bg-container overflow-hidden'>
+    <div className='app-overview relative flex w-full min-w-[280px] vsm:w-full sm:h-400 text-4xl rounded-2xl text-shadow rounded-2xl shadow-container bg-container overflow-hidden'>
       <div className='flex size-full'>
         <div className="text-container flex flex-col justify-center px-6 py-4 text-left z-10 bg-modal w-full md:w-[460px] transition-all ease-in-out">
           <h3>FlipTheCard</h3> <p className='text-sm text-red-600 font-bold'>...in progress</p>
