@@ -1,3 +1,4 @@
 {
-  "dicePost":"With a simple input, you can set the max to 999 - no need for a dice bag!"
+  "details1":"With a simple input, you can set the max to 999 - no need for a dice bag!",
+  "details2":"Tested on own Pixel 3A and different emulated devices in Android Studio, tablets included!"
 }

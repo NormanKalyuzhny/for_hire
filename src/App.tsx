@@ -13,7 +13,6 @@ import Marketing from "./components/Marketing/Marketing";
 import AppOverview from "./components/AppOverview";
 import Notes from "./components/Notes";
 import DicePost from "./components/DicePost";
-import DicePost2 from "./components/DicePost2";
 import DicePost3 from "./components/DicePost3";
 import FTCPostWrapper from "./FTCPostWrapper";
 import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
@@ -38,7 +37,9 @@ export default function App(): JSX.Element {
   const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
   const [isContactVisible, setIsContactVisible] = useState<boolean>(false);
   const [isAppContentVisible,setIsAppContentVisible] = useState<string>('app');
-  const {t, i18n} = useTranslation('notes');
+  const { i18n } = useTranslation();
+  const {t: tNotes} = useTranslation('notes')
+  const {t: tDice} = useTranslation('dicePost')
 
   useEffect(()=>{
     i18n.changeLanguage(navigator.language.slice(0,2));
@@ -55,18 +56,26 @@ export default function App(): JSX.Element {
               <AppOverview/>
               <FTCPostWrapper>
                 <FTCPostWrapperSingle>
-                  <Notes title={t("title_1")} 
-                    p={t("p_1")}/>
-                  <DicePost/>
+                  <Notes 
+                    title={tNotes("title_1")}
+                    p={tNotes("p_1")}
+                  />
+                  <DicePost 
+                    p={tDice("details1")}
+                    src="../src/assets/img/dice-value.jpg"
+                  />
                 </FTCPostWrapperSingle>
                 <FTCPostWrapperSingle>
-                  <Notes title={t("title_2")} 
-                    p={t("p_2")}/>
-                  <DicePost2/>
+                  <Notes title={tNotes("title_2")} 
+                    p={tNotes("p_2")}/>
+                  <DicePost 
+                    p={tDice("details2")}
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg"
+                  />
                 </FTCPostWrapperSingle>
               </FTCPostWrapper>
-              <Notes title={t("title_3")} 
-                p={t("p_3")}/>
+              <Notes title={tNotes("title_3")} 
+                p={tNotes("p_3")}/>
               <DicePost3/> 
             </div>
           </div>

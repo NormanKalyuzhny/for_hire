@@ -239,37 +239,39 @@ a{
   box-shadow: var(--btn-downloadShadowsHover);
 }
 
-@media (max-width:1150px) {
-  .component-container{
-    gap: 0;
+@media screen and (max-width: 1130px) {
+  .dicePost {
     flex-direction: column;
-  }
-}
-
-@media (max-width:550px) {
-  .dicePost{
-    flex-direction: column;
-    align-items: center;
     width: 100%;
   }
   .dicePostText{
-    width: 100%;
-  }
-  .footer-btns{
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-block,
-  .about-block{
-    margin-bottom: 75px;
-  }
-  .app-overview{
+    padding-top: 0.5rem;
     width: 100%;
   }
 }
 
-@media (max-width:320px) {
-  #iconsContainer{
-    width: 100%;
+@media screen and (max-width: 740px) {
+  .component-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .dicePost {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .dicePostText{
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ftc-title{
+    font-size: 2rem;
+  }
+  .ftc-summary{
+    font-size: 1.4rem;
+  }
+  .dicePost {
+    flex-direction: column;
   }
 }
