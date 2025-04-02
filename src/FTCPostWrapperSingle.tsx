@@ -3,7 +3,7 @@ import React from 'react'
 export default function FTCPostWrapperSingle({children}: {children:React.ReactNode}) {
 
   return (
-    <div className='flex flex-col justify-between items-center w-full'>
+    <div className='w-full flex flex-col items-center justify-between'>
           {children}
     </div>
   )
