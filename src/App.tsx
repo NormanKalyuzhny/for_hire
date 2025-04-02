@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import diceValue from "../src/assets/img/dice-value.jpg"
 
 //Localization 
 import { useTranslation } from "react-i18next";
@@ -62,7 +63,7 @@ export default function App(): JSX.Element {
                   />
                   <DicePost 
                     p={tDice("details1")}
-                    src="../src/assets/img/dice-value.jpg"
+                    src={diceValue}
                   />
                 </FTCPostWrapperSingle>
                 <FTCPostWrapperSingle>
