@@ -17,7 +17,6 @@ import DicePost from "./components/DicePost";
 import DicePost3 from "./components/DicePost3";
 import FTCPostWrapper from "./FTCPostWrapper";
 import FTCPostWrapperSingle from "./FTCPostWrapperSingle";
-import Ghost from "./components/Ghost";
 import ScrollTopBtn from "./components/ScrollTopBtn";
 
 //other page
@@ -103,11 +102,10 @@ export default function App(): JSX.Element {
           </div>
         )}
         {isAppContentVisible === 'music' &&(
-          <div className='content-other flex flex-col flex-grow w-full'>
-            <div className="main flex flex-col items-center size-full">
-            <AudioPlayer/>
-            <Ghost/>
-            </div>
+          <div className='content-other flex flex-grow size-full flex-center'>
+       
+              <AudioPlayer/>
+        
           </div>
         )}
         <About 

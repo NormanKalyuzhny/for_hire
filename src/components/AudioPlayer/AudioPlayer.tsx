@@ -112,7 +112,7 @@ export default function AudioPlayer() {
         onEnded={handleEnded}
       ></audio>
 
-      <div className="relative absolute flex justify-center h-full p-4 vsm:p-0 vsm:h-[250px] img-container">
+      <div className="relative flex justify-center h-full p-4 vsm:p-0 vsm:h-[250px] img-container">
         <img 
           src={audioData[currentSongIndex].cover} 
           alt="music-cover" 
