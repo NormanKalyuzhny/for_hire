@@ -1,5 +1,6 @@
 export interface ContentVisibilityValues{
   setIsAppContentVisible:(value:string)=>string;
+  setIsSidebarVisible:(value:boolean)=>void;
 }
 
 export interface AboutVisibility{

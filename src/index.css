@@ -9,6 +9,9 @@
     -moz-backface-visibility: visible;
     -ms-backface-visibility: visible;
   }
+  .themed-shadow {
+    filter: drop-shadow(0 0 2px var(--text-color));
+  }
   .backface-hidden {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;

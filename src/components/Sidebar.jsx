@@ -1,6 +1,7 @@
 import ContentVisibility from './ContentVisibility'
 
 export default function Sidebar({setIsSidebarVisible,isSidebarVisible,setIsAppContentVisible }) {
+  
   return (
     <>
       <button onClick={()=>setIsSidebarVisible(prev => !prev)} className='burgerMenu vsm:hidden cursor-pointer' 
@@ -15,8 +16,8 @@ export default function Sidebar({setIsSidebarVisible,isSidebarVisible,setIsAppCo
         </svg>
       </button>
        
-      <div className={`${!isSidebarVisible ? 'hidden':''} absolute w-full vsm:min-w-[100px] h-[100px] bg-modal shadow-container backdrop-blur-xl top-[80px] z-50 flex flex-col right-0 justify-center vsm:rounded-xl px-4` }>
-        <ContentVisibility setIsAppContentVisible={setIsAppContentVisible}/>
+      <div className={`${!isSidebarVisible ? 'h-[0px] py-0':''} absolute gap-2 h-[64px] py-2 transition-all duration-300 ease-in-out w-full bg-modal shadow-container backdrop-blur-xl top-[80px] z-50 flex right-0 justify-center vsm:rounded-xl px-4 overflow-hidden` }>
+        <ContentVisibility setIsAppContentVisible={setIsAppContentVisible} setIsSidebarVisible={setIsSidebarVisible}/>
       </div>
     </>
   )
